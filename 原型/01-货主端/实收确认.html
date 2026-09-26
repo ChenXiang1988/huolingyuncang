@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实收确认 · 货主端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>货主端</small></div><ul><li><a href="工作台.html">工作台</a></li><li><a href="库存账.html">库存账</a></li><li><a href="流转账.html">流转账</a></li><li><a href="费用账.html">费用账</a></li><li class="on"><a href="实收确认.html">实收确认</a></li><li><a href="异常台账.html">异常台账</a></li><li><a href="增值服务指令.html">增值服务指令</a></li><li><a href="配额占用.html">配额占用</a></li><li><a href="货品资料.html">货品资料</a></li><li><a href="影像调取.html">影像调取</a></li><li><a href="出库预报.html">出库预报</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="工作台.html">首页</a><span class="sep">/</span><span class="cur">实收确认</span></nav><div class="topbar-right"><span class="who">张三</span></div></header>
+<main><div class="head"><h1>实收确认</h1></div>
+<div class="wrap">
+<div class="note info"><span class="ico">说明</span><span><b>数量以仓入库实收为准；你随寄货物须附装箱单，无装箱单的以实收为终。</b>本页让你当场看到仓数出多少，可确认或申辩。产品不承诺验证你实际寄出多少——该信息不在仓手里。</span></div>
+<div class="card"><h2>待确认与已确认</h2><div class="body" style="padding:0"><table><thead><tr><th>入库单</th><th>仓</th><th>货品</th><th>随寄单据</th><th>仓实收</th><th>差异</th><th>状态</th></tr></thead><tbody><tr><td>RK20260925-0031</td><td>上海云仓</td><td>A001 补水面膜</td><td>装箱单 + 采购单</td><td>1,200</td><td>—</td><td>待确认</td></tr><tr><td>RK20260924-0022</td><td>上海云仓</td><td>A002 返利卡</td><td>无装箱单</td><td>480</td><td>你标注 500</td><td>已申辩 → 异常台账</td></tr><tr><td>RK20260922-0018</td><td>广州云仓</td><td>A003 保温杯</td><td>装箱单</td><td>300</td><td>—</td><td>已确认</td></tr></tbody></table></div></div>
+<div class="card"><h2>申辩</h2><div class="body"><div class="form"><div class="field"><label>差异说明</label><div class="ctl">填写</div><div class="tip">必填</div></div><div class="field"><label>附件</label><div class="ctl">上传装箱单 / 凭证</div><div class="tip">选填</div></div></div><div class="btns"><span class="btn primary">提交申辩</span></div></div></div>
+
+</div></main>
+</div>
+</body>
+</html>

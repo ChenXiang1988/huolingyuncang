@@ -1,0 +1,83 @@
+q=云仓 in:name,description                        n=30
+q=三方仓储 in:name,description                      n=29
+q=3pl in:name,description stars:>50             n=1
+q=货主 in:name,description stars:>20              n=30
+q=仓储管理系统 in:name,description                    n=30
+q=wms 货主 in:name,description                    n=3
+q=billing warehouse in:name,description stars:>30 n=1
+q=warehouse billing in:name,description         n=30
+q=multi-tenant warehouse in:name,description    n=30
+q=pda 仓库 in:name,description                    n=19
+
+--- 补搜命中（星数>=30）---
+fighting41love/funNLP                      |  83045 | Python     | None         | 2024-05-10 | 中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库
+Dujltqzv/Some-Many-Books                   |  23425 | None       | None         | 2026-06-18 | 个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+cirosantilli/x86-bare-metal-examples       |   5358 | Assembly   | NOASSERTION  | 2022-07-18 | Dozens of minimal operating systems to learn x86 system programming. Tested on Ubuntu 17.10 host in QEMU 2.10 and real h
+o2oa/o2oa                                  |   4669 | JavaScript | AGPL-3.0     | 2026-04-24 | 开源OA系统 - 码云GVP|Java开源oa|企业OA办公平台|企业OA|协同办公OA|流程平台OA|O2OA|OA，支持国产麒麟操作系统和国产数据库（达梦、人大金仓），政务OA，军工信息化OA
+PeterH0323/Streamer-Sales                  |   3769 | Python     | AGPL-3.0     | 2025-03-08 | Streamer-Sales 销冠 —— 卖货主播 LLM 大模型🛒🎁，一个能够根据给定的商品特点从激发用户购买意愿角度出发进行商品解说的卖货主播大模型。🚀⭐内含详细的数据生成流程❗ 📦另外还集成了 LMDeploy 加速推理🚀、RAG检索
+cirosantilli/china-dictatorship            |   3195 | HTML       | CC-BY-SA-4.0 | 2026-02-05 | 反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 
+tech-shrimp/docker_image_pusher            |   2967 | None       | Apache-2.0   | 2024-08-21 | 使用Github Action将国外的Docker镜像转存到阿里云私有仓库，供国内服务器使用，免费易用
+apache/kyuubi                              |   2365 | Scala      | Apache-2.0   | 2026-09-11 | Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses.
+gege-circle/.github                        |   2003 | None       | None         | 2025-10-04 | 这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for G
+MoeNetwork/Tieba-Cloud-Sign                |   1972 | PHP        | NOASSERTION  | 2026-05-28 | 百度贴吧云签到，在服务器上配置好就无需进行任何操作便可以实现贴吧的全自动签到。配合插件使用还可实现云灌水、点赞、封禁、删帖、审查等功能。注意：Gitee (原Git@osc) 仓库将不再维护，目前唯一指定的仓库为 Github。本项目没有官
+DLLXW/data-science-competition             |   1381 | Python     | None         | 2023-04-21 | 该仓库用于记录作者本人参加的各大数据科学竞赛的获奖方案源码以及一些新比赛的原创baseline. 主要涵盖：kaggle, 阿里天池，华为云大赛校园赛，百度aistudio，和鲸社区，datafountain等
+hechenqingyuan/gitwms                      |   1043 | JavaScript | GPL-2.0      | 2023-05-31 | 吉特仓储管理系统
+dennisyang1986/opensqt_market_maker        |    858 | Go         | None         | 2026-04-25 | OpenSQT 是一个高性能、低延迟的加密货币做市商系统，专注于永续合约市场的做多网格交易策略。系统采用 Go 语言开发，基于 WebSocket 实时数据流驱动，旨在为 Binance、Bitget、Gate.io 等主流交易所提供稳定的
+Metarget/cloud-native-security-book        |    778 | Go         | None         | 2023-02-19 | 《云原生安全：攻防实践与体系构建》资料仓库
+xixihhhh/clipforge                         |    771 | TypeScript | AGPL-3.0     | 2026-09-07 | ClipForge（原『带货剪手』/ daihuo-jianshou）：开源 AI 带货短视频神器——上传一张商品图，AI 自动提炼卖点 + 写种草脚本 + 锁定商品原图不变形 + 配画面/配音/字幕，一键产出抖音小店 / 快手 / 小红书
+zhongmiao0706/NumberOne-MM                 |    746 | JavaScript | None         | 2017-08-02 | Java SSM 商户管理系统 客户管理 库存管理 销售报表 项目源码 本商品卖的是源码，合适的地方直接拿来使用，不合适的根据自己的需求二次开发 系统介绍： 1.系统采用主流的 SSM 框架 jsp JSTL bootstrap html5
+Horrarndoo/YiZhi                           |    675 | Java       | Apache-2.0   | 2022-08-31 | MVP+RxJava2+Retrofit2+Glide+Rxbus，主要实现日报、新闻、干货、影视等资讯，个人项目
+gaolhjy/enjoyshop                          |    657 | Java       | Apache-2.0   | 2020-12-02 | 购物(商城)类app,项目主要分为主页、热卖、分类、购物车、我的五大板块.该app基本上覆盖市面上商业级商城类app的功能,包括购物车、微信及支付宝支付、热门及历史搜索、登录注册、收货地址管理等.另外,本项目持续维护中!!!同时可进入QQ群
+Don-Jimmy/kongshoudao-fangdai              |    654 | None       | None         | 2022-08-04 | 说明：偶然看到大约十年前收藏的一篇文章，今天读来也不过时，分享给大家（手机码字，聚聚们将就看看） 房贷空手道 昨晚，和一个开典当行的同学喝酒。 　　我问同学，“你买了多少套房子，多少间铺面？” 　　“房子22套，铺面12间。”同学炫耀似的答
+pxvr-official/1                            |    517 | None       | None         | 2021-03-15 | 無許諾配信 企業理念剽窃 動物の森収益化 大神ミオ権利者削除 戌神権利侵害発言 常闇トワ炎上 夜空メルストーカー被害 建築王サポーター放置 赤十字マーク 魔乃アロエ卒業 一つの中國支持声明 大空昴3Dライブ 無限延期清掃員職業差別 日清コラ
+walljser/cms_community_e_commerce          |    456 | JavaScript | None         | 2023-01-25 | 云生活超市后台管理系统——React后台项目：react + react-router4 + redux + antd + axios + sass。 （另外配套两个仓库：Spring Boot服务端、 React Native App端）
+netease-kit/NIM_Web_Demo                   |    437 | JavaScript | None         | 2023-06-27 | 网易云信Web Demo发布仓库。#推荐客户得京东卡#首次推荐成单得3000元京东卡,连续推荐4500元/单,上不封顶。点击参与https://yunxin.163.com/promotion/recommend
+yuqing2026/ruoyi-office                    |    375 | Java       | MIT          | 2026-04-06 | 🔥🔥🔥RuoYi Office 基于 SpringCloud+Vue3+Vben 的中小企业办公一体化平台，涵盖 │🏢 OA协同办公 │💼 HRM人力资源 │🤝 CRM客户管理 │📋 BPM审批流 │🛍️ ERP进销存 │📑 合同管理 │📊
+cirosantilli/china-dictatroship-7          |    361 | HTML       | CC-BY-SA-4.0 | 2026-02-05 | 反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别
+xiaojiaqi/k8seasy_release_page             |    328 | None       | None         | 2022-05-15 | 一键安装kubernets(k8s)系统，已支持云环境的发布，可以在阿里云 azure 等云环境自主部署k8s系统，golang 编写 无需任何插件，无需翻墙下载任何内容，证书10年有效期，支持 单机 集群 生产环境的高可用  完全离线安装
+cirosantilli/cirosantilli                  |    303 | JavaScript | None         | 2026-08-04 | 小粉红小朋友们，新issue 在这儿开： https://github.com/cirosantilli/china-dictatorship/issues # 21世纪新政宣言（2020年4月5曰笫四次修改稿)（2020年6月19曰第七次
+netease-kit/NIM_PC_Demo                    |    296 | C++        | NOASSERTION  | 2025-12-25 | 云信Windows(PC) C/C++ Demo源码仓库
+LYM-mg/MGMiaoBo                            |    283 | Objective-C | MIT          | 2018-06-13 | 首创房间内多视频直播模式，移动直播新体验，多人秀场更好玩。随时随地与主播聊天互动亲密接触，清纯美女、校花嫩模、吃货萌妹、通通都有…… 1.项目引导页业使用ijkPlayer播放视频； 2.首页使用父子控制器进行界面之间的切换； 3.自定义M
+itliuwk/newretail-admin-web                |    236 | Vue        | None         | 2024-05-23 | 后台管理系统的前端项目，基于Vue + Element实现。主要包括设备管理，货道管理，场地管理，库存管理，广告管理，商品管理，权限管理，财务管理，权限管理，分润管理 销售订单 财务等功能       演示地址：
+cykjydxs/TWFX.CRM.Web                      |    218 | Vue        | None         | 2019-04-25 | 天仙仓储管理系统，基于Vue+Element实现。 主要包括客户管理、销售管理、产品管理、库存管理、采购管理、内容管理、统计报表、权限管理、基础设置等功能
+snchengqi/course-robot                     |    213 | None       | Apache-2.0   | 2024-07-23 | 知学云网上大学学习助手（中国电信、中国移动、中国人民保险、国家电投、中国石油、中国广核集团）（知学云要求，永久关闭该仓库！）
+hechenqingyuan/yun_gitwms                  |    210 | JavaScript | MIT          | 2020-04-02 | 吉特仓储管理系统多企业，多仓库版本
+meng-yun-ai/meng-yun-ai                    |    207 | JavaScript | MIT          | 2024-02-21 | 24小时全自动AI直播，AI主播，抖音直播，虚拟直播间，虚拟主播，直播带货。
+mRFWq7LwNPZjaVv5v6eo/cihna-dictattorshrip- |    205 | HTML       | CC-BY-SA-4.0 | 2026-02-05 | 反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别
+panbinibn/OpenPacketFix_                   |    195 | None       | MIT          | 2022-08-12 | 大陆修宪香港恶法台湾武统朝鲜毁约美中冷战等都是王沪宁愚弄习思想极左命运共同体的大策划中共窃国这半个多世纪所犯下的滔天罪恶，前期是毛泽东策划的，中期6.4前后是邓小平策划的，黄牛数据分析后期是毛的极左追随者三朝罪恶元凶王沪宁策划的。王沪宁高小
+CodeXiaoMai/AndroidGeek                    |    183 | Kotlin     | None         | 2018-07-14 | "Android Geek（Android极客）"一个专门为Android程序猿打造的极客应用。主要包括： 干货笔记、GitHub Trending、密码管理 .......
+xiaochen168/shoppingmall                   |    177 | Java       | NOASSERTION  | 2022-12-16 | 这是一个购物商城的项目的服务端，仿照的是天猫网，项目主要用到的技术有 springmvc做前端控制和请求转发、spring整合mybatis做数据访问层、数据库使用的是mysql、使用maven对项目进行构建、搭建ftp服务器存储图片和文件
+bingbing-gui/dotnet-agent-playbook         |    161 | C#         | None         | 2026-09-09 | 一个面向 .NET + AI Agent 开发的实践型仓库，涵盖 Web、云原生与微服务场景，聚焦智能应用的工程化落地。
+wjsbjl/use-gplearn-to-generate-CTA-factor  |    155 | Python     | None         | 2023-12-29 | 本文通过gplearn模型，结合遗传算法中的遗传规划方法生成因子。这里因子生成基于simple-backtest中的简单回测系统，主要针对股指期货操作。
+yaoysyao/Auto_checkin_release              |    149 | None       | Apache-2.0   | 2024-06-05 | GLaDOS平台|天翼云盘|bilibili直播|科研通签到|谷粉学术签到|阿里云盘新版本签到|Wps云空间容量|百度贴吧|交易猫|飘云阁|吾爱破解,自动签到项目发行版仓库，支持多种平台签到,已打包为exe文件和安装包文件，直接下载填写配置
+zhaopeng0103/OnlineDisk                    |    140 | JavaScript | None         | 2018-02-03 | 大数据企业实训项目：基于SpringMVC+Spring+HBase+Maven搭建的Hadoop分布式云盘系统。使用Hadoop HDFS作为文件存储系统、HBase作为数据存储仓库，采用SpringMVC+Spring框架实现，包括用户
+M-3LAB/awesome-3d-anomaly-detection        |    138 | None       | MIT          | 2026-09-08 | We have summarised all 3D anomaly detection methods and datasets (still updating). 多模态，点云和姿势无关异常检测的综述仓库（持续更新）
+BarneyD66/open-warehouse-system            |    136 | TypeScript | MIT          | 2026-08-24 | Chinese-first open-source WMS starter for cross-border warehouse, fulfillment, inventory, billing, returns, and 3PL oper
+xiaomeng9597/iStoreOS-RK35XX               |    133 | Shell      | None         | 2026-09-10 | iStoreOS云编译仓库
+Embedfire/ebf_products                     |    130 | None       | None         | 2020-12-12 | 野火所有产品的资料链接，方便查找各个git仓库和百度云下载链接（Embedfire Products link）
+netease-im/NIM_iOS_SDK                     |    123 | Ruby       | None         | 2022-03-08 | 网易云信 iOS SDK 发布仓库。【推荐客户得京东卡，首次推荐成单得1500元京东卡，连续推荐2000元/单，上不封顶。】点击参与https://yunxin.163.com/promotion/recommend
+zpc1314521/PCL2                            |    121 | None       | MIT          | 2022-08-12 | [stays mad] 反PCL宣传库。Anti PCL propaganda. 大陆修宪香港恶法台湾武统朝鲜毁约美中冷战等都是王沪宁愚弄习思想极左命运共同体的大策划中共窃国这半个多世纪所犯下的滔天罪恶，前期是毛泽东策划的，中期6.4前后是
+shanqiu127/Collaborative-Operation-Managem |    119 | Java       | None         | 2026-06-23 | 企业协同运营管理系统。项目采用前后端分离架构，前端基于 Vue 3 + Vite，后端基于 Spring Boot + MyBatis-Plus，数据库使用 MySQL。系统围绕实际仓储业务场景，完成了用户与权限管理、基础资料维护、进销退存
+cumtcssuld/RSP_of_CUMTCS                   |    116 | Jupyter Notebook | None         | 2023-10-03 | 【矿大计算机学院资源共享计划（Resource SharingPlan of CUMTCS）】本仓库由矿大计算机学院学生会学习部牵头维护，由计算机学院全体同学共建共享。欢迎大家积极的参加到本资源库的建设中来吧！（每当有重大更新，我们都会将整
+HeBianGu/WPF-Control                       |    111 | C#         | MIT          | 2026-09-11 | WPF-Control 是一个基于 .NET 8+ 的高性能 WPF 控件库，提供丰富的轻量级 UI 组件、多套现代化 皮肤主题，并整合了精选的 第三方开源控件，同时内置 数据库仓储模型 和 模块化封装 的通用功能，包含完整桌面应用程序的解
+small-bears/health                         |    106 | Vue        | None         | 2026-04-05 | 社区居民诊疗健康管理系统  java springboot vue ssm mysql python Django 健康管理系统(源代码+数据库+配套论文+ppt) 角色：管理员、用户、医生  管理员：管理员进入主页面，主要功能包括对系统首
+MoshiCoCo/docker-compose-hub               |    104 | JavaScript | MIT          | 2024-04-21 | 常用docker容器快速启动仓库，帮你使用docker完成搭建云环境的搭建。
+guandasheng/adguardhome                    |    103 | Java       | MIT          | 2026-09-11 | TheBestAdrules，适用于Adguard Home的去广告dns规则，由关圣整理上游优秀的规则，合并去重而来，集百家之所长，取其精华去其糟粕。  关圣DNS官网https://dns1.top 官方微信群及QQ群见官网公布。  由
+next-1688/1688-distribution                |    101 | Python     | None         | 2026-05-06 | 1688 分销唯一主入口。选品铺货、订单管理、知识库查询、店铺绑定，涵盖分销全链路。当用户提到铺货、选品、分销、上架、查订单、催发、旺旺、发货流程、绑店时触发。不要在用户仅询问非1688业务（如闲聊、天气、翻译等无关话题）时触发。
+ovhiucza/UltraServer-9vms                  |     95 | None       | None         | 2026-09-05 | 裸金属服务器，离岸主机，offstore，虚拟货币支付，匿名支付，Dedicated Server，大盘机，高性能，高速率，vps
+zhanggyjp/CloudERP                         |     93 | PHP        | None         | 2018-06-13 | 实现管理流程“客户关系管理-> 销售报价-> 销售合同-> 生产计划-> 研发设计-> 采购订单-> 加工制造-> 质检入库-> 发货出库-> 财务核算-> 售后服务”的高效循环运作！管理者能够对客户资源、销售情况、采购情况、库存存货、生产
+FaithLikeJob/vue-django-storeManage        |     88 | Vue        | None         | 2022-01-15 | vue+django+uniapp实现仓储物流管理系统(网页端+小程序)
+blockchain-university/patent               |     85 | None       | None         | 2016-05-27 | 区块链、加密学货币相关技术专利，主要来源于美国、中国、欧洲、日韩。
+ShopeX/OMS                                 |     85 | PHP        | Apache-2.0   | 2026-08-16 | ONEX OMS 是由ShopeX开发并开源的企业级全渠道订单管理系统，专为电商、零售、分销等丰富的业务场景设计。系统采用模块化架构，功能完善、高度模块化，支持多平台订单统一处理、智能库存管理、全流程仓储管理等核心功能。
+yeyueduxing/YeLearns                       |     83 | Java       | None         | 2018-09-09 | 夜月资讯：一款符合Google Material Design的Android客户端。项目使用MVPArms作为底层框架，然后自己扩展了一个UI框架YeLibrary，实现了各种常用的列表页，Tab页等等，便于快速开发应用。现主要包括：玩安
+shenhliu/Fuck-SJTU-ML-Exam                 |     78 | None       | GPL-3.0      | 2022-01-10 | 该仓库面向SJTU SE-125 机器学习  的期末考试.这个仓库主要记录了个人根据老师提供的考纲文档 整理的笔记。 其中大部分都是根据文档上网查阅资料并copy的，夹带有一定私货。 仓库中整理的文档与老师上课的slides关系不大（因为我
+shuxiang/MT-WMS                            |     71 | Python     | Apache-2.0   | 2025-05-11 | MT-WMS 是开源的支持多仓多货主(multi warehouses, mulit owners)的WMS(仓储管理系统) 遵循Apache License 2.0协议
+wucaibao/Y-oms-wms-tms-bms                 |     68 | None       | GPL-3.0      | 2022-05-26 | y-oms-wms-tms-bms(简称y-owtb)包含订单管理、仓库管理、运输配送管理、装卸管理、快递面单管理以及物流费用管理等功能，兼具H5、微信小程序、PDA和Web端，旨在为国内外的品牌商、经销商、零售商、三方物流商提供系统和技术
+wukongdaily/store                          |     67 | None       | None         | 2026-07-03 | 此项目用于存储 ImmortalWrt-ImageBuilder 项目仓库以外的第三方软件包
+yuqing2026/ruoyi-office-vben               |     57 | Vue        | MIT          | 2026-05-07 | 🔥🔥🔥RuoYi Office 基于 SpringCloud+Vue3+Vben 的中小企业办公一体化平台，涵盖 │🏢 OA协同办公 │💼 HRM人力资源 │🤝 CRM客户管理 │📋 BPM审批流 │🛍️ ERP进销存 │📑 合同管理 │📊
+ShangGuanPF/WMS                            |     47 | C++        | None         | 2019-09-13 | 融合物联网标识与定位技术的仓储管理系统（基于Qt平台、MySQL 数据库以及UWB定位模块开发）
+YSGStudyHards/FastFramework                |     44 | C#         | Apache-2.0   | 2024-11-03 | 🚀FastFramework是一款基于.NET 8的灵活快速开发框架，集成通用RBAC权限管理、统一认证授权、JWT、数据仓储、配置中心、日志系统、ELK等相关功能。
+soon14/wms                                 |     41 | C#         | None         | 2017-02-14 | 这个项目是仓储管理系统，从商品收货记录库存，到根据客户订单出库的的软件。功能包括收货登记、销货管理、库存查询、系统设置、基础信息管理等。
+shane186/shop                              |     34 | None       | None         | 2022-11-28 | Java跨境电商亚马逊ERP源码，SpringBoot+Vue，amazonerp亚马逊erp、亚马逊精细化运营、fba erp、fbaerp、shopifyerp独立站、shopeeerp虾皮（跨境本土）、lazadaerp来赞、wish
+Floweryu/DatabaseDesign                    |     33 | HTML       | Apache-2.0   | 2026-02-11 | 数据库课程设计——企业仓库存储管理系统
+TREE erzhongxmu/JeeWMS FAIL IncompleteRead(3473408 bytes read)

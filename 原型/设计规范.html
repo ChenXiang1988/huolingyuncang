@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>管理后台视觉规范 · 货灵云仓原型</title>
+<link rel="stylesheet" href="00-资源/原型样式.css">
+</head>
+<body>
+<main style="padding:0"><div class="overview">
+<h1>管理后台视觉规范</h1>
+<div class="sub">三端管理后台（货主端 · 云仓管理端 · 单仓端）的原型基准：内容取舍、布局结构、模块职责、配色与尺寸。</div>
+<div class="meta">配色全部取自 Ant Design 官方 Design Token 与官方色板，无自造色值。布局对齐 <b>Ant Design Pro 的默认导航形态</b>：<span class="code">navTheme:'light'</span> 浅色导航 + <span class="code">layout:'side'</span> 侧栏导航 + 不做多页签栏。手持端不适用本规范（02-2 §7 已声明手持作业端不属于 Ant Design Pro 适用范围）。<b>本页自身即按本规范渲染。</b></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:20px"><h2>一、原型表达的简洁原则<span class="hint">什么能进原型，什么不能</span></h2><div class="body">
+
+<div class="note danger"><span class="ico">原则</span><span>原型页面应遵循简洁原则，除非确有必要，否则不应添加额外的解释性内容；所有非必要的解释信息都不应在原型中展示，以保证原型的纯粹性和可读性。</span></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:16px 0 10px">「确有必要」只有一条判据——<b>这条内容服务谁</b>。服务使用者的留，服务评审者的出：</p>
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>类别</th><th>服务对象</th><th>判定</th><th>以什么形态存在</th></tr></thead>
+<tbody>
+<tr><td><b>界面承载的业务信息</b><br><span style="font-size:12px;color:#00000073">口径、单位、校验规则、字段含义、操作后果</span></td><td><b>使用者</b></td><td><span class="tag green">留</span></td><td>做成界面元素本身——口径标签、字段旁说明、必填星号、按钮文案里的后果。不另起说明块</td></tr>
+<tr><td><b>设计规则与设计意图</b><br><span style="font-size:12px;color:#00000073">「界面不得诱导选贵的档」「为什么不强制货主提供参数」</span></td><td>设计者 / 评审者</td><td><span class="tag red">出</span></td><td>归本规范页或 <span class="code">设计文档\</span>。原型不需要自证</td></tr>
+<tr><td><b>过程性记录</b><br><span style="font-size:12px;color:#00000073">未决项、反方审查、改造前后对比、方案取舍</span></td><td>评审者</td><td><span class="tag red">出</span></td><td>归 <span class="code">设计文档\00-对话纪要与决策台账.md</span></td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:16px 0 10px">抽象规则不如一个对照。同一件事，两种写法：</p>
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>内容</th><th>现在的写法（违反）</th><th>该有的写法（合规）</th></tr></thead>
+<tbody>
+<tr><td>默认档必须最省动作</td><td>页面底部一块提示条：<span class="code">「界面不得诱导选贵的档」</span></td><td>默认档按钮加高亮；「高」档旁标 <span class="code">按此档执行需人工复核</span></td></tr>
+<tr><td>库容指标不得裸数字</td><td>提示条：<span class="code">「每个指标必须标注口径」</span></td><td>每个数字下挂口径标 <span class="code">有效占用</span> / <span class="code">冻结占用</span></td></tr>
+<tr><td>上游依据可追溯</td><td>页面标题右侧标签：<span class="code">依据 02-2 §7.1</span></td><td>不写在页面里——登记在本端 <span class="code">index.html</span> 的页面清单表中</td></tr>
+</tbody></table></div>
+
+<div class="note info" style="margin-top:16px"><span class="ico">三条推论</span><span>
+<b>1. 整块提示条（Alert）不是解释性内容的容器。</b>业务信息要落到字段旁、按钮文案里、表头口径标上——做成使用者一眼就能用的东西，而不是读一段说明才敢操作。<br>
+<b>2. 上游依据不散落在页面内。</b>可追溯性由各端 <span class="code">index.html</span> 的页面清单集中登记（逐页对应哪几条上游条款），页面里不再挂依据标签。<br>
+<b>3. 原型里唯一允许的标注，是原型机制本身的标注。</b>静态假数据标记、当前页高亮——它们不是解释，是原型的表达手段。<b>弹层内容预览的虚线框已取消</b>，改为真实的悬浮提示（见第十六节）。
+</span></div>
+
+<div class="note warn" style="margin-top:16px"><span class="ico">适用范围</span><span><b>本原则约束的是原型页面。</b>另有两类文件不受约束，因为它们不是原型页面：<br>
+· <b>本规范页</b>——身份是规范文档，说明「为什么这么定」正是它的职责；<br>
+· <b>各端 <span class="code">index.html</span></b>——身份是页面索引与依据登记表，登记依据是它的功能。<br>
+若不划这条边界，本页自身的「反方审查」「未决项」「改造前状态」会被自身规则全部删掉——那是自毁。
+</span></div>
+
+</div></div>
+<div class="card" style="margin-top:16px"><h2>二、整体布局结构<span class="hint">三区，来自 ProLayout 的默认形态</span></h2><div class="body">
+
+<div class="cols">
+<div>
+<div class="fig">
+  <div style="display:flex;height:264px;font-size:11px;line-height:1.4">
+    <div style="flex:0 0 82px;background:#fff;display:flex;flex-direction:column;padding:10px 8px;border-right:1px solid #f0f0f0;gap:3px;text-align:center">
+      <b style="color:#000000e0;font-size:12px">货灵云仓</b>
+      <span style="color:#00000073;margin-bottom:6px">云仓管理端</span>
+      <span style="background:#e6f4ff;color:#1677ff;border-radius:6px;padding:4px 0;font-weight:500">经营看板</span>
+      <span style="padding:4px 0;color:#000000a6">多仓容量统筹</span>
+      <span style="padding:4px 0;color:#000000a6">容量度量</span>
+      <span style="padding:4px 0;color:#000000a6">差错成本</span>
+      <span style="margin-top:auto;color:#00000073">侧栏 Sider<br>256px · 白底</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+      <div style="height:38px;background:#f0f2f5;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;padding:0 12px;color:#000000a6;gap:6px;flex:0 0 auto">首页 / 分组 / 当前页 <span style="margin-left:auto;display:inline-flex;align-items:center;gap:5px"><span style="display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#1677ff;color:#fff;font-size:9px">张</span>张三<span style="width:0;height:0;border-left:3px solid transparent;border-right:3px solid transparent;border-top:3px solid #00000040"></span></span></div>
+      <div style="flex:1;background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#00000073;text-align:center;padding:8px">内容区 Content<br>标题区 + 卡片流</div>
+    </div>
+  </div>
+  <div class="fig-cap">三区结构（缩略）</div>
+</div>
+</div>
+<div>
+<table style="font-size:13px">
+<thead><tr><th style="padding-left:0">区</th><th>Ant Design 对应</th><th>尺寸</th></tr></thead>
+<tbody>
+<tr><td style="padding-left:0"><b>侧栏</b></td><td><span class="code">Layout.Sider</span>（浅色）</td><td>宽 <b>256px</b></td></tr>
+<tr><td style="padding-left:0"><b>顶栏</b></td><td><span class="code">Layout.Header</span></td><td>高 <b>56px</b></td></tr>
+<tr><td style="padding-left:0"><b>顶栏 · 用户区</b></td><td><span class="code">Avatar</span> + <span class="code">Dropdown</span></td><td>头像 <b>24px</b><br>菜单最小宽 <b>136px</b></td></tr>
+<tr><td style="padding-left:0"><b>内容区</b></td><td><span class="code">Layout.Content</span></td><td>左右 24px<br>底部 56px</td></tr>
+</tbody></table>
+<p style="font-size:13px;color:#00000073;margin-top:12px;line-height:1.8">侧栏宽 256px 取自 <b>ProLayout</b> 的 <span class="code">siderWidth</span> 默认值（side 模式；mix 模式为 215px）——不是 antd <span class="code">Sider</span> 的 200px。顶栏高 56px 取自 ProLayout <b>Header Token</b> 的 <span class="code">height</span> 默认值，也不是 antd 的 64px。</p>
+</div>
+</div>
+
+<div class="note warn" style="margin-top:16px"><span class="ico">一处取舍：side 而非 mix</span><span>Pro 脚手架 <span class="code">config/defaultSettings.ts</span> 的默认是 <span class="code">layout:'mix'</span>（<b>顶部一级导航 + 侧边二级导航</b>），而 ProLayout <b>组件</b>的默认是 <span class="code">layout:'side'</span>。本项目取 <b>side</b>——mix 要求每端都有两级菜单结构，但<b>货主端与单仓端的侧栏是单一平铺列表，在上游没有分组依据</b>，做 mix 就得编造导航层级。这是一处<b>有意的偏离</b>，不是照抄默认。</span></div>
+
+<div class="note info" style="margin-top:10px"><span class="ico">顶栏为什么是浅灰</span><span>顶栏背景取 ProLayout <b>Header Token</b> 的 <span class="code">colorBgHeader</span> 默认值 <b>rgba(240,242,245,.4)</b>，与内容区同底色；侧栏取容器色 <b>#ffffff</b>。两区靠<b>色彩层次</b>分开、只留 1px 分隔线，而不是靠深色块对冲。</span></div>
+
+<div class="note ok" style="margin-top:10px"><span class="ico">多页签栏已删除</span><span>Pro 的 <span class="code">PageContainer</span> 默认<b>不带</b> <span class="code">tabList</span>，多页签要显式传入才出现——所以「没有页签栏」才是默认形态。上一版按参考样例做的「首页 + 当前页 ×」页签栏已整体移除，样式表里的对应规则一并清空。</span></div>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>三、主要功能模块的划分与职责</h2><div class="body">
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>模块</th><th>Ant Design 组件</th><th>职责</th><th>不做什么</th></tr></thead>
+<tbody>
+<tr><td><b>侧栏 · 品牌区</b></td><td>Layout.Sider 自定义内容</td><td>系统名「货灵云仓」+ <b>当前端名</b>（货主端 / 云仓管理端 / 单仓端）</td><td>不放用户信息，不放操作入口</td></tr>
+<tr><td><b>侧栏 · 导航</b></td><td><span class="code">Menu</span>（<span class="code">mode="inline"</span>）</td><td>本端全部页面，<b>按业务分组</b>；当前项高亮</td><td>不跨端跳转；不承担操作</td></tr>
+<tr><td><b>顶栏 · 面包屑</b></td><td><span class="code">Breadcrumb</span></td><td>「首页 / 分组 / 当前页」三级定位，占据顶栏左侧</td><td>不做导航主线（主线在侧栏）</td></tr>
+<tr><td><b>顶栏 · 用户区</b></td><td><span class="code">Avatar</span> + <span class="code">Dropdown</span></td><td>操作人 + 退出</td><td><b>不显示角色</b>——01 §4.3 已定角色按动作切、一人兼任多角色，顶栏写死角色会与权限模型冲突</td></tr>
+<tr><td><b>内容 · 标题区</b></td><td><span class="code">PageHeader</span></td><td>页面名（唯一必需内容）</td><td><b>不挂上游依据标签、不做面向角色的说明</b>——见第一节判据；可追溯性由本端 <span class="code">index.html</span> 集中登记</td></tr>
+<tr><td><b>内容 · 筛选条</b></td><td><span class="code">Form</span>（<span class="code">layout="inline"</span>）</td><td>查询条件；标签与控件同行，查询/重置按钮另起一行</td><td><b>卡片不带标题</b>——筛选区一眼可辨，标题是冗余</td></tr>
+<tr><td><b>内容 · 指标卡</b></td><td><span class="code">Statistic</span> / <span class="code">Card</span></td><td>关键经营数字</td><td><b>禁止裸数字</b>，每个数字必须带口径标签（02-2 §7.2 原则 2）</td></tr>
+<tr><td><b>内容 · 数据表格</b></td><td><span class="code">Table</span></td><td>明细；支持主从展开（主行 + 子表）</td><td>—</td></tr>
+<tr><td><b>内容 · 提示条</b></td><td><span class="code">Alert</span></td><td>四语义：信息 / 警告 / 错误 / 成功</td><td>不用提示条替代校验错误；<b>也不用于承载解释性内容</b>（见第一节）</td></tr>
+<tr><td><b>内容 · 弹出提示</b></td><td><span class="code">Tooltip</span></td><td>点击后<b>悬浮静止</b>才浮现的短提示，承载操作后果与关键约束</td><td><b>不做弹层内容预览</b>——不再用虚线框把 Drawer / Modal 的完整内容铺在页面上；也不承载复杂文本与操作（官方原文，见第十六节）</td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;margin-top:14px;line-height:1.8">上一版还有两个模块，本次删除：<b>顶栏折叠器</b>（☰ 是死控件，点不动却长得像能点，已整条移除）和<b>页签栏</b>（Pro 默认没有）。</p>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>四、配色统一：改造前 → Ant Design 官方值<span class="hint">这是上一轮改造最实质的部分，本次沿用</span></h2><div class="body">
+
+<div class="note danger"><span class="ico">改造前的真实状态</span><span>原样式表<b>名为 Ant Design，实则混了三套设计体系</b>：主色与圆角确实是 Ant Design，但<b>功能色来自 Arco Design</b>（字节跳动），<b>中性色阶来自飞书 / Arco</b>，边框色也来自 Arco。这就是「配色没有统一」的实情。</span></div>
+
+<div class="tbl-wrap" style="margin-top:16px"><table>
+<thead><tr><th>用途</th><th>改造前取值</th><th>来源判定</th><th>改造后取值</th><th>Ant Design Token</th></tr></thead>
+<tbody>
+<tr><td>主色</td><td><span style="display:inline-block;width:14px;height:14px;background:#1677ff;border-radius:2px;vertical-align:-2px"></span> #1677ff</td><td><span class="tag green">原本就对</span></td><td>#1677ff</td><td><span class="code">colorPrimary</span></td></tr>
+<tr><td>成功色</td><td><span style="display:inline-block;width:14px;height:14px;background:#00b42a;border-radius:2px;vertical-align:-2px"></span> #00b42a</td><td><span class="tag red">Arco Design</span></td><td>#52c41a</td><td><span class="code">colorSuccess</span></td></tr>
+<tr><td>警告色</td><td><span style="display:inline-block;width:14px;height:14px;background:#ff7d00;border-radius:2px;vertical-align:-2px"></span> #ff7d00</td><td><span class="tag red">Arco Design</span></td><td>#faad14</td><td><span class="code">colorWarning</span></td></tr>
+<tr><td>错误色</td><td><span style="display:inline-block;width:14px;height:14px;background:#f53f3f;border-radius:2px;vertical-align:-2px"></span> #f53f3f</td><td><span class="tag red">Arco Design</span></td><td>#ff4d4f</td><td><span class="code">colorError</span></td></tr>
+<tr><td>一级文本</td><td><span style="display:inline-block;width:14px;height:14px;background:#1f2329;border-radius:2px;vertical-align:-2px"></span> #1f2329</td><td><span class="tag red">飞书色阶</span></td><td>rgba(0,0,0,.88)</td><td><span class="code">colorText</span></td></tr>
+<tr><td>二级文本</td><td><span style="display:inline-block;width:14px;height:14px;background:#5b6168;border-radius:2px;vertical-align:-2px"></span> #5b6168</td><td><span class="tag red">飞书色阶</span></td><td>rgba(0,0,0,.65)</td><td><span class="code">colorTextSecondary</span></td></tr>
+<tr><td>描述文本</td><td><span style="display:inline-block;width:14px;height:14px;background:#8f959e;border-radius:2px;vertical-align:-2px"></span> #8f959e</td><td><span class="tag red">飞书色阶</span></td><td>rgba(0,0,0,.45)</td><td><span class="code">colorTextTertiary</span></td></tr>
+<tr><td>一级边框</td><td><span style="display:inline-block;width:14px;height:14px;background:#e5e6eb;border-radius:2px;vertical-align:-2px;border:1px solid #d9d9d9"></span> #e5e6eb</td><td><span class="tag red">Arco Design</span></td><td>#d9d9d9</td><td><span class="code">colorBorder</span></td></tr>
+<tr><td>分割线</td><td><span style="display:inline-block;width:14px;height:14px;background:#f0f1f3;border-radius:2px;vertical-align:-2px;border:1px solid #d9d9d9"></span> #f0f1f3</td><td><span class="tag orange">近 Arco</span></td><td>#f0f0f0</td><td><span class="code">colorBorderSecondary</span></td></tr>
+<tr><td>布局背景</td><td><span style="display:inline-block;width:14px;height:14px;background:#f4f5f7;border-radius:2px;vertical-align:-2px;border:1px solid #d9d9d9"></span> #f4f5f7</td><td><span class="tag orange">非官方</span></td><td>#f5f5f5</td><td><span class="code">colorBgLayout</span></td></tr>
+<tr><td>容器背景</td><td>#ffffff</td><td><span class="tag green">原本就对</span></td><td>#ffffff</td><td><span class="code">colorBgContainer</span></td></tr>
+<tr><td>卡片圆角</td><td>8px</td><td><span class="tag green">原本就对</span></td><td>8px</td><td><span class="code">borderRadiusLG</span></td></tr>
+<tr><td>控件圆角</td><td>6px</td><td><span class="tag green">原本就对</span></td><td>6px</td><td><span class="code">borderRadius</span></td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;margin-top:14px;line-height:1.8">判定依据：<span class="code">#00b42a</span> / <span class="code">#ff7d00</span> / <span class="code">#f53f3f</span> 是 Arco Design 的默认功能色三元组；<span class="code">#1f2329</span> / <span class="code">#5b6168</span> / <span class="code">#8f959e</span> 是飞书的文本色阶；<span class="code">#e5e6eb</span> 是 Arco 的一级边框色。以上均可在各体系官方色板中一一对应。Ant Design 的对应值见 <span class="code">ant.design/docs/spec/colors-cn</span> 与 Global Token 表。</p>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>五、主色与它的衍生色阶<span class="hint">选主色，官方建议取色板由浅至深的第六个</span></h2><div class="body">
+
+<div class="sw-grid">
+<div class="sw"><div class="sw-c" style="background:#e6f4ff"></div><div class="sw-t"><b>blue-0</b><span>#e6f4ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#bae0ff"></div><div class="sw-t"><b>blue-1</b><span>#bae0ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#91caff"></div><div class="sw-t"><b>blue-2</b><span>#91caff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#69b1ff"></div><div class="sw-t"><b>blue-3</b><span>#69b1ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#4096ff"></div><div class="sw-t"><b>blue-4</b><span>#4096ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#1677ff;outline:2px solid #1677ff;outline-offset:-2px"></div><div class="sw-t"><b>blue-5 ★</b><span>#1677ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#0958d9"></div><div class="sw-t"><b>blue-6</b><span>#0958d9</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#003eb3"></div><div class="sw-t"><b>blue-7</b><span>#003eb3</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#002c8c"></div><div class="sw-t"><b>blue-8</b><span>#002c8c</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#001d66"></div><div class="sw-t"><b>blue-9</b><span>#001d66</span></div></div>
+</div>
+
+<p style="font-size:13px;color:#00000073;margin-top:14px;line-height:1.8">官方色板是 <b>12 色 × 10 阶 = 120 个颜色</b>，蓝色一族称为「拂晓蓝」，主色取其中第 6 个 <b>#1677ff</b>（官方建议「选择色板从浅至深的第六个颜色作为主色」）。本项目只用蓝族的 <b>blue-0 / blue-2 / blue-4 / blue-5 / blue-6</b> 五档，分别对应浅底、描边、悬停、常态、按下。</p>
+
+<div class="tbl-wrap" style="margin-top:6px"><table>
+<thead><tr><th>用途</th><th>取档</th><th>原型里的变量</th></tr></thead>
+<tbody>
+<tr><td>浅色背景 / 选中底</td><td>blue-0 #e6f4ff</td><td><span class="code">--brand-1 --primary-bg</span></td></tr>
+<tr><td>浅色描边 / 虚线口径标</td><td>blue-2 #91caff</td><td><span class="code">--brand-3 --primary-line</span></td></tr>
+<tr><td>悬停 hover</td><td>blue-4 #4096ff</td><td><span class="code">--brand-4 --primary-hover</span></td></tr>
+<tr><td>常态 / 主色</td><td>blue-5 #1677ff</td><td><span class="code">--brand-5 --primary</span></td></tr>
+<tr><td>按下 active</td><td>blue-6 #0958d9</td><td><span class="code">--brand-6 --primary-active</span></td></tr>
+</tbody></table></div>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>六、功能色<span class="hint">官方称「功能色」，不是「辅助色」</span></h2><div class="body">
+
+<div class="note warn"><span class="ico">先纠正一个术语</span><span>Ant Design 官方色彩体系里<b>没有「辅助色」这个概念</b>。官方只分三层：<b>品牌色（主色）· 功能色 · 中性色</b>。你说的「辅助色」在本页按三种可能分别给出对应物（第五节主色衍生色阶 / 本节功能色 / 第十二节次按钮与链接色），<b>请挑一个确认</b>。</span></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:14px 0">官方对功能色的定义：<b>「功能色代表了明确的信息以及状态，比如成功、出错、失败、提醒、链接等……我们建议在一套产品体系下，功能色尽量保持一致，不要有过多的自定义。」</b>本项目只用官方四色，不新增自定义语义色。</p>
+
+<div class="sw-grid">
+<div class="sw"><div class="sw-c" style="background:#f6ffed"></div><div class="sw-t"><b>成功 浅底</b><span>#f6ffed</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#b7eb8f"></div><div class="sw-t"><b>成功 描边</b><span>#b7eb8f</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#52c41a"></div><div class="sw-t"><b>成功 ★</b><span>#52c41a</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#fffbe6"></div><div class="sw-t"><b>警告 浅底</b><span>#fffbe6</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#ffe58f"></div><div class="sw-t"><b>警告 描边</b><span>#ffe58f</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#faad14"></div><div class="sw-t"><b>警告 ★</b><span>#faad14</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#fff1f0"></div><div class="sw-t"><b>错误 浅底</b><span>#fff1f0</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#ffccc7"></div><div class="sw-t"><b>错误 描边</b><span>#ffccc7</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#ff4d4f"></div><div class="sw-t"><b>错误 ★</b><span>#ff4d4f</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#e6f4ff"></div><div class="sw-t"><b>信息 浅底</b><span>#e6f4ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#91caff"></div><div class="sw-t"><b>信息 描边</b><span>#91caff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#1677ff"></div><div class="sw-t"><b>信息 ★</b><span>#1677ff</span></div></div>
+</div>
+
+<p style="font-size:13px;color:#00000073;margin-top:14px;line-height:1.8">三档的用法固定：<b>浅底 = 提示条 / 标签底</b>，<b>描边 = 同色系边框</b>，<b>主色 = 图标 / 强调文字</b>。信息色与主色同值（官方 <span class="code">colorInfo</span> 默认就是 #1677ff），这是官方设定，不是偷懒。</p>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>七、中性色<span class="hint">官方按透明度实现，不是固定灰阶</span></h2><div class="body">
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin-bottom:14px">官方原文：<b>「Ant Design 的中性色在落地的时候是按照透明度的方式实现的」</b>。所以本项目的中性色用 <span class="code">rgba()</span> 而非十六进制灰——这样同一套色值放在白底卡片和浅灰布局底上都成立。官方同时给出深色背景下的对应档（本项目已不用，因为侧栏改为浅色）。</p>
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>用途</th><th>本项目取值</th><th>Token</th></tr></thead>
+<tbody>
+<tr><td>标题 / 一级文本</td><td><span style="display:inline-block;width:14px;height:14px;background:#000000e0;border-radius:2px;vertical-align:-2px"></span> rgba(0,0,0,.88)</td><td><span class="code">colorText</span></td></tr>
+<tr><td>二级文本 / 常规 / 侧栏菜单项</td><td><span style="display:inline-block;width:14px;height:14px;background:#000000a6;border-radius:2px;vertical-align:-2px"></span> rgba(0,0,0,.65)</td><td><span class="code">colorTextSecondary</span></td></tr>
+<tr><td>描述文本 / 弱化 / 侧栏分组标题</td><td><span style="display:inline-block;width:14px;height:14px;background:#00000073;border-radius:2px;vertical-align:-2px"></span> rgba(0,0,0,.45)</td><td><span class="code">colorTextTertiary</span></td></tr>
+<tr><td>禁用文本 / 占位符</td><td><span style="display:inline-block;width:14px;height:14px;background:#00000040;border-radius:2px;vertical-align:-2px"></span> rgba(0,0,0,.25)</td><td><span class="code">colorTextDisabled</span></td></tr>
+<tr><td>一级边框</td><td><span style="display:inline-block;width:14px;height:14px;background:#d9d9d9;border-radius:2px;vertical-align:-2px"></span> #d9d9d9</td><td><span class="code">colorBorder</span></td></tr>
+<tr><td>分隔线</td><td>rgba(5,5,5,.06)　｜　#f0f0f0</td><td><span class="code">colorSplit</span> / <span class="code">colorBorderSecondary</span></td></tr>
+<tr><td>布局背景 / 顶栏底</td><td><span style="display:inline-block;width:14px;height:14px;background:#f5f5f5;border-radius:2px;vertical-align:-2px;border:1px solid #d9d9d9"></span> #f5f5f5　｜　rgba(240,242,245,.4)</td><td><span class="code">colorBgLayout</span> / <span class="code">colorBgHeader</span></td></tr>
+<tr><td>容器背景 / 侧栏底</td><td>#ffffff</td><td><span class="code">colorBgContainer</span></td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;margin-top:16px;line-height:1.8;margin-bottom:10px">官方基础中性色板另有一套 <b>gray-0 ~ gray-12</b> 十三阶固定灰，供不做透明度分层时使用。本项目未采用。</p>
+<div class="sw-grid">
+<div class="sw"><div class="sw-c" style="background:#ffffff"></div><div class="sw-t"><b>gray-0</b><span>#ffffff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#fafafa"></div><div class="sw-t"><b>gray-1</b><span>#fafafa</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#f5f5f5"></div><div class="sw-t"><b>gray-2</b><span>#f5f5f5</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#f0f0f0"></div><div class="sw-t"><b>gray-3</b><span>#f0f0f0</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#d9d9d9"></div><div class="sw-t"><b>gray-4</b><span>#d9d9d9</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#bfbfbf"></div><div class="sw-t"><b>gray-5</b><span>#bfbfbf</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#8c8c8c"></div><div class="sw-t"><b>gray-6</b><span>#8c8c8c</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#595959"></div><div class="sw-t"><b>gray-7</b><span>#595959</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#434343"></div><div class="sw-t"><b>gray-8</b><span>#434343</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#262626"></div><div class="sw-t"><b>gray-9</b><span>#262626</span></div></div>
+</div>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>八、浅色侧栏配色<span style="font-size:12px;font-weight:400;color:#00000073;margin-left:8px">本次改造的核心</span></h2><div class="body">
+
+<div class="sw-grid">
+<div class="sw"><div class="sw-c" style="background:#ffffff;border-bottom:1px solid #f0f0f0"></div><div class="sw-t"><b>侧栏背景</b><span>#ffffff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#e6f4ff"></div><div class="sw-t"><b>当前项底</b><span>#e6f4ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#1677ff"></div><div class="sw-t"><b>当前项文字</b><span>#1677ff</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#ffffff"><span style="display:block;height:100%;background:rgba(0,0,0,.04)"></span></div><div class="sw-t"><b>悬停底</b><span>rgba(0,0,0,.04)</span></div></div>
+</div>
+
+<div class="tbl-wrap" style="margin-top:16px"><table>
+<thead><tr><th>项</th><th>值</th><th>Token</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>侧栏背景</td><td>#ffffff</td><td><span class="code">lightSiderBg</span></td><td>navTheme 取 light 时的侧栏底色</td></tr>
+<tr><td>侧栏宽</td><td>256px</td><td><span class="code">siderWidth</span></td><td>ProLayout 默认值（side 模式）</td></tr>
+<tr><td>侧栏右分隔线</td><td>1px #f0f0f0</td><td><span class="code">colorBorderSecondary</span></td><td>白侧栏与浅灰内容区之间靠它分开</td></tr>
+<tr><td>菜单项常态文字</td><td>rgba(0,0,0,.65)</td><td><span class="code">colorTextMenu</span></td><td>取二级文本档</td></tr>
+<tr><td>菜单项高度</td><td>40px</td><td>—</td><td>antd <span class="code">Menu</span> 的 <span class="code">itemHeight</span> 默认值</td></tr>
+<tr><td>菜单项悬停</td><td>底 rgba(0,0,0,.04)</td><td><span class="code">colorBgMenuItemHover</span></td><td>浅灰底，文字提到一级文本色</td></tr>
+<tr><td><b>当前项</b></td><td>底 <b>#e6f4ff</b> + 字 <b>#1677ff</b> + 字重 500</td><td><span class="code">itemSelectedBg</span> / <span class="code">itemSelectedColor</span></td><td>取 antd <span class="code">Menu</span> 的 light 默认值（blue-0 底 + 主色字）</td></tr>
+<tr><td>分组标题</td><td>12px rgba(0,0,0,.45)</td><td><span class="code">colorTextTertiary</span></td><td>仅云仓管理端有分组；另两端的菜单是平铺</td></tr>
+<tr><td>品牌区</td><td>系统名 16px/600 + 端名 12px 三级文本</td><td>—</td><td>侧栏顶部，下接 1px 分隔线</td></tr>
+</tbody></table></div>
+
+<div class="note warn" style="margin-top:16px"><span class="ico">这里有两套官方值打架，我选了一套</span><span>antd <span class="code">Menu</span> 的 light 默认是 <b>浅蓝底 #e6f4ff + 主色字 #1677ff</b>；而 ProLayout 的 <b>Sider Token</b> 表里写的是 <span class="code">colorBgMenuItemSelected</span> 默认 <b>rgba(0,0,0,.04)</b>、<span class="code">colorTextMenuSelected</span> 默认 <b>rgb(0,0,0)</b>——即<b>浅灰底 + 黑字</b>。两者都是官方原文，冲突来自两套 token 体系。<b>本页取前者（蓝色系）</b>，理由是 ProLayout 的 <span class="code">Menu</span> 本身就是 antd Menu，且「选中即蓝」是 Ant Design 浅色导航的通用语言。这条凭据不够硬，已列入未决项。</span></div>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>九、圆角</h2><div class="body">
+<div class="cols">
+<div class="tbl-wrap"><table>
+<thead><tr><th>用途</th><th>值</th><th>Token</th></tr></thead>
+<tbody>
+<tr><td>口径标 / 继承标 / 小徽标</td><td><b>2px</b></td><td><span class="code">borderRadiusXS</span></td></tr>
+<tr><td>Tag · 选项卡 · 提示条内小块</td><td><b>4px</b></td><td><span class="code">borderRadiusSM</span></td></tr>
+<tr><td>按钮 · 输入框 · 下拉框 · 分页 · 侧栏菜单项</td><td><b>6px</b></td><td><span class="code">borderRadius</span></td></tr>
+<tr><td>卡片 · 弹层 · 抽屉 · 提示条 · 指标卡</td><td><b>8px</b></td><td><span class="code">borderRadiusLG</span></td></tr>
+</tbody></table></div>
+<div>
+<p style="font-size:13px;color:#00000073;line-height:1.8">官方圆角体系由单个种子变量 <span class="code">borderRadius</span> 派生（默认 <b>6</b>），组件再按体量取 LG / SM / XS 档，<b>不需要逐个组件调圆角</b>。项目里对应 CSS 变量 <span class="code">--r-xs / --r-sm / --r / --r-lg</span>。</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+<span style="width:78px;height:48px;background:#e6f4ff;border:1px solid #91caff;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:11px">2px</span>
+<span style="width:78px;height:48px;background:#e6f4ff;border:1px solid #91caff;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px">4px</span>
+<span style="width:78px;height:48px;background:#e6f4ff;border:1px solid #91caff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px">6px</span>
+<span style="width:78px;height:48px;background:#e6f4ff;border:1px solid #91caff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px">8px</span>
+</div>
+</div>
+</div>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十、间距<span class="hint">sizeUnit = 4，全部间距是它的整数倍</span></h2><div class="body">
+<div class="cols">
+<div class="tbl-wrap"><table>
+<thead><tr><th>档</th><th>值</th><th>Token</th><th>典型用途</th></tr></thead>
+<tbody>
+<tr><td>XXS</td><td><b>4px</b></td><td><span class="code">paddingXXS</span></td><td>图标与文字之间</td></tr>
+<tr><td>XS</td><td><b>8px</b></td><td><span class="code">paddingXS</span></td><td>按钮之间、标签内边距左右</td></tr>
+<tr><td>SM</td><td><b>12px</b></td><td><span class="code">paddingSM</span></td><td>卡片内小分区间、表格单元格纵向</td></tr>
+<tr><td>基础</td><td><b>16px</b></td><td><span class="code">padding</span></td><td>模块之间、卡片内边距</td></tr>
+<tr><td>LG</td><td><b>24px</b></td><td><span class="code">paddingLG</span></td><td>卡片内边距、页面主区左右</td></tr>
+<tr><td>XL</td><td><b>32px</b></td><td><span class="code">paddingXL</span></td><td>页面级留白</td></tr>
+</tbody></table></div>
+<div>
+<div class="ruler">
+<div class="rr"><span class="rb" style="width:4px"></span><span class="rt">4px　--sp-xxs</span></div>
+<div class="rr"><span class="rb" style="width:8px"></span><span class="rt">8px　--sp-xs</span></div>
+<div class="rr"><span class="rb" style="width:12px"></span><span class="rt">12px　--sp-sm</span></div>
+<div class="rr"><span class="rb" style="width:16px"></span><span class="rt">16px　--sp</span></div>
+<div class="rr"><span class="rb" style="width:24px"></span><span class="rt">24px　--sp-lg</span></div>
+<div class="rr"><span class="rb" style="width:32px"></span><span class="rt">32px　--sp-xl</span></div>
+</div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin-top:16px">纪律只针对<b>页面级与模块级</b>间距——卡片内边距、模块之间、页面边距，取上表六档。<b>1–3px 的微调是允许的</b>（如标签 <span class="code">padding:1px 8px</span>、图标与文字对齐），官方组件内部同样这么用，不算违规。</p><p style="font-size:13px;color:#00000073;line-height:1.8;margin-top:8px">改造前真正的问题是 <b>13px / 7px / 9px 这类值被用在了模块级间距上</b>。上一轮已把模块级收敛到六档；<b>1–3px 的微调仍有约 180 处保留</b>，集中在描边内边距与图标对齐，未逐条清理。</p>
+</div>
+</div>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十一、尺寸与断点</h2><div class="body">
+<div class="tbl-wrap"><table>
+<thead><tr><th>项</th><th>值</th><th>Token / 来源</th></tr></thead>
+<tbody>
+<tr><td>基础控件高（按钮 / 输入框 / 下拉框）</td><td><b>32px</b></td><td><span class="code">controlHeight</span></td></tr>
+<tr><td>大控件高（登录页输入框与按钮 / 大按钮）</td><td><b>40px</b></td><td><span class="code">controlHeightLG</span></td></tr>
+<tr><td>小控件高（表格内小按钮）</td><td><b>24px</b></td><td><span class="code">controlHeightSM</span></td></tr>
+<tr><td>侧栏菜单项高</td><td><b>40px</b></td><td>antd <span class="code">Menu</span> <span class="code">itemHeight</span></td></tr>
+<tr><td>顶栏高</td><td><b>56px</b></td><td>ProLayout Header Token <span class="code">height</span></td></tr>
+<tr><td>侧栏宽</td><td><b>256px</b></td><td>ProLayout <span class="code">siderWidth</span></td></tr>
+<tr><td>基础字号</td><td><b>14px</b></td><td><span class="code">fontSize</span></td></tr>
+<tr><td>小字号（描述、提示、标签）</td><td><b>12px</b></td><td><span class="code">fontSizeSM</span></td></tr>
+<tr><td>大字号</td><td><b>16px</b></td><td><span class="code">fontSizeLG</span></td></tr>
+<tr><td>行高</td><td><b>1.5714</b></td><td><span class="code">lineHeight</span></td></tr>
+<tr><td>字体族</td><td>系统字体栈，中文优先 PingFang SC / Microsoft YaHei</td><td><span class="code">fontFamily</span></td></tr>
+<tr><td>表格字号</td><td>13px</td><td>介于 SM 与基础之间的紧凑档</td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:16px 0 8px">响应式断点取官方 Grid 的六档（另有 xxxl 1920px）。管理端在 <b>992px</b> 收起侧栏，在 <b>768px</b> 压缩顶栏至 48px 并隐藏操作人姓名。</p>
+<div class="sw-grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
+<div class="sw"><div class="sw-c" style="background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#000000a6;font-family:Consolas,monospace">480</div><div class="sw-t"><b>xs</b><span>480px</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#000000a6;font-family:Consolas,monospace">576</div><div class="sw-t"><b>sm</b><span>576px</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#e6f4ff;display:flex;align-items:center;justify-content:center;color:#0958d9;font-family:Consolas,monospace">768</div><div class="sw-t"><b>md ★</b><span>768px</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#bae0ff;display:flex;align-items:center;justify-content:center;color:#0958d9;font-family:Consolas,monospace">992</div><div class="sw-t"><b>lg ★</b><span>992px</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#91caff;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Consolas,monospace">1200</div><div class="sw-t"><b>xl</b><span>1200px</span></div></div>
+<div class="sw"><div class="sw-c" style="background:#69b1ff;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Consolas,monospace">1600</div><div class="sw-t"><b>xxl</b><span>1600px</span></div></div>
+</div>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十二、组件态色<span class="hint">同一个控件在六种状态下的取色</span></h2><div class="body">
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>状态</th><th>主按钮</th><th>次按钮</th><th>输入框</th><th>侧栏菜单项</th></tr></thead>
+<tbody>
+<tr><td><b>默认</b></td><td>底 #1677ff<br>字 #fff</td><td>底 #fff<br>边 #d9d9d9<br>字 rgba(0,0,0,.88)</td><td>边 #d9d9d9<br>占位 rgba(0,0,0,.25)</td><td>字 rgba(0,0,0,.65)<br>底 #fff</td></tr>
+<tr><td><b>悬停 hover</b></td><td>底 <b>#4096ff</b></td><td>边 #4096ff<br>字 #4096ff</td><td>边 <b>#4096ff</b></td><td>字 rgba(0,0,0,.88)<br>底 rgba(0,0,0,.04)</td></tr>
+<tr><td><b>按下 active</b></td><td>底 <b>#0958d9</b></td><td>边 #0958d9<br>字 #0958d9</td><td>—</td><td>—</td></tr>
+<tr><td><b>聚焦 focus</b></td><td>—</td><td>—</td><td>边 #1677ff<br>外发光 0 0 0 2px rgba(22,119,255,.1)</td><td>—</td></tr>
+<tr><td><b>错误 error</b></td><td>—</td><td>—</td><td>边 <b>#ff4d4f</b><br>聚焦外发光 0 0 0 2px rgba(255,77,79,.1)</td><td>—</td></tr>
+<tr><td><b>选中 selected</b></td><td>—</td><td>—</td><td>—</td><td>底 <b>#e6f4ff</b> + 字 <b>#1677ff</b> + 字重 500<br><span class="tag blue">itemSelectedBg / itemSelectedColor</span></td></tr>
+<tr><td><b>禁用 disabled</b></td><td>禁点<br>字 #fff</td><td>字 rgba(0,0,0,.25)<br>边 #d9d9d9</td><td>底 rgba(0,0,0,.04)<br>字 rgba(0,0,0,.25)</td><td>—</td></tr>
+</tbody></table></div>
+
+<div class="states" style="margin-top:18px">
+<div class="st"><span class="lb">默认</span><span class="btn primary">主要按钮</span></div>
+<div class="st"><span class="lb">悬停 #4096ff</span><span class="btn primary" style="background:#4096ff;border-color:#4096ff">主要按钮</span></div>
+<div class="st"><span class="lb">按下 #0958d9</span><span class="btn primary" style="background:#0958d9;border-color:#0958d9">主要按钮</span></div>
+<div class="st"><span class="lb">禁用</span><span class="btn primary" style="background:#a0c4ff;border-color:#a0c4ff">主要按钮</span></div>
+</div>
+
+<div class="states" style="margin-top:16px">
+<div class="st"><span class="lb">次按钮 · 默认</span><span class="btn">次按钮</span></div>
+<div class="st"><span class="lb">次按钮 · 悬停</span><span class="btn" style="border-color:#4096ff;color:#4096ff">次按钮</span></div>
+<div class="st"><span class="lb">输入框 · 聚焦</span><span class="ctl" style="border-color:#1677ff;box-shadow:0 0 0 2px rgba(22,119,255,.1);color:#00000040;width:150px">请输入</span></div>
+<div class="st"><span class="lb">输入框 · 错误</span><span class="ctl" style="border-color:#ff4d4f;color:#00000040;width:150px">请输入</span></div>
+</div>
+
+<p style="margin-top:22px"><b>可填态控件：两个类，两种语义</b></p>
+<div class="tbl-wrap"><table><thead><tr><th>类</th><th>是什么</th><th>表达什么</th><th>用在哪</th></tr></thead><tbody>
+<tr><td><span class="code">.ctl</span></td><td>静态 <span class="code">div</span></td><td>「原型中这里是只读展示」</td><td>筛选条 · 只读值 · 详情</td></tr>
+<tr><td><span class="code">.in</span></td><td>真 <span class="code">input / select / textarea</span></td><td>「这里可填，且有校验」</td><td>新建 / 编辑表单</td></tr>
+</tbody></table></div>
+<div class="states" style="margin-top:16px">
+<div class="st"><span class="lb">真输入 · 默认</span><input class="in" style="width:170px" placeholder="请输入"></div>
+<div class="st"><span class="lb">真输入 · 错误</span><input class="in bad" style="width:170px" placeholder="请输入"></div>
+<div class="st"><span class="lb">真下拉</span><select class="in" style="width:170px"><option>云仓打印</option><option>货主提供</option></select></div>
+<div class="st"><span class="lb">真多选组</span><span class="checks"><label><input type="checkbox" checked>上门揽件</label><label><input type="checkbox">送指定站点</label></span></div>
+</div>
+<div class="note info" style="margin-top:16px"><span class="ico">两个类的尺寸同源，不得混用</span><span>尺寸取同一套值（最小高 <span class="code">32px</span> · 内边距 <span class="code">5px 11px</span> · 字号 <span class="code">13px</span>），交互态取上表「输入框」列。<b>出现缘起</b>：新建仓与物流渠道两个页面需要表单校验，而校验必须有可填控件才能成立——此前全库 57 页只有三端登录页各有真输入框，管理端页面一律是 <span class="code">.ctl</span> 展示态。<b>两者只在「有没有校验」上分家</b>：可填必须有校验，因此只出现在新建 / 编辑表单；筛选条与详情仍用 <span class="code">.ctl</span>，不因本次新增而改写。</span></div>
+<div class="note warn" style="margin-top:18px"><span class="ico">一处需要你知道的保留项</span><span><b>主按钮的禁用底色 #a0c4ff 是按主色浅化取的，不是官方 Token。</b>官方 Seed Token 表里只给了禁用文字色 <span class="code">colorTextDisabled</span>（rgba(0,0,0,.25)）与禁用背景 <span class="code">colorBgContainerDisabled</span>（rgba(0,0,0,.04)），主按钮禁用态的复合底色未在官方文档中单列。这条标记为<b>待核</b>。</span></div>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十三、关键视觉样式要点<span class="hint">六条被落成硬规则的</span></h2><div class="body">
+<div class="tbl-wrap"><table>
+<thead><tr><th>#</th><th>要点</th><th>取法与理由</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><b>侧栏浅色，当前项用浅蓝底 + 主色文字</b></td><td>antd <span class="code">Menu</span> 的 light 默认（itemSelectedBg / itemSelectedColor）。不用左侧竖条，不用仅改字色</td></tr>
+<tr><td>2</td><td><b>顶栏与内容区同底色，侧栏用容器色上浮</b></td><td>靠色彩层次区分区域，而不是靠深色块对冲。顶栏与侧栏之间只留 1px 分隔线</td></tr>
+<tr><td>3</td><td><b>筛选条卡片不带标题</b>，标签与控件同行，查询/重置按钮另起一行</td><td>筛选区本身可辨识，标题是冗余信息</td></tr>
+<tr><td>4</td><td><b>表格表头底色 #fafafa（gray-1），13px 字号，行悬停同色</b></td><td>比正文小一档以容纳更多列；表头不用主色底，避免与「选中」语义冲突</td></tr>
+<tr><td>5</td><td><b>指标卡数字 24px / 600 / 表格数字等宽</b>，且必须带口径标签</td><td>02-2 §7.2 原则 2：禁止裸数字。等宽数字防止纵向跳动</td></tr>
+<tr><td>6</td><td><b>卡片用描边不用阴影</b>：1px #f0f0f0 + 圆角 8px</td><td>阴影只留给弹层（Drawer / Modal），平铺卡片用描边，避免层级混乱</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十四、主从展开表格</h2><div class="body">
+<div class="tbl-wrap"><table>
+<thead><tr><th style="width:34px"></th><th>单号 / 订货单号</th><th>入库类型</th><th>仓库 / 库区</th><th>入库状态</th><th class="num">数量</th><th>操作</th></tr></thead>
+<tbody>
+<tr class="row-main open"><td>▾</td><td><b>RK20260925001</b><br><span style="font-size:12px;color:#00000073">单号：RK09082046</span></td><td><span class="tag blue">采购入库</span></td><td>上海云仓 · 冷藏区</td><td><span class="tag green">已入库</span></td><td class="num">998</td><td><span class="ops"><a href="#">修改</a><a href="#">收货</a><a href="#">打印</a></span></td></tr>
+<tr class="row-sub"><td colspan="7">
+<div class="sub-card">
+<div class="sub-title">商品明细</div>
+<table>
+<thead><tr><th>商品名称</th><th>规格</th><th>库区</th><th class="num">数量</th><th class="num">单价</th><th>批次</th><th>生产日期</th><th>过期日期</th></tr></thead>
+<tbody>
+<tr><td>某护肤精华</td><td>30ml</td><td>A1</td><td class="num">100</td><td class="num">¥0.00</td><td>B2609</td><td>2026-08-30</td><td>2028-08-29</td></tr>
+<tr><td>某面膜</td><td>十片装</td><td>A1</td><td class="num">300</td><td class="num">¥0.00</td><td>B2609</td><td>2026-08-30</td><td>2028-08-29</td></tr>
+<tr><td>某洁面乳</td><td>120g</td><td>A3</td><td class="num">598</td><td class="num">¥0.00</td><td>B2610</td><td>2026-08-30</td><td>2028-08-29</td></tr>
+</tbody></table>
+</div>
+</td></tr>
+</tbody></table></div>
+<p style="font-size:13px;color:#00000073;margin-top:14px;line-height:1.8">主行（<span class="code">row-main</span>）承载单据级信息，展开后子行（<span class="code">row-sub</span>）承载货品级明细。对应 <span class="code">Table</span> 组件的 <span class="code">expandable</span> 与嵌套表格。子表底色取 gray-1 #fafafa，与主表拉开一层。</p>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十五、筛选条的实际形态</h2><div class="body">
+<div class="card search" style="border-radius:8px">
+<div class="body">
+<div class="form">
+<div class="field"><label>货主</label><div class="ctl sel">全部</div></div>
+<div class="field"><label>仓</label><div class="ctl sel">全部</div></div>
+<div class="field"><label>时间范围</label><div class="ctl sel">2026-09-01 ~ 2026-09-25</div></div>
+<div class="field"><label>业务功能 / 温区 / 监管域</label><div class="ctl sel">全部</div></div>
+</div>
+<div class="btns"><span class="btn primary">查询</span><span class="btn">重置</span></div>
+</div></div>
+<p style="font-size:13px;color:#00000073;margin-top:12px;line-height:1.8">筛选条：卡片无标题，标签与控件同行，查询/重置按钮另起一行并用分隔线与条件区隔开。上方正是「经营看板」页的筛选条原样。</p>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十六、弹出提示：点击后悬浮静止触发<span class="hint">替代原「弹层内容预览」</span></h2><div class="body">
+
+<div class="note danger"><span class="ico">要求</span><span>原型里<b>不再实现弹层的内容预览效果</b>——不再用虚线框把 Drawer / Modal 的完整内容平铺在页面上。改为真实浮层：<b>点击按钮后，当鼠标悬浮并保持静止时，才触发弹出提示。</b></span></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:14px 0">这条改动的官方依据不是审美，是组件定位。Ant Design 对 <span class="code">Tooltip</span> 的定义原文：<b>「鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作」</b>，用途是<b>「提供一个按钮 / 文字 / 操作的文案解释」</b>。把整张表单铺进浮层，本身就超出它的承载范围。</p>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">一、触发条件：三重叠加，缺一不触发</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="width:34px">#</th><th>条件</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><b>元素带提示结构</b></td><td>没有提示内容的元素不参与判定，鼠标停留再久也不弹</td></tr>
+<tr><td>2</td><td><b>该元素被点击过</b></td><td>未点击过的按钮，悬浮静止也不弹——<b>没被用过的操作不主动打扰</b>。点击一旦发生，该元素即进入「可提示」状态并保持（移出后不撤销）</td></tr>
+<tr><td>3</td><td><b>鼠标在元素内累计静止 ≥ 400ms</b></td><td>位移超过阈值即清零重启，见下节</td></tr>
+</tbody></table></div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:10px 0 0">第 2 条的来由：点击发生时鼠标必然已在按钮上，因此「点击后」与「悬浮」不是两个先后动作，而是<b>同一次停留</b>——点完手不划走，提示才浮出；点完立刻划走则不打扰。</p>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">二、悬浮静止的判定方式</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>项</th><th>取值</th><th>判定规则</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>静止计时阈值</td><td><b>400ms</b></td><td>鼠标进入或位移重启后，连续静止满 400ms 才显示</td><td><span class="tag red">本项目取值</span></td></tr>
+<tr><td>位移阈值</td><td><b>4px</b></td><td>连续两次 <span class="code">mousemove</span> 的坐标差 ≤ 4px 视为「未移动」；<b>超过即清零重启计时</b>，已在显示状态的立即收起</td><td><span class="tag red">本项目取值</span></td></tr>
+<tr><td>官方的移入延迟</td><td>0.1 秒</td><td>官方 <span class="code">mouseEnterDelay</span> 默认值——<b>只防抖动，不判静止</b>。本项目在它之上另加静止判定</td><td><span class="tag green">官方</span></td></tr>
+</tbody></table></div>
+<div class="note warn" style="margin-top:12px"><span class="ico">必须说清的边界</span><span><b>官方没有「静止」这个参数。</b><span class="code">mouseEnterDelay</span> 表达的是「移入后延迟多久显示」，鼠标在元素内部怎么动它都不管；官方也不区分「停住」与「划过」。<b>400ms 与 4px 是本项目自定的两个数</b>，没有官方出处，也没有用户测试支撑——它们是这条规则的实现参数，不是设计定论。</span></div>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">三、鼠标移动或移出时的消失时机</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>事件</th><th>动作</th><th>延时</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>鼠标<b>移出</b>触发元素</td><td>隐藏</td><td><b>100ms</b></td><td><span class="tag green">官方 mouseLeaveDelay 默认值</span></td></tr>
+<tr><td>100ms 内又移回</td><td><b>不隐藏</b>，保持原状态</td><td>—</td><td>100ms 窗口的容错效果</td></tr>
+<tr><td>鼠标在元素内<b>移动超过 4px</b></td><td>立即隐藏；若仍停留在元素上，<b>重新开始 400ms 计时</b></td><td>0</td><td><span class="tag red">本项目</span></td></tr>
+<tr><td>页面滚动</td><td>隐藏全部提示</td><td>0</td><td><span class="tag orange">推论</span>：绝对定位会随滚动失真</td></tr>
+<tr><td>按下 <span class="code">Esc</span></td><td>隐藏全部提示</td><td>0</td><td><span class="tag orange">推论</span>：与弹层的关闭习惯一致</td></tr>
+</tbody></table></div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:10px 0 0"><b>移动与移出是两件事</b>：移出是「离开元素」，延时 100ms 给容错；移动是「还在元素上但手在动」，<b>立即消失且计时归零</b>——所以停一下又动，计时会从零重来，不会因为总停留时间长而误弹。</p>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">四、与其他触发方式的区别</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>触发方式</th><th>官方支持</th><th>触发条件</th><th>误触风险</th><th>键盘可达</th><th>本项目</th></tr></thead>
+<tbody>
+<tr><td><span class="code">hover</span>　<b>官方 trigger 默认值</b></td><td>✓</td><td>鼠标移入即显示（延迟 0.1s）</td><td><b>高</b>——划过就弹，表格密集按钮区尤其扰人</td><td>否（官方默认不含 <span class="code">focus</span>）</td><td>✗ 不用</td></tr>
+<tr><td><span class="code">click</span></td><td>✓</td><td>点击即显示</td><td>无</td><td>是</td><td>部分——只作前置条件</td></tr>
+<tr><td><span class="code">focus</span></td><td>✓</td><td>键盘聚焦即显示</td><td>无</td><td><b>是</b></td><td>✗ 未做</td></tr>
+<tr><td><span class="code">contextMenu</span></td><td>✓</td><td>右键</td><td>无</td><td>否</td><td>✗ 不用</td></tr>
+<tr><td><b>点击 + 悬浮静止</b></td><td><b>✗ 组合用法</b></td><td>点击过 <b>且</b> 静止 400ms</td><td><b>最低</b>——两个条件都满足才显示</td><td>否</td><td><b>✓ 本项目</b></td></tr>
+</tbody></table></div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:10px 0 0">官方 <span class="code">trigger</span> 支持数组，可写成 <span class="code">['hover','focus']</span> 以同时支持键盘。本项目若要键盘可达，应补 <span class="code">focus</span> 触发并在其上同样施加静止判定——<b>当前未做</b>。</p>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">五、视觉规格：全部取自官方 Token</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>项</th><th>值</th><th>Token / 来源</th></tr></thead>
+<tbody>
+<tr><td>背景</td><td><span style="display:inline-block;width:14px;height:14px;background:rgba(0,0,0,.85);border-radius:2px;vertical-align:-2px"></span> rgba(0,0,0,.85)</td><td><span class="code">colorBgSpotlight</span>（官方原文：该色目前只用在 Tooltip 的背景色上）</td></tr>
+<tr><td>文字</td><td>#ffffff</td><td><span class="code">colorTextLightSolid</span></td></tr>
+<tr><td>最大宽度</td><td>250px</td><td>Tooltip 组件 Token <span class="code">maxWidth</span></td></tr>
+<tr><td>内边距</td><td>8px 12px</td><td><span class="code">paddingXS</span> / <span class="code">paddingSM</span></td></tr>
+<tr><td>圆角</td><td>6px</td><td><span class="code">borderRadius</span></td></tr>
+<tr><td>箭头</td><td>8px 边框，指向目标中心</td><td>组件 Token <span class="code">sizePopupArrow</span> = 16</td></tr>
+<tr><td>层级</td><td>1070</td><td>组件 Token <span class="code">zIndexPopup</span></td></tr>
+<tr><td>动效</td><td>0.2s <span class="code">cubic-bezier(.08,.82,.17,1)</span></td><td><span class="code">motionDurationMid</span> / <span class="code">motionEaseOutCirc</span></td></tr>
+<tr><td>位置</td><td>上方居中，贴边自动翻转</td><td><span class="code">placement</span> 默认 <span class="code">top</span></td></tr>
+<tr><td><b>阴影</b></td><td><b>不用阴影</b></td><td><span class="tag orange">本项目</span>：深色底自带对比，官方未为 Tooltip 指定阴影</td></tr>
+</tbody></table></div>
+
+<div class="states" style="margin-top:56px;padding-top:16px">
+<div class="st"><span class="lb">常态 · 不显示</span><span class="poptip"><span class="btn">套用</span><span class="poptip-b">3 组目标中 1 组将被覆盖，原有手改丢失</span></span></div>
+<div class="st"><span class="lb">触发后 · 静止 400ms</span><span class="poptip on"><span class="btn">套用</span><span class="poptip-b">3 组目标中 1 组将被覆盖，原有手改丢失</span></span></div>
+</div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:14px 0 0">右侧是真实浮层原样（本页内联了同一份样式，不依赖脚本）。实际页面里它由内联脚本按上述四条时机控制显隐。</p>
+
+<p style="font-size:13px;font-weight:600;color:#000000e0;margin:18px 0 8px">六、落地范围</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>页</th><th>提示挂在哪</th><th>提示内容（全部来自原弹层或上游条款）</th></tr></thead>
+<tbody>
+<tr><td>仓与基础定义</td><td>「新建仓」按钮</td><td>建仓最小输入 4 项：仓编码 · 仓名称 · 所属经营主体 · 仓型模板，其余可后补</td></tr>
+<tr><td>告警中心</td><td>「处置」（表格首行）</td><td>必须选处置动作，不允许只写备注</td></tr>
+<tr><td>差错成本</td><td>「处置记录」（表格首行）</td><td>处置全过程留痕：登记 → 定责 → 处理 → 闭环 → 回写费用账与库存</td></tr>
+<tr><td>库位容量参数</td><td>「编辑」（表格首行）</td><td>变更原因必填，不提供默认原因</td></tr>
+<tr><td>规则模板与批量套用</td><td>「套用」（表格首行）</td><td>3 组目标中 1 组将被覆盖，原有手改丢失</td></tr>
+<tr><td>调取审批</td><td>「审批」（表格首行）</td><td>导出即失控：批准后片段可自由流转，留痕到此为止</td></tr>
+<tr><td>货主配额</td><td>「编辑」（表格首行）</td><td>改计量口径等于换尺子，历史达成率不可比</td></tr>
+</tbody></table></div>
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:10px 0 0">原 8 处弹层预览已全部删除（含 <b>经营看板</b> 的毛利下钻——该页没有可点的「毛利」元素，原弹层属自说自话，只删不挂）。<b>参数归属</b>：视觉规格与 100ms 移出延时取官方值；<b>400ms 静止、4px 位移、点击前置条件三项是本项目自定</b>。实现方式为页面内联脚本，无外部依赖。</p>
+
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>十七、本次改造覆盖面<span class="hint">相对上一版「深色侧栏 + 多页签」</span></h2><div class="body">
+<div class="tbl-wrap"><table>
+<thead><tr><th>改动对象</th><th>数量</th><th>改了什么</th></tr></thead>
+<tbody>
+<tr><td>公共样式表 <span class="code">00-资源\原型样式.css</span></td><td>1 份</td><td>变量层去掉深色侧栏六项、新增浅色侧栏八项与顶栏 token；<b>删除页签栏与折叠按钮的全部规则</b>；顶栏 64→56px、侧栏 200→256px；侧栏加右分隔线</td></tr>
+<tr><td>管理端工作台页面</td><td><b>42 页</b></td><td>货主端 10 · 云仓管理端 16 · 单仓端 16 —— 每页<b>删除页签栏与折叠按钮</b>、侧栏品牌区改为「系统名 + 端名」、删除重复的端名徽标、侧栏底部内联白字改为 Token 色（浅色下白字会看不见）</td></tr>
+<tr><td>规范页</td><td>1 页</td><td>本页——布局结构、侧栏配色、模块表、组件态色、改造覆盖面与反方全部按新形态重写</td></tr>
+<tr><td>登录页 · 手持端 · index</td><td>13 页</td><td><b>未改结构</b>，仅随变量层更新配色。登录页第 7 节口径未动；手持端不属于 Ant Design Pro 适用范围（02-2 §7）；index 是原型导航页，不是真实系统页面</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- ============================================================ -->
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px">
+<h2>十八、登录态与权限显隐<span class="hint">云仓管理端专用：不同账号看到不同界面</span></h2><div class="body">
+
+<div class="note info"><span class="ico">缘起</span><span>云仓管理端要演示「客服跟单」与「仓负责人」看到的菜单不一样。这是原型的<b>第四类脚本</b>（<span class="code">原型体例.md §五.2</span>，2026-09-26 Martin 批准新增）。<b>其余三端不做。</b></span></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:16px 0 10px">它的规则只有三条：</p>
+
+<div class="tbl-wrap"><table>
+<thead><tr><th>规则</th><th>取值</th><th>为什么</th></tr></thead>
+<tbody>
+<tr><td><b>读不到登录态时</b></td><td><b>按全量显示</b></td><td>为的是保住 <span class="code">原型体例.md §五.1</span>「双击任一页即可打开」。直接双击某页＝没有登录态＝看到全部菜单</td></tr>
+<tr><td><b>无权限的菜单项</b></td><td><b>隐藏</b>（不渲染）</td><td>不置灰——置灰会暴露「系统里有这个功能」。与 <span class="code">权限与角色.html</span> 现有提示语「未勾选即不可见——包括菜单与按钮」一致</td></tr>
+<tr><td><b>分组标题</b></td><td>组内项<b>全被隐藏时，组标题一并隐藏</b></td><td>否则侧栏上会挂着一个空标题</td></tr>
+</tbody></table></div>
+
+<p style="font-size:13px;color:#00000073;line-height:1.8;margin:16px 0 10px"><b>挂什么属性</b>——菜单项与页内按钮各挂一个 <span class="code">data-perm</span>，取值就是动作名（清单见 <span class="code">设计文档\02-5</span> §4.4）：</p>
+
+<div class="fig"><div style="font-size:12px;line-height:2.1;font-family:Consolas,Monaco,monospace;color:#000000a6;padding:12px 16px;background:#f5f5f5;border-radius:8px">
+&lt;li <b style="color:#1677ff">data-perm="经营看板"</b>&gt;&lt;a href="经营看板.html"&gt;经营看板&lt;/a&gt;&lt;/li&gt;<br>
+&lt;a class="btn" <b style="color:#1677ff">data-perm="计费规则.编辑"</b>&gt;新增计费规则&lt;/a&gt;
+</div></div>
+
+<div class="note warn" style="margin-top:16px"><span class="ico">它不该被用来做什么</span><span>不得用于计算、网络请求、路由跳转、动画。<b>权限显隐只改「显示与否」，不改控件形态</b>——被隐藏的菜单项与按钮仍然是展示态的普通链接。另有一处必须承认的副作用：<b>同一个页面会出现两种样子</b>——从登录页点进去是客服视图，直接双击打开是全量视图，评审者可能以为原型做坏了，见未决项 新-14。</span></div>
+
+</div></div>
+
+<div class="card" style="margin-top:20px"><h2>反方审查</h2><div class="body">
+<div class="note danger"><span class="ico">1</span><span><b>「按 Pro 默认审美走」这条指令，我在 layout 上打了折。</b>Pro 脚手架 <span class="code">config/defaultSettings.ts</span> 的默认是 <span class="code">layout:'mix'</span>，我做的是 <span class="code">side</span>。理由（货主端与单仓端没有二级菜单依据）是事实，但<b>我实际上是用「不编造」的纪律换掉了「按默认」的指令</b>。真正的默认不是 side。要按字面执行，得先给两端定分组。<b>这条我反驳不了，接受</b>——但这是一处需要你知道的偏离，不是我偷偷改的。</span></div>
+<div class="note danger"><span class="ico">2</span><span><b>删页签栏对云仓管理端可能是净损失。</b>16 个页面、4 个分组的管理端，页签栏是真实有用的（老板在几个看板间反复跳）。「Pro 默认没有」不等于「对该端无用」——<span class="code">PageContainer</span> 的多页签本就是 Pro 提供的<b>可选</b>能力，默认关闭不等于不该开。我用「三端统一」换掉了「单端有用」。<b>这条有道理。</b></span></div>
+<div class="note danger"><span class="ico">3</span><span><b>42 页里有一半的改动收益仍然不可见。</b>云仓管理端 16 页是深化过的，换色后确实更干净；但货主端 10 页和单仓端 16 页<b>内容还是骨架</b>，这次只是把深色壳换成浅色壳。等它们填充内容时，「骨架配不上皮肤」的问题还会再出现一次。</span></div>
+<div class="note danger"><span class="ico">4</span><span><b>顶栏底色我取的是官方 token 值，但没实际渲染验证过。</b><span class="code">colorBgHeader</span> 默认 <b>rgba(240,242,245,.4)</b> 是一个接近布局底色的浅灰，叠在 <span class="code">#f0f2f5</span> 上几乎不显色。它和纯白侧栏形成的层次<b>理论上成立、观感上我没看过</b>。官方 token 表给的值未必等于 Pro 预览站的实际观感。<b>这条我没法自证，需要你开一页看一眼。</b></span></div>
+<div class="note danger"><span class="ico">5</span><span><b>折叠按钮我是删掉的，不是做真的。</b>这是把「死控件」的问题转成了「缺功能」。Pro 的 side 布局默认有收起按钮，删掉之后顶栏左侧只剩面包屑，<b>和 Pro 默认并不完全一致</b>。删比留死的好，但不等于解决了。</span></div>
+<div class="note danger"><span class="ico">6</span><span><b>菜单项选中态，我在两份官方文档之间做了取舍。</b>antd <span class="code">Menu</span> 的 light 默认是蓝底蓝字；ProLayout 的 Sider Token 默认是灰底黑字。两个值都是官方原文，冲突来自两套 token 体系。我按「浅色导航应是蓝色系」的直觉选了前者——<b>这是直觉，不是硬依据。</b></span></div>
+<div class="note danger"><span class="ico">7</span><span><b>「不要写说明」这件事，我用了这一页最长的一段话去规定。</b>三类判据 + 三行对照表 + 三条推论 + 一段边界说明，全在讲「少说废话」。<b>这是自指的矛盾，我承认。</b>缓解的办法是它只在规范页出现这一次；<b>一旦它开始被各页援引当挡箭牌，就说明这条规则已经失效。</b>另有一条更实的：<b>三分判据是我推的，不是 Martin 给的</b>——他只说「非必要的不展示」。判据若划偏，「服务评审者」这条会把该留的东西一并划出去。</span></div>
+<div class="note danger"><span class="ico">8</span><span><b>「点击之后」这个前置条件是照字面读的，但这条要求也可能读成「取消点击、改为纯悬停静止」。</b>两种读法只差一个 <span class="code">armed</span> 判断，我选了字面读法并把它写进了规则。<b>如果本意是纯悬停，这条规则错了一半</b>——而字面读法下，「点击」其实只影响第一次，因为该状态移出后不撤销，之后与纯悬停无异。<b>这条我反驳不了，已列未决项新-9。</b></span></div>
+<div class="note danger"><span class="ico">9</span><span><b>400ms 与 4px 是我拍的整数，没有任何依据。</b>官方对「移入延迟」给的是 0.1 秒，比我的静止阈值短 4 倍；我没有任何用户测试数据支撑「静止多久算静止」。这两个数一旦进了规范，就会被当成定论使用——<b>它们是实现参数，不是设计结论</b>，页内已标注，但这不代表问题解决了。</span></div>
+<div class="note danger"><span class="ico">10</span><span><b>删掉的 8 处弹层里，有两处的信息在原型里再无呈现。</b>「差错处置时间轴」（登记 → 定责 → 处理 → 闭环 → 回写）是 <span class="code">01 §2.2</span> 差错闭环的界面表达；「毛利下钻」是 <span class="code">01 §2.3.1</span>「按货主切片」的界面表达。我给差错成本挂了一句提示，但那是压缩成一句话，<b>不是等价替换</b>；毛利下钻则完全没有替代物。<b>这是信息的净损失，我承认。</b></span></div>
+<div class="note danger"><span class="ico">11</span><span><b>7 个提示点全是「每页第一个」同名按钮。</b>表格里「编辑」「套用」「处置」每行都有，我只给第一行挂了提示——<b>设计上要求一致，实现上不一致</b>。同一列第 2 行之后点开不会有任何反应，会让人以为提示是随机的。</span></div>
+<div class="note danger"><span class="ico">12</span><span><b>内联脚本 7 份重复，没有任何同步机制。</b>改一个参数要改 7 处，将来推广到货主端与单仓端就是 42 处。<b>这是明确的技术债</b>，我选了内联是为了不新增文件（文件治理 §六），代价已经写在未决项新-11。</span></div>
+<div class="note danger"><span class="ico">13</span><span><b>防裁切依赖 <span class="code">:has()</span>。</b>卡片与表格容器都带 <span class="code">overflow</span>，浮层靠 <span class="code">.card:has(.poptip.on){overflow:visible}</span> 才不被切掉。<b>该选择器在旧浏览器上不支持时，浮层会被裁掉一半且没有任何回退</b>。我没有做特性检测或回退样式。还有一层副作用：这条规则一启用，<b>整张卡片的圆角裁切同时失效</b>——提示显示的那几百毫秒里，卡片内的表格直角会从圆角里露出来。</span></div>
+<div class="note danger"><span class="ico">14</span><span><b>权限显隐让云仓管理端的每一页多一段逐字复制的脚本</b>，而「双击打开即全量」本身就是一处不一致。这段脚本和侧栏导航一样是复制品——改一个参数要改二十多处。更难受的是语义：<b>同一个页面在两种入口下有两种样子</b>，而原型原本只该有一种样子。我选「读不到登录态就全量显示」来保住可打开性，但那只是<b>把不一致藏起来，不是消除它</b>。这条我反驳不了，接受。缓解手段只有一条：这段脚本必须压到最短，且只做一件事。</span></div>
+</div></div>
+
+<!-- ============================================================ -->
+<div class="card" style="margin-top:16px"><h2>未决项</h2><div class="body">
+<div class="tbl-wrap"><table>
+<thead><tr><th>#</th><th>未决的</th><th>卡住什么</th></tr></thead>
+<tbody>
+<tr><td>新-1</td><td><b>布局形态是否要改成 <span class="code">mix</span></b>（顶部一级 + 侧边二级）</td><td>反方 1。若要走字面默认，需先给货主端（10 页）与单仓端（16 页）定分组——目前它们的侧栏是单一平铺列表，无分组依据</td></tr>
+<tr><td>新-2</td><td><b>侧栏菜单选中态取哪一套</b>：antd Menu 的蓝底蓝字，还是 ProLayout Sider Token 的灰底黑字</td><td>反方 6。本页取了前者，凭据不硬</td></tr>
+<tr><td>新-3</td><td><b>页签栏是否对云仓管理端单独恢复</b></td><td>反方 2。影响 16 页是否需要回加页签栏</td></tr>
+<tr><td>新-4</td><td><b>顶栏浅灰底色的实际观感是否可接受</b></td><td>反方 4。需实际打开页面确认，或改回容器色 #ffffff</td></tr>
+<tr><td>新-5</td><td><b>「辅助色」指的是哪一个</b>——主色衍生色阶 / 功能色 / 次要操作色？</td><td>第六节已给出三种映射，需挑一个，否则后续页面可能各取一套</td></tr>
+<tr><td>新-6</td><td><b>主按钮禁用底色的官方值</b></td><td>第十二节的「待核」项，需查官方 Button 组件 Token 表补齐</td></tr>
+<tr><td>新-7</td><td><b>侧栏在 992px 以下直接隐藏是否可接受</b></td><td>当前窄屏无导航入口，未做抽屉式导航（Pro 默认是自动收起为图标栏，非隐藏）</td></tr>
+<tr><td><b>新-8</b></td><td><b>原型页面按本节判据的清理</b> <span class="tag green">2026-09-26 已执行</span></td><td><b>删除</b>：提示条 94 条 · 卡片副标题 14 条 · 标题区依据标签 42 处 · 面向角色说明 44 处 · 折叠块 16 处（含两端登录页「原型专用」说明区）· 登录页品牌要点 2 组 · 内联条款标注 39 处（卡片副标题 10 · 字段说明 9 · 正文表格 20）。<br><b>保留</b>：服务使用者的业务信息——提示条 10 条（弹层内操作后果、货主侧操作规则）· 字段说明 44 处 · 卡片副标题 27 处。<br><b>依据的落点</b>：不在页面内，由各端 <span class="code">index.html</span> 的页面清单集中登记。</td></tr>
+<tr><td><b>新-9</b></td><td><b>「点击后」是否为必要条件</b>：是「点击过才可提示」（当前实现），还是「取消点击、纯悬停静止」</td><td>反方 8。两种实现只差一个判断，但规则表述不同；另需定「点击过的状态」是否移出后保持</td></tr>
+<tr><td><b>新-10</b></td><td><b>静止阈值 400ms 与位移阈值 4px 是否采用</b></td><td>反方 9。无官方出处、无测试数据，纯取值</td></tr>
+<tr><td><b>新-11</b></td><td><b>内联脚本是否抽为 <span class="code">00-资源\原型交互.js</span></b></td><td>反方 12。当前 7 页各内联一份，改参数要改 7 处；抽出则新增文件，需按 §六 报备</td></tr>
+<tr><td><b>新-12</b></td><td><b>表格同列其余行的按钮是否也挂提示</b></td><td>反方 11。当前只挂首行</td></tr>
+<tr><td><b>新-13</b></td><td><b>是否补键盘可达</b>（<span class="code">focus</span> 触发 + 同样施加静止判定）</td><td>官方 <span class="code">trigger</span> 默认不含 <span class="code">focus</span>，当前提示对键盘用户不可达</td></tr>
+<tr><td><b>新-14</b></td><td><b>评审者如何分辨「权限视图」与「全量视图」</b>：无登录态按全量显示、登录后按权限显示，同一页面两种样子</td><td>反方 14。当前无任何提示，评审者可能以为原型做坏了。是否在云仓管理端的 <span class="code">index.html</span> 留一句极简说明（<b>不放进页面</b>——依第一节，解释性内容服务评审者，应出）</td></tr>
+<tr><td>旧-1</td><td>组件命名的中英混用（<span class="code">CODEBUDDY.md §四</span>「全中文不用英文缩写」vs <span class="code">02-2 §7</span>「统一使用 Ant Design Pro 标准组件名」）</td><td>本页用了 <span class="code">Layout.Sider</span> / <span class="code">Table</span> / <span class="code">Menu</span> 等英文组件名与 token 名。这是最需要裁的一条——<b>建议在 §四 加一句组件名与 token 名的例外</b></td></tr>
+<tr><td>旧-2</td><td>端划分属 03 身份 · 多仓登录主体能否跨法人 · NEW-42 四位置字段 · U7 动作清单精度</td><td>同前几轮，未动</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="note info" style="margin-top:20px"><span class="ico">本页的定位</span><span>这是本工作区<b>第一份样式规范</b>，与 <span class="code">设计文档\</span> 下的业务文档不同类：它只回答「界面长什么样、色值取多少」，不回答业务问题。改了 <span class="code">00-资源\原型样式.css</span> 就要同步改本页——两处不一致，以本页标注的 Ant Design 官方值为准。</span></div>
+
+</div></main>
+</body>
+</html>

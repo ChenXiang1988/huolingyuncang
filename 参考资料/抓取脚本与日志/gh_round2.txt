@@ -1,0 +1,351 @@
+TOTAL: 349
+
+vinta/awesome-python                          | 319970 | Python       | NOASSERTION  | 2026-09-01 | The definitive list that answers "I want to do X in Python, which tool should I use?"
+avelino/awesome-go                            | 183807 | Go           | MIT          | 2026-09-10 | A curated list of awesome Go frameworks, libraries and software
+msitarzewski/agency-agents                    | 151669 | Shell        | MIT          | 2026-09-09 | A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality check
+ripienaar/free-for-dev                        | 137127 | HTML         | None         | 2026-09-10 | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev
+goldbergyoni/nodebestpractices                | 105609 | Dockerfile   | CC-BY-SA-4.0 | 2026-06-15 | ✅ The Node.js best practices list (July 2026)
+punkpeye/awesome-mcp-servers                  |  94803 | None         | MIT          | 2026-09-08 | A collection of MCP servers.
+ruvnet/RuView                                 |  93034 | Rust         | MIT          | 2026-09-11 | π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all wit
+bregman-arie/devops-exercises                 |  84416 | Python       | NOASSERTION  | 2025-12-27 | Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS,
+ComposioHQ/awesome-claude-skills              |  74866 | Python       | None         | 2026-08-10 | A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows
+josephmisiti/awesome-machine-learning         |  74300 | Python       | NOASSERTION  | 2026-09-08 | A curated list of awesome Machine Learning frameworks, libraries and software.
+binhnguyennus/awesome-scalability             |  73854 | None         | MIT          | 2026-01-04 | The Patterns of Scalable, Reliable, and Performant Large-Scale Systems
+prakhar1989/awesome-courses                   |  71054 | None         | None         | 2023-05-04 | :books: List of awesome university courses for learning Computer Science!
+odoo/odoo                                     |  54295 | Python       | NOASSERTION  | 2026-09-11 | Odoo. Open Source Apps To Grow Your Business.
+lukasz-madon/awesome-remote-job               |  48534 | None         | None         | 2026-08-16 | A curated list of awesome remote jobs and resources. Inspired by https://github.com/vinta/awesome-python
+ReactiveX/RxJava                              |  48203 | Java         | Apache-2.0   | 2026-09-08 | RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequence
+jeecgboot/JeecgBoot                           |  47743 | Java         | Apache-2.0   | 2026-09-11 | 【低代码v2.0，一句话即可生成整个系统】企业级AI低代码平台，一键生成前后端代码甚至整个系统。 AI Skills 一句话画流程、设计表单、生成报表、大屏。内置 AI应用平台涵盖：AI聊天、知识库、流程编排、MCP插件等，兼容主流大模型。引领AI低代码「Sk
+sickn33/agentic-awesome-skills                |  46276 | Python       | MIT          | 2026-09-09 | AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and plan
+frappe/erpnext                                |  39122 | Python       | GPL-3.0      | 2026-09-11 | Free and Open Source Enterprise Resource Planning (ERP)
+open-guides/og-aws                            |  36460 | Shell        | CC-BY-4.0    | 2024-08-16 | 📙 Amazon Web Services — a practical guide
+OpenBMB/ChatDev                               |  34271 | Python       | Apache-2.0   | 2026-07-24 | ChatDev 2.0: Dev All through LLM-powered Multi-Agent Collaboration
+imthenachoman/How-To-Secure-A-Linux-Server    |  31395 | None         | CC-BY-SA-4.0 | 2026-09-07 | An evolving how-to guide for securing a Linux server.
+academic/awesome-datascience                  |  29965 | None         | MIT          | 2026-09-09 | :memo: An awesome Data Science repository to learn and apply for real world problems.
+e2b-dev/awesome-ai-agents                     |  29952 | None         | NOASSERTION  | 2026-08-21 | A list of AI autonomous agents
+donnemartin/data-science-ipython-notebooks    |  29342 | Python       | NOASSERTION  | 2024-03-20 | Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop Map
+TencentCloud/TencentDB-Agent-Memory           |  26357 | TypeScript   | NOASSERTION  | 2026-09-11 | TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory 
+goldbergyoni/javascript-testing-best-practice |  24621 | JavaScript   | MIT          | 2024-06-27 | 📗🌐 🚢 Comprehensive and exhaustive JavaScript & Node.js testing best practices (August 2025)
+nocobase/nocobase                             |  24158 | TypeScript   | NOASSERTION  | 2026-09-11 | NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch
+vxcontrol/pentagi                             |  22941 | Go           | MIT          | 2026-09-10 | Fully autonomous AI Agents system capable of performing complex penetration testing tasks
+marimo-team/marimo                            |  22718 | Python       | Apache-2.0   | 2026-09-11 | A reactive notebook for Python — run reproducible experiments, query with SQL, execute as a script, deploy as an app, and version 
+ossu/data-science                             |  21953 | None         | NOASSERTION  | 2025-05-13 | 📊 Path to a free self-taught education in Data Science!
+EthicalML/awesome-production-machine-learning |  20901 | None         | MIT          | 2026-09-06 | A curated list of awesome open source libraries to deploy, monitor, version and scale your machine learning
+RunaCapital/awesome-oss-alternatives          |  19633 | Python       | MIT          | 2025-09-03 | Awesome list of open-source startup alternatives to well-known SaaS products 🚀
+mahmoud/awesome-python-applications           |  18034 | Jupyter Notebook | None         | 2026-07-11 | 💿 Free software that works great, and also happens to be open-source Python. 
+SimplifyJobs/New-Grad-Positions               |  17953 | None         | None         | 2026-09-11 | A collection of full time roles in SWE, Quant, and PM for new grads.
+dexteryy/spellbook-of-modern-webdev           |  17900 | None         | None         | 2023-12-18 | A Big Picture, Thesaurus, and Taxonomy of Modern JavaScript Web Development
+andkret/Cookbook                              |  15413 | Python       | Apache-2.0   | 2026-07-23 | The Data Engineering Cookbook
+open-metadata/OpenMetadata                    |  15170 | TypeScript   | Apache-2.0   | 2026-09-11 | The Open Context Layer for Data and AI ,  OpenMetadata is the open platform for building trusted data context and business semanti
+chentsulin/awesome-graphql                    |  15113 | None         | None         | 2026-09-10 | Awesome list of GraphQL
+grokability/snipe-it                          |  14929 | PHP          | AGPL-3.0     | 2026-09-11 | A free open source IT asset/license management system
+oxnr/awesome-bigdata                          |  14629 | None         | MIT          | 2026-07-31 | A curated list of awesome big data frameworks, ressources and other awesomeness.
+visenger/awesome-mlops                        |  14192 | None         | None         | 2024-11-21 | A curated list of references for MLOps 
+donnemartin/awesome-aws                       |  14143 | Python       | NOASSERTION  | 2024-03-12 | A curated list of awesome Amazon Web Services (AWS) libraries, open source repos, guides, blogs, and other resources.  Featuring t
+dbt-labs/dbt                                  |  13806 | Rust         | Apache-2.0   | 2026-09-11 | dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build appl
+TonnyL/Awesome_APIs                           |  13112 | None         | CC-BY-SA-4.0 | 2020-02-29 | :octocat: A collection of APIs
+datahub-project/datahub                       |  12680 | Python       | Apache-2.0   | 2026-09-11 | The Context Platform for your Data and AI Stack
+semantica-agi/semantica                       |  12677 | Python       | MIT          | 2026-09-11 | Graph-Native Infrastructure for Context and Accountable AI Systems
+aureuserp/aureuserp                           |  11904 | PHP          | MIT          | 2026-09-11 | Free and Open Source ERP platform
+akaunting/akaunting                           |  10119 | PHP          | NOASSERTION  | 2026-09-11 | Online Accounting Software
+Integerous/goQuality-dev-contents             |  10079 | None         | MIT          | 2025-08-26 | { 고퀄리티 :zap: 개발 컨텐츠 모음 }
+invoiceninja/invoiceninja                     |  10071 | PHP          | NOASSERTION  | 2026-09-11 | A source-available invoice, quote, project and time-tracking app built with Laravel
+awslabs/mcp                                   |   9682 | Python       | Apache-2.0   | 2026-09-11 | Open source MCP Servers for AWS
+MyCATApache/Mycat-Server                      |   9513 | Java         | GPL-2.0      | 2026-05-18 | 
+grocy/grocy                                   |   9479 | Blade        | MIT          | 2026-09-04 | ERP beyond your fridge - Grocy is a web-based self-hosted groceries & household management solution for your home
+databendlabs/databend                         |   9441 | Rust         | NOASSERTION  | 2026-09-11 | Data Agent Ready Warehouse : One for  Analytics, Search, AI, Python Sandbox.  — rebuilt from scratch. Unified architecture on your
+yzhao062/anomaly-detection-resources          |   9379 | Python       | AGPL-3.0     | 2026-03-02 | Anomaly detection related books, papers, videos, and toolboxes. Last update late 2025 for LLM and VLM works!
+AdrienTorris/awesome-blazor                   |   9372 | None         | CC0-1.0      | 2026-09-11 | Resources for Blazor, a .NET web framework using C#/Razor and HTML that runs in the browser with WebAssembly.
+risingwavelabs/risingwave                     |   9316 | Rust         | Apache-2.0   | 2026-09-11 | Event streaming platform for agentic AI. Continuously ingest, transform, and serve event streams in real time, at scale.
+igorbarinov/awesome-data-engineering          |   9039 | None         | CC0-1.0      | 2026-09-07 | A curated list of data engineering tools for software developers
+idurar/idurar-erp-crm                         |   8784 | JavaScript   | AGPL-3.0     | 2026-08-14 | Free Open Source ERP CRM Software Accounting Invoicing | Node.Js React
+yangzongzhuan/RuoYi                           |   8552 | HTML         | MIT          | 2026-09-07 | :tada: (RuoYi)官方仓库 基于SpringBoot的权限管理系统 易读易懂、界面简洁美观。 核心技术采用Spring、MyBatis、Shiro没有任何其它重度依赖。直接运行即可用
+Dolibarr/dolibarr                             |   7598 | PHP          | GPL-3.0      | 2026-09-11 | Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity (contacts, suppliers, invoices, orde
+Dolibarr/dolibarr                             |   7598 | PHP          | GPL-3.0      | 2026-09-11 | Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity (contacts, suppliers, invoices, orde
+inventree/InvenTree                           |   7554 | Python       | MIT          | 2026-09-11 | Open Source Inventory Management System
+frappe/books                                  |   4949 | TypeScript   | AGPL-3.0     | 2026-09-06 | Free Accounting Software
+jishenghua/jshERP                             |   4580 | Java         | Apache-2.0   | 2026-09-11 | 管伊佳ERP（原名华夏ERP）基于SpringBoot框架和SaaS模式，立志为中小企业提供开源好用的ERP软件，目前专注进销存+财务功能。主要模块有零售管理、采购管理、销售管理、仓库管理、财务管理、报表查询、系统管理等。支持预付款、收入支出、仓库调拨、组装拆
+rudderlabs/rudder-server                      |   4485 | Go           | NOASSERTION  | 2026-09-11 | Privacy and Security focused Segment-alternative, in Golang and React  
+geoserver/geoserver                           |   4455 | Java         | NOASSERTION  | 2026-09-11 | Official GeoServer repository
+ever-co/ever-gauzy                            |   4382 | TypeScript   | AGPL-3.0     | 2026-09-11 | Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co
+opensourcepos/opensourcepos                   |   4380 | PHP          | NOASSERTION  | 2026-09-11 | Open Source Point of Sale is a web based point of sale application written in PHP using CodeIgniter framework. It uses MySQL as th
+GreaterWMS/GreaterWMS                         |   4373 | Python       | Apache-2.0   | 2025-09-26 | This Inventory management system is the currently Ford Asia Pacific after-sales logistics warehousing supply chain process . After
+Velocidex/velociraptor                        |   4239 | Go           | NOASSERTION  | 2026-09-10 | Digging Deeper....
+pypi/warehouse                                |   4151 | Python       | Apache-2.0   | 2026-09-11 | The Python Package Index
+mlabouardy/komiser                            |   4141 | Go           | NOASSERTION  | 2026-09-10 | Open-source cloud-environment inspector. Supporting AWS, GCP, Azure, and more! Your cloud resources will have nowhere to hide!
+muxuuu/serenity-skill                         |   3980 | Python       | MIT          | 2026-05-05 | Serenity-inspired Agent Skill for supply-chain bottleneck stock research
+fleetbase/fleetbase                           |   2577 | JavaScript   | AGPL-3.0     | 2026-09-11 | Modular logistics and supply chain operating system (LSOS)
+frappe/frappe_docker                          |   2557 | Python       | MIT          | 2026-09-08 | Docker environment for developing, deploying, and running Frappe applications (ERPNext and custom apps) in production and developm
+allegro/ralph                                 |   2518 | Python       | Apache-2.0   | 2026-09-10 | Ralph is the CMDB / Asset Management system for data center and back office hardware.
+metasfresh/metasfresh                         |   2419 | Java         | None         | 2026-09-11 | We do Open Source ERP - Fast, Flexible & Free Software to scale your Business.
+crbnos/carbon                                 |   2399 | TypeScript   | NOASSERTION  | 2026-09-11 | Carbon is an open source ERP, MES and QMS for manufacturing. Perfect for complex assembly, contract manufacturing, high volume, an
+FJ-OMS/oms-erp                                |   1925 | Java         | Apache-2.0   | 2025-12-24 | 一站式全渠道业务中台系统包括订单管理系统OMS/电商ERP、库存WMS统一管理系统和SAP财务管理系统等，实现快速部署，并帮助企业后续自主进行开发迭代，实现数字化转型，并有多个经典案例。中台系统包括：通用业务中台、强大的技术中台Springcloud/Isti
+VROOM-Project/vroom                           |   1857 | C++          | BSD-2-Clause | 2026-09-08 | Vehicle Routing Open-source Optimization Machine
+ever-co/ever-demand                           |   1850 | TypeScript   | AGPL-3.0     | 2026-08-05 | Ever® Demand™ - Open Commerce Platform - https://everdemand.co
+YetiForceCompany/YetiForceCRM                 |   1792 | PHP          | NOASSERTION  | 2024-09-13 | We've moved! For more information, visit https://github.com/YetiForceCompany/YetiForce
+Part-DB/Part-DB-server                        |   1757 | PHP          | AGPL-3.0     | 2026-09-10 | Part-DB is an Open source inventory management system for your electronic components
+open-mercato/open-mercato                     |   1720 | TypeScript   | MIT          | 2026-09-11 | The AI-Engineering Foundation Framework for CRM/ERP and commerce: open-source TypeScript, with multi-tenancy, RBAC, events and dom
+fjykTec/ModernWMS                             |   1689 | Vue          | Apache-2.0   | 2025-06-22 | The open source simple and complete warehouse management system is derived from our many years of experience in implementing erp p
+openshiporg/openship                          |   1628 | TypeScript   | AGPL-3.0     | 2026-08-25 | multi-channel fulfillment at scale
+steedos/steedos-platform                      |   1576 | TypeScript   | AGPL-3.0     | 2026-09-10 | The AI-Native Infrastructure for Enterprise Apps. Powered by ObjectStack (ObjectQL, ObjectOS, Object UI). Turn Prompts into Enterp
+san089/goodreads_etl_pipeline                 |   1544 | Python       | MIT          | 2020-03-09 | An end-to-end GoodReads Data Pipeline for Building Data Lake, Data Warehouse and Analytics Platform.
+guacsec/guac                                  |   1540 | Go           | Apache-2.0   | 2026-09-11 | GUAC aggregates software security metadata into a high fidelity graph database.
+andrewdwallo/erpsaas                          |   1473 | PHP          | MIT          | 2026-03-05 | A Laravel and Filament-powered accounting platform featuring full double-entry accrual accounting, delivering modern automation fo
+jhipster/jhipster-sample-app                  |   1469 | TypeScript   | Apache-2.0   | 2026-08-30 | This is a sample application created with JHipster
+tensorbase/tensorbase                         |   1460 | Rust         | Apache-2.0   | 2022-05-10 | TensorBase is a new big data warehousing with modern efforts.
+openclarity/openclarity                       |   1459 | Go           | Apache-2.0   | 2026-05-25 | OpenClarity is an open source platform built to enhance security and observability of cloud native applications and infrastructure
+ikatsov/tensor-house                          |   1453 | Jupyter Notebook | Apache-2.0   | 2024-01-24 | A collection of reference Jupyter notebooks and demo AI/ML applications for enterprise use cases: marketing, pricing, supply chain
+TerriaJS/terriajs                             |   1364 | TypeScript   | Apache-2.0   | 2026-09-11 | A library for building rich, web-based geospatial 2D & 3D data platforms.
+pypa/pip-audit                                |   1362 | Python       | Apache-2.0   | 2026-09-09 | Audits Python environments, requirements files and dependency trees for known security vulnerabilities, and can automatically fix 
+ossf/best-practices-badge                     |   1360 | Ruby         | MIT          | 2026-09-11 | 🏆Open Source Security Foundation (OpenSSF) Best Practices Badge (formerly Core Infrastructure Initiative (CII) Best Practices Badg
+osbzr/gooderp_addons                          |   1337 | None         | None         | 2020-08-03 | 可能是中国用户数最多的开源ERP
+go2ismail/Asp.Net-Core-Inventory-Order-Manage |   1289 | C#           | NOASSERTION  | 2026-07-24 | Now upgraded to .NET 9, this project is a super-fast, completely headless API powered by Clean Architecture, CQRS, and MediatR. It
+iTowns/itowns                                 |   1268 | JavaScript   | NOASSERTION  | 2026-09-10 | A Three.js-based framework written in Javascript/WebGL for visualizing 3D geospatial data
+tumic0/GPXSee                                 |   1239 | C++          | GPL-3.0      | 2026-09-10 | GPS log file viewer and analyzer with support for GPX, TCX, KML, FIT, IGC, NMEA, SLF, SML, LOC, GPI, GeoJSON and OziExplorer files
+MrSuiChuan/data-warehouse-learning            |   1236 | Java         | Artistic-2.0 | 2026-04-26 | 【2026最新版】 大数据 数据分析 电商系统 实时数仓 离线数仓 数据湖 建设方案及实战代码，涉及组件 #flink #paimon #doris #seatunnel #dolphinscheduler #datart #dinky #hudi #iceb
+OCA/web                                       |   1223 | JavaScript   | AGPL-3.0     | 2026-09-10 | Odoo web client UI related addons
+MapServer/MapServer                           |   1219 | C            | NOASSERTION  | 2026-09-06 | Source code of the MapServer project.  Please submit pull requests to the 'main' branch.
+dromara/skyeye                                |   1217 | Java         | MIT          | 2026-09-11 | 智能办公OA系统[SpringBoot2-快速开发平台]，适用于医院，学校，中小型企业等机构的管理。Activiti5.22+动态表单实现零java代码即可做到复杂业务的流程实施，同时包含文件在线操作、日志、考勤、CRM、ERP进销存、项目、拖拽式生成问卷、日
+odoo/docker                                   |   1206 | Dockerfile   | NOASSERTION  | 2026-09-08 | 
+sigstore/rekor                                |   1205 | Go           | Apache-2.0   | 2026-09-07 | Software Supply Chain Transparency Log
+zccbbg/wms-ruoyi                              |   1198 | Java         | NOASSERTION  | 2026-03-20 | 若依wms是一套基于若依的wms仓库管理系统，支持lodop和网页打印入库单、出库单。包括仓库/库区/货架管理，出入库管理，客户/供应商/承运商，库存看板、库存记录等功能。
+Viveckh/Veniqa                                |   1190 | JavaScript   | MIT          | 2023-03-02 | MEVN Full Stack E-Commerce Solution. Built using MEVN Stack (Node.js, Express.js, Vue.js, MongoDB) with Developer Friendliness and
+puemos/craftplan                              |   1147 | Elixir       | AGPL-3.0     | 2026-09-05 | Self-hosted software for managing artisanal D2C micro-businesses
+tegojs/tego                                   |   1101 | TypeScript   | Apache-2.0   | 2026-08-14 | Tego is a pluggable Node.js framework for building customizable development platforms. It enables developers to create their own n
+cdxgen/cdxgen                                 |   1065 | JavaScript   | Apache-2.0   | 2026-09-11 | Creates CycloneDX Bill of Materials (BOM) for your projects from source and container images. Supports many languages and package 
+getrebuild/rebuild                            |   1065 | Java         | GPL-3.0      | 2026-09-11 | 最新版全面支持AI智能！通过自然语言操作业务数据，支持 Skills/工具/知识库/MCP。高度可配置化的国产企业管理系统，企业内部可免费商用！零代码/低代码快速搭建WMS库存管理、MES生产报工、CRM客户管理、HRM人事管理，以及 TMS/ERP 等
+endojs/endo                                   |   1054 | JavaScript   | Apache-2.0   | 2026-09-10 | Endo is a distributed secure JavaScript sandbox, based on SES
+in-toto/in-toto                               |   1035 | Python       | NOASSERTION  | 2026-08-27 | in-toto is a framework to protect supply chain integrity.
+yeqifu/warehouse                              |   1027 | Java         | None         | 2026-02-11 | 仓库管理系统
+totumonline/totum-mit                         |    981 | PHP          | MIT          | 2026-05-30 | Small-code database for non-programmers. Universal UI, simple-code logic, automatic actions, access rules, logging, API and more. 
+peter-kish/gloot                              |    972 | GDScript     | MIT          | 2026-07-14 | A universal inventory system for the Godot game engine.
+DataWithBaraa/sql-data-warehouse-project      |    939 | TSQL         | MIT          | 2025-04-23 | A comprehensive guide to building a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics.
+OCA/server-tools                              |    929 | Python       | AGPL-3.0     | 2026-09-11 | Tools for Odoo Administrators to improve some technical features on Odoo.
+microsoft/maro                                |    923 | Python       | MIT          | 2025-04-24 | Multi-Agent Resource Optimization (MARO) platform is an instance of Reinforcement Learning as a Service (RaaS) for real-world reso
+lysilver/KopSoftWms                           |    896 | C#           | MIT          | 2026-06-15 | KopSoft仓库管理系统
+openboxes/openboxes                           |    893 | Groovy       | EPL-1.0      | 2026-09-11 | OpenBoxes is a warehouse management system designed to manage inventory and track stock movements for healthcare facilities.
+abap2xlsx/abap2xlsx                           |    873 | ABAP         | Apache-2.0   | 2026-04-20 | Generate your professional Excel spreadsheet from ABAP
+openeducat/openeducat_erp                     |    870 | HTML         | NOASSERTION  | 2026-09-07 | Comprehensive Open Source ERP for Educational Institutes
+inoerp/inoERP                                 |    839 | JavaScript   | MPL-2.0      | 2023-06-28 | inoERP is an OneApp [ Go back-end & Flutter front-end ] based enterprise management system
+JulietMirambo/Units_of_Measure_Harmonization- |    817 | PowerShell   | Apache-2.0   | 2026-05-21 |    Production-Grade ML System for Automated Unit of Measure Error Detection | 88-92% Accuracy | 94% Autonomy | KNIME Workflow
+apache/ofbiz                                  |    806 | Java         | Apache-2.0   | 2020-04-27 | Apache OFBiz - Main development has moved to the ofbiz-frameworks repository.
+datadrivenconstruction/OpenConstructionERP    |    796 | TypeScript   | AGPL-3.0     | 2026-09-11 | Open-source construction ERP - BOQ, PDF/CAD/BIM takeoff, AI cost matching, 293 guided cases. 55,000 priced positions, 44 languages
+Grashjs/cmms                                  |    770 | TypeScript   | AGPL-3.0     | 2026-09-11 | #1 Self hosted CMMS web & mobile application that allows you to manage enterprise maintenance for free - Computerized Maintenance 
+openwms/org.openwms                           |    731 | Java         | Apache-2.0   | 2026-07-13 | Open Warehouse Management System
+expressobits/inventory-system                 |    730 | C++          | MIT          | 2026-02-20 | Modular inventory system for godot 4 with nodes, compatible with multiplayer, separate logic from the UI, Using items as separate 
+theupdateframework/go-tuf                     |    717 | Go           | Apache-2.0   | 2026-09-08 | Go implementation of The Update Framework (TUF)
+Azure-Samples/modern-data-warehouse-dataops   |    710 | Shell        | MIT          | 2026-02-25 | DataOps for Microsoft Data Platform technologies. https://aka.ms/dataops-repo
+wp-erp/wp-erp                                 |    697 | PHP          | None         | 2026-08-24 | An open-source ERP (Enterprise Resource Planning) solution for WordPress
+PyVRP/PyVRP                                   |    693 | Python       | MIT          | 2026-09-10 | Open-source, state-of-the-art vehicle routing problem solver in an easy-to-use Python package.
+ossillate-inc/packj                           |    691 | Python       | AGPL-3.0     | 2026-09-09 | Packj stops :zap: Solarwinds-, ESLint-, and PyTorch-like attacks by flagging malicious/vulnerable open-source dependencies ("weak 
+mapproxy/mapproxy                             |    671 | Python       | Apache-2.0   | 2026-09-01 | MapProxy is a tile cache and WMS proxy
+idempiere/idempiere                           |    661 | Java         | NOASSERTION  | 2026-09-10 | iDempiere. Community Powered Enterprise.  Full Open Source Business Suite ERP/CRM/MFG/SCM/POS
+ishanvyas22/awesome-open-source-systems       |    653 | None         | WTFPL        | 2026-06-04 | :sunglasses: A curated list of awesome Free Open Source Softwares(FOSS).
+simbafl/DataWarehouse                         |    649 | None         | MPL-2.0      | 2022-01-26 | 从数据仓库到用户画像，从数据建设到数据应用
+francoisjacquet/rosariosis                    |    643 | PHP          | GPL-2.0      | 2026-09-03 | RosarioSIS Student Information System for school management.
+weizhiqiang1995/erp-pro                       |    641 | Java         | MIT          | 2026-09-11 | Skyeye云零代码，采用Springboot + UNI-APP + Ant Design Vue的框架的快速开发平台。包含50多种电子流程，CRM、PM、ERP、MES、ADM、OA、EHR、AI、项目、商城、财务、多班次考勤、薪资、招聘、云售后、论坛、问
+frappe/education                              |    633 | Python       | NOASSERTION  | 2026-09-09 | Open source education / school management system
+youyingxiang/Discover                         |    629 | PHP          | MIT          | 2025-01-22 | Discover 是一个基于 Dcat-admin 开发的进销存系统
+devops-kung-fu/bomber                         |    624 | Go           | MPL-2.0      | 2026-02-10 | Scans Software Bill of Materials (SBOMs) for security vulnerabilities
+flattool/warehouse                            |    620 | Python       | GPL-3.0      | 2026-07-22 | A versatile toolbox for viewing flatpak info, managing user data, and batch managing installed flatpaks
+Forceu/barcodebuddy                           |    604 | PHP          | AGPL-3.0     | 2026-09-03 | Barcode system for Grocy
+ledgersmb/LedgerSMB                           |    565 | Perl         | NOASSERTION  | 2026-09-11 | Double-entry accounting & ERP for the web
+OCA/l10n-spain                                |    560 | Python       | AGPL-3.0     | 2026-09-10 | Odoo Spain Localization
+CycloneDX/specification                       |    547 | XSLT         | Apache-2.0   | 2026-09-10 | OWASP CycloneDX is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk r
+in-toto/witness                               |    544 | Go           | Apache-2.0   | 2026-09-09 | Witness is a pluggable framework for software supply chain risk management.  It automates, normalizes, and verifies software artif
+replaysMike/Binner                            |    535 | C#           | GPL-3.0      | 2026-04-18 | Open source parts inventory system for makers, electronics hobby, and professional engineers
+sigstore/sigstore                             |    533 | Go           | Apache-2.0   | 2026-09-10 | Common go library shared across sigstore services and clients
+earthians/marley                              |    527 | Python       | GPL-3.0      | 2026-09-11 | Open Source, Enterprise and Modern Health Information System
+fajarghifar/inventory-management-system       |    515 | PHP          | None         | 2026-09-07 | ✍Building an Inventory Management System with Laravel 10.
+boostsecurityio/poutine                       |    512 | Go           | Apache-2.0   | 2026-07-09 | poutine, a supply chain vulnerability scanner for build pipelines
+shyamsitaula/samarium                         |    505 | Blade        | MIT          | 2026-05-20 | Open-source business management system with ERP, POS, invoicing, and CMS features. Laravel-based, Docker-ready. Still in active de
+aws-robotics/aws-robomaker-small-warehouse-wo |    491 | CMake        | None         | 2026-07-21 | This Gazebo world is well suited for organizations who are building and testing robot applications for warehouse and logistics use
+vmware-archive/versatile-data-kit             |    489 | Python       | Apache-2.0   | 2026-09-01 | ⛔ [ARCHIVING ON 2026-11-01] One framework to develop, deploy and operate data workflows with Python and SQL.
+facebookresearch/jepa-wms                     |    476 | Python       | NOASSERTION  | 2026-04-11 | Code, data and weights for the paper **What drives success in physical planning with Joint-Embedding Predictive World Models?**
+sandworm-hq/sandworm-audit                    |    474 | JavaScript   | MIT          | 2024-09-01 | Security & License Compliance For Your App's Dependencies 🪱
+siamon123/warehouse-inventory-system          |    465 | PHP          | MIT          | 2021-04-12 | Open source inventory management system with php and mysql
+hubbs5/or-gym                                 |    455 | Python       | MIT          | 2023-10-12 | Environments for OR and RL Research
+socib/Leaflet.TimeDimension                   |    451 | JavaScript   | MIT          | 2026-06-01 | Add time dimension capabilities on a Leaflet map. 
+FeMiner/wms                                   |    439 | PHP          | MIT          | 2021-11-26 | 企业仓库管理系统
+semitable/robotic-warehouse                   |    438 | Python       | MIT          | 2024-09-15 | Multi-Robot Warehouse (RWARE): A multi-agent reinforcement learning environment
+kpcyrd/rebuilderd                             |    428 | Rust         | GPL-3.0      | 2026-09-07 | Independent verification of binary packages - Reproducible Builds
+cosmoscout/cosmoscout-vr                      |    423 | C++          | NOASSERTION  | 2026-09-11 | :milky_way: A virtual universe which lets you explore, analyze and present huge planetary datasets and large simulation data in re
+masagrator/FPSLocker-Warehouse                |    419 | Python       | None         | 2026-09-09 | FPSLocker configs used to make FPSLocker patches
+mindersec/minder                              |    418 | Go           | Apache-2.0   | 2026-09-11 | Software Supply Chain Security Platform
+ossf/scorecard-action                         |    417 | Go           | Apache-2.0   | 2026-09-10 | Official GitHub Action for OpenSSF Scorecard.
+OCA/stock-logistics-warehouse                 |    409 | HTML         | AGPL-3.0     | 2026-09-10 | Odoo Warehouse Management Addons
+freeCodeCamp/pantry-for-good                  |    401 | JavaScript   | NOASSERTION  | 2019-04-29 | An open source food bank logistics and inventory management tool
+boostsecurityio/smokedmeat                    |    378 | Go           | AGPL-3.0     | 2026-08-06 | A CI/CD Red Team Framework for demonstrating Build Pipeline security risks.
+yuqing2026/ruoyi-office                       |    375 | Java         | MIT          | 2026-04-06 | 🔥🔥🔥RuoYi Office 基于 SpringCloud+Vue3+Vben 的中小企业办公一体化平台，涵盖 │🏢 OA协同办公 │💼 HRM人力资源 │🤝 CRM客户管理 │📋 BPM审批流 │🛍️ ERP进销存 │📑 合同管理 │📊 PMS项目管理 │
+BruTile/BruTile                               |    375 | C#           | Apache-2.0   | 2026-05-18 | BruTile is a .NET library to access tile services like those of OpenStreetMap, MapBox or GeodanMaps.
+zccbbg/RuoYi-WMS-VUE                          |    366 | Vue          | NOASSERTION  | 2026-09-08 | 若依wms是一套基于若依的wms仓库管理系统，支持lodop和网页打印入库单、出库单。包括仓库/库区/货架管理，出入库管理，客户/供应商/承运商，库存看板、库存记录等功能。
+fusioninventory/fusioninventory-for-glpi      |    365 | PHP          | AGPL-3.0     | 2023-04-26 | FusionInventory plugin for GLPI
+chenbool/wms                                  |    358 | PHP          | GPL-3.0      | 2026-05-01 | php仓库进销存
+madires/Transistortester-Warehouse            |    355 | None         | None         | 2026-07-10 | The Transistortester's warehouse for firmware, hardware, documentation and more.
+rust-stdx/stdx                                |    351 | Rust         | MIT          | 2026-07-14 | Rust's extended standard library: simplicity, performance and supply chain security for everyone.
+sajxraj/InventoryManagementSystem             |    344 | Java         | None         | 2024-05-30 | A software developed using Java SE which provides as easy way to track the products, suppliers, customers as well as purchase and 
+jingsewu/open-wes                             |    342 | Java         | MIT          | 2026-08-12 | 🔥 Open WES is a customizable, open-source Warehouse Execution System designed to streamline warehouse operations. By integrating A
+sigstore/sigstore-python                      |    334 | Python       | NOASSERTION  | 2026-09-10 | A Sigstore client written in Python
+KevinFasusi/supplychainpy                     |    330 | JavaScript   | BSD-3-Clause | 2022-08-20 | Supplychainpy is a Python library for supply chain analysis, modelling and simulation. The library assists a workflow that is reli
+lsfusion-solutions/mycompany                  |    329 | JavaScript   | Apache-2.0   | 2026-09-09 | Free, open-source, self-hosted ERP and CRM for small businesses: inventory, invoicing, manufacturing, sales, projects, HR and POS.
+wmsxwdsh/Profiles2wmsxwdsh                    |    312 | None         | MIT          | 2026-02-08 | 搜集多方大神的 Quantumult X / Surge 懒人配置，先学习模仿，后融会贯通，最终为我所用。
+wh200720041/warehouse_simulation_toolkit      |    311 | C++          | BSD-3-Clause | 2024-02-18 | A simulation toolkit for ground robot AGV in warehouse environment, including tutorials for robot navigation and localization
+sadatrafsanjani/JavaFX-Point-of-Sales         |    309 | Java         | MIT          | 2026-09-08 | Point of Sales with inventory management system 
+s-pms/SPMS-Server                             |    305 | Java         | MIT          | 2026-08-10 | 🔥🔥🔥S-PMS (Smart Production Management System) 智能生产管理系统 ，是一个集成化、智能化的企业级应用软件，它集成了多个核心的生产管理模块，包括 制造执行系统 (MES)、仓库管理系统 (WMS)、企业资源计划系统 (
+leotm/react-native-template-new-architecture  |    301 | JavaScript   | None         | 2026-09-11 | React Native 0.88 ⚡ Hardened JS 🔒 LavaMoat 🌋 Ubuntu 26 🐧 Xcode 27 🍎 Hermes V1 ⚙️ Fiber / Fabric / Yoga 🏎️  Turbo / Nitro 💨 TS 7 ✅ 
+Funkmyster/awesome-supply-chain               |    295 | None         | None         | 2023-10-28 | A curated list of awesome supply chain blogs, podcasts, standards, projects, and examples.
+stemword/php-inventory-management-system      |    292 | PHP          | MIT          | 2022-01-29 | Open source inventory management system with php and mysql Invoice generation and easy to download invoice in PDF format Lightweig
+comsmobiler/SmoWMS                            |    289 | C#           | MIT          | 2020-04-29 | 仓库管理系统，移动端APP开源项目，支持Android、iOS，基于.NET（C#、VB）。SmoWMS仓库管理系统包含了仓库管理、订单、主数据维护、图表分析、个人信息等几大功能。 SmoWMS is Warehouse Management solution
+cackle-rs/cackle                              |    285 | Rust         | NOASSERTION  | 2026-08-03 | A code ACL checker for Rust
+moelashmawy/inventory-application             |    279 | JavaScript   | None         | 2026-08-30 | Shopping app using MERN stack
+Abdur-rahmaanJ/shopcube                       |    278 | HTML         | NOASSERTION  | 2026-07-21 | 🛒 POS & ecommerce solution for Shops. (Woo-commerce for Python) Complete with cart and wishlist. 
+baratgabor/MyWarehouse                        |    273 | C#           | MIT          | 2023-03-25 | Clean Architecture and Domain Driven Design sample project based on C# 10 / .NET 6 / ASP.NET Core 6 / EF Core 6 & Angular 11 with 
+rittmananalytics/ra_data_warehouse            |    272 | None         | Apache-2.0   | 2022-10-28 | This dbt package contains a set of pre-built, pre-integrated Load and Transform dbt models for common SaaS applications.
+Ephigenia/ikea-availability-checker           |    268 | TypeScript   | MIT          | 2026-09-03 | Command-Line-Script & Library for checking the availability of specific IKEA products in specific stores and/or countries.
+osmlab/editor-layer-index                     |    266 | JSON         | NOASSERTION  | 2026-09-08 | A unified layer index for OSM editors.
+securebluefox/CTF_competition_warehouse_2019  |    266 | JavaScript   | GPL-3.0      | 2020-02-03 | CTF赛题仓库
+merschformann/RAWSim-O                        |    261 | C#           | GPL-3.0      | 2025-01-21 | A simulation framework for Robotic Mobile Fulfillment Systems
+awesomedotnetcore/WMS                         |    260 | None         | MIT          | 2020-08-26 | 
+heigeo/leaflet.wms                            |    252 | JavaScript   | MIT          | 2021-03-18 | A Leaflet plugin for working with Web Map services, providing: single-tile/untiled/nontiled layers, shared WMS sources, and GetFea
+sandworm-hq/sandworm-guard-js                 |    251 | JavaScript   | MIT          | 2023-03-15 | Easy auditing & sandboxing for your JavaScript dependencies 🪱
+sigstore/model-transparency                   |    244 | Python       | Apache-2.0   | 2026-09-07 | Supply chain security for ML
+qq283335746/Wms                               |    235 | C#           | MIT          | 2023-04-29 | WMS（智能仓储配送平台），一个具有后端+前端+移动/PDA端的项目
+chrisidakwo/EFLInventory-V2                   |    231 | PHP          | None         | 2023-01-06 | :department_store: Point-of-sale and inventory tracking for small-scale retail stores. Easily manage inventory, purchases, sales, 
+os-scar/overlay                               |    229 | JavaScript   | MIT          | 2025-06-22 | Overlay is a browser extension helping developers evaluate open source packages before picking them
+TtBigdata/ambari-env                          |    227 | Shell        | Apache-2.0   | 2026-06-22 | Ambari+Bigtop一站式解决方案
+iamtekson/Leaflet-from-basic-to-advance       |    225 | JavaScript   | None         | 2025-02-01 | This contains basic codes on leaflet programming. It includes important plugins of leaflet & some other different technique for an
+lae/ansible-role-netbox                       |    224 | Python       | MIT          | 2026-06-17 | Cross-platform Ansible role for deploying NetBox, a DCIM/IPAM tool, in a production environment.
+OCA/wms                                       |    220 | JavaScript   | AGPL-3.0     | 2026-09-10 | Warehouse Management System for advance logistic with Odoo
+timwaters/mapwarper                           |    218 | Ruby         | MIT          | 2026-07-31 | free open source public map georeferencer, georectifier and warper
+leon-mbs/zstore                               |    217 | PHP          | MIT          | 2026-09-10 | Облікова програма (склад, торгівля, виробництво) з веб-інтерфейсом
+marius00/iagd                                 |    216 | C#           | MIT          | 2026-09-10 | 
+nsacyber/HIRS                                 |    213 | JavaScript   | NOASSERTION  | 2026-09-10 | Trusted Computing based services supporting TPM provisioning and supply chain validation concepts. #nsacyber
+openvex/vexctl                                |    212 | Go           | Apache-2.0   | 2026-09-09 | A  tool to create, transform and attest VEX metadata
+race2infinity/AuthentiFi                      |    209 | Java         | GPL-3.0      | 2023-04-05 | A blockchain-based Product Ownership Management System for anti-counterfeits in the Post Supply Chain.
+totalhack/zillion                             |    207 | Python       | MIT          | 2026-08-29 | Make sense of it all. Semantic data modeling and analytics with a sprinkle of AI. https://totalhack.github.io/zillion/
+hexojs/warehouse                              |    206 | TypeScript   | MIT          | 2026-08-17 | JSON database
+kirilkirkov/Electronic-Invoicing-And-Warehous |    205 | PHP          | None         | 2026-08-05 | A self-hosted open-source application built with CodeIgniter and Bootstrap. Features include electronic invoicing, PDF generation,
+iamtekson/leaflet-geoserver-request           |    204 | JavaScript   | MIT          | 2023-07-05 | This is the leaflet plugin for GeoServer. Using this plugin user can have access to wms and wfs request easily. 
+bosch-aisecurity-aishield/watchtower          |    203 | PureBasic    | Apache-2.0   | 2026-03-03 | AIShield Watchtower: Dive Deep into AI's Secrets! 🔍 Open-source tool by AIShield for AI model insights & vulnerability scans. Secu
+fosslight/fosslight                           |    202 | Java         | AGPL-3.0     | 2026-09-11 | FOSSLight Hub : Integrated management web-service for Open Source Compliance Process
+phpcontrols/inventory-manager                 |    198 | PHP          | None         | 2024-01-04 | Making an Awesome Inventory Management Application with Barcode Reader in PHP and MySQL from Start to Finish
+ConsciousUniverse/simple-stock-management     |    182 | Python       | GPL-3.0      | 2026-07-28 | Simpler Stock Management is a stock & inventory web app. Designed for small businesses, charities and non-profits.
+SVAIGBA/WMSeg                                 |    174 | Python       | MIT          | 2022-12-06 | 
+LarrySnyder/stockpyl                          |    173 | Python       | MIT          | 2026-06-10 | Python inventory optimization and simulation tools.
+deegree/deegree3                              |    170 | Java         | LGPL-2.1     | 2026-09-03 | Official deegree repository providing geospatial core libraries, data access and advanced OGC web service implementations
+LyapunovJingci/Warehouse_Robot_Path_Planning  |    162 | Python       | MIT          | 2020-06-20 | A multi agent path planning solution under a warehouse scenario using Q learning and transfer learning.🤖️
+tourajghaffari/tigerfid                       |    156 | C            | Apache-2.0   | 2018-09-27 | The open-source active RFID system developed by Touraj Ghaffari. This was his life work and we hope it helps you achieve your drea
+danthegoodman1/icedb                          |    153 | Python       | NOASSERTION  | 2026-02-15 | An in-process Parquet merge engine for better data warehousing in S3 with MVCC
+sair-lab/GroundSLAM                           |    150 | C++          | GPL-3.0      | 2026-07-18 | GroundSLAM: A Robust Visual SLAM System for Warehouse Robots Using Ground Textures
+gojekfarm/beast                               |    150 | Java         | Apache-2.0   | 2022-02-11 | [Deprecated] Load data from Kafka to any data warehouse. BQ sink is being supported in Firehose now. https://github.com/odpf/fireh
+samirsaci/picking-route                       |    149 | Python       | MIT          | 2026-07-27 | Improve Warehouse Productivity using Order Batching
+county-of-simcoe-gis/SimcoeCountyWebViewer    |    147 | TypeScript   | MIT          | 2026-09-10 | Web Map Viewer built with React and OpenLayers.  Built for GeoServer and ArcGIS Server.
+erzhongxmu/JeeWMS                             |    147 | Java         | GPL-3.0      | 2026-09-11 | A warehouse management system base on Spring MVC,MyBstis and MySQL
+mhamzashaikh/React-Inventory-Management-Syste |    142 | JavaScript   | None         | 2024-12-06 | Inventory Management Built with React JS, Node JS, Express JS, MongoDB and Tailwind CSS.
+PartPilotLab/PartPilot                        |    139 | TypeScript   | AGPL-3.0     | 2024-09-26 | PartPilot: The open-source tool for managing your electronics parts. Inventory tracking, LCSC integration, barcode scanning – all 
+SAMMiCA/ChangeSim                             |    138 | Python       | MIT          | 2022-10-28 | A multi-modal, photo-realistic dataset for online end-to-end scene change detection and more (accepted to IROS2021).
+wms2/mywms                                    |    131 | Java         | NOASSERTION  | 2026-04-14 | myWMS: Warehouse Management System
+apdevelop/tile-map-service                    |    128 | C#           | MIT          | 2026-07-05 | Tile server for .NET8 with MBTiles, Filesystem, GeoTIFF, HTTP sources and XYZ, TMS, WMTS, WMS endpoints (protocols support) and va
+tabbled/tabbled                               |    116 | Vue          | NOASSERTION  | 2025-07-25 | Self-hosted low-code platform for business applications like CRM, ERP, WMS, etc. Built using JavaScript/TypeScript. 🚀
+NVIDIA-AI-IOT/synthetic_data_generation_train |    115 | Jupyter Notebook | NOASSERTION  | 2025-06-26 | Workflow for generating synthetic data and training CV models. 
+WeBankFinTech/Streamis                        |    115 | Java         | Apache-2.0   | 2025-04-25 | Streaming application development and management system, based on Linkis and DSS, planning to provide the workflow-like graphical 
+s-pms/SPMS-Web                                |    113 | Vue          | MIT          | 2026-08-11 | 🔥🔥🔥S-PMS (Smart Production Management System) 智能生产管理系统 ，是一个集成化、智能化的企业级应用软件，它集成了多个核心的生产管理模块，包括 制造执行系统 (MES)、仓库管理系统 (WMS)、企业资源计划系统 (
+dadaloop82/EverShelf                          |    113 | JavaScript   | MIT          | 2026-09-10 | EverShelf: Your pantry's best friend. A self-hosted, open source smart pantry manager with AI expiry tracking, barcode scanning, s
+akashroshan135/inventory-management           |    109 | HTML         | None         | 2023-07-28 | A simple inventory management system built with Django
+NASAWorldWind/WorldWindServerKit              |    105 | JavaScript   | None         | 2020-03-10 | The NASA WorldWind Server Kit (WWSK) is an open source Java project that assembles GeoServer for easy distribution and implementat
+WayneChou-bot/WareTwin                        |    104 | TypeScript   | MIT          | 2026-09-11 | Real-time 3D digital twin of an autonomous warehouse — 20 AMRs, deterministic simulation, explainable fleet scheduling, failure in
+bibinprathap/ERP                              |    104 | JavaScript   | MIT          | 2025-08-05 | ERP Software  This software can be described as a complete business software solution.It has module such as sales , purchase ,inve
+malekwasim/WMSegmentControl                   |    104 | Swift        | MIT          | 2021-09-19 | Custom segment control for iOS
+KinjalDas/Inventory-Management-System-Django  |    103 | Python       | None         | 2022-10-31 | A Inventory management system written in DJango
+ArpadGBondor/Red-Inventory-Management         |    100 | C#           | None         | 2024-11-25 | C#, WPF, MVVM, MS SQL LocalDB, Inventory management, Entity Framework, log4net
+phamos-eu/it_management                       |     99 | Python       | GPL-3.0      | 2026-07-20 | Management von IT-Bausteinen. Hierzu gehören IT-Geräte und IT-Lösungen wie Server, Rechner, Netzwerke und E-Mailserver sowie auch 
+unep-grid/mapx                                |     98 | JavaScript   | NOASSERTION  | 2026-09-10 | MapX 
+JoaoHenriqueBarbosa/FinOpenPOS                |     97 | TypeScript   | MIT          | 2026-08-16 | Open-source POS with Brazilian fiscal module (NF-e/NFC-e). Next.js 16, React 19, PGLite, tRPC, Drizzle ORM.
+104H/Open-Source-Python-POS-and-Accounting-So |     95 | Python       | None         | 2024-07-19 | Open source software for POS and Automated Accounting.
+hishamkaram/geoserver                         |     94 | Go           | MIT          | 2026-09-07 | Go client for the GeoServer REST API — workspaces, datastores, layers, styles, security, ACL, GeoWebCache, Importer, plus OWS GetC
+Unity-Technologies/Robotics-Warehouse         |     93 | C#           | Apache-2.0   | 2022-06-16 | A warehouse environment for robotics simulation in Unity.
+Devnawjesh/mad-pharma                         |     93 | PHP          | MIT          | 2026-05-05 | Madpharma - A convenient pharmacy management system developed by PHP and Codeigniter framework. 
+hmakelin/gisnav                               |     92 | Python       | MIT          | 2024-08-18 | Estimates airborne drone global position by matching video to map retrieved from onboard GIS server.
+code-boxx/Storage-Boxx-PHP-Inventory-Manageme |     92 | PHP          | None         | 2024-03-07 | Open source PHP inventory management system, with built-in QR and NFC scanner.
+OptMLGroup/DeepBeerInventory-RL               |     91 | Python       | BSD-3-Clause | 2023-03-24 | The code for the SRDQN algorithm to train an agent for the beer game problem
+viditgarg1999/Inventory-Management-System     |     90 | None         | MIT          | 2019-09-19 | Database Management System Project on the Inventory Management System using SQL
+camptocamp/ogc-client                         |     89 | TypeScript   | BSD-3-Clause | 2026-09-10 | A TypeScript library for interacting with geospatial services
+30350n/inventree-part-import                  |     88 | Python       | MIT          | 2026-06-17 | CLI to import parts from suppliers like DigiKey, LCSC, Mouser, etc. to InvenTree
+dreamer888/hm-MES.                            |     86 | JavaScript   | AGPL-3.0     | 2023-11-23 | 开源mes系统：Java springboot + layui + mysql, 看板和后端独立 。精美的大屏幕看板，支持低代码大屏设计。 丰富的物联网数据采集组件， 数据采集和后端主程序独立，通过MQ通讯。 支持和ERP，WMS系统对接。
+3liz/py-qgis-server                           |     85 | Python       | MPL-2.0      | 2026-09-02 | QGIS embbeded WMS/WFS/WCS  asynchronous scalable http server
+lmikolajczak/wms-tiles-downloader             |     84 | Go           | MIT          | 2025-06-30 | CLI for downloading map tiles from WMS server with given bbox and zoom.
+somasays/pgwarehouse                          |     84 | Python       | MIT          | 2024-11-21 | Easily sync your Postgres database to a Snowflake, ClickHouse, or DuckDB warehouse.
+brunoleocam/Documentacao-LSP-Linguagem-Senior |     83 | Common Lisp  | MIT          | 2026-05-07 | Documentação - LSP - Linguagem Senior de Programação
+godaddy/warehouse.ai                          |     83 | JavaScript   | MIT          | 2026-09-02 | A storage and developer workflow engine for enforcing arbitrary checks on ontologies of npm packages.
+geotrellis/geotrellis-server                  |     80 | Scala        | Apache-2.0   | 2026-02-09 | Tools for building raster processing and display services
+mvdnbrk/warehouse-framework                   |     75 | PHP          | MIT          | 2024-06-21 | Laravel Warehouse Framework
+origo-map/origo                               |     75 | JavaScript   | NOASSERTION  | 2026-09-10 | Origo
+mapdraw/mapdraw                               |     75 | JavaScript   | AGPL-3.0     | 2026-09-10 | MapDraw is a simple, powerful web-based editor for creating, viewing, and managing geographic data like paths, areas, and markers.
+OlegLobakov/WarehouseControlSystem            |     72 | C#           | GPL-3.0      | 2019-11-12 | Warehouse Control System for Microsoft Dynamics NAV
+gavindsouza/inventory-management-system       |     72 | Jinja        | MIT          | 2023-02-27 | Insanely lightweight Inventory tracker
+alberteije/T2TiERP-2-CSharp                   |     71 | C#           | None         | 2020-09-05 | T2Ti ERP 2.0 - C#
+shuxiang/MT-WMS                               |     71 | Python       | Apache-2.0   | 2025-05-11 | MT-WMS 是开源的支持多仓多货主(multi warehouses, mulit owners)的WMS(仓储管理系统) 遵循Apache License 2.0协议
+marination/Inventory-Manager                  |     67 | HTML         | None         | 2023-05-01 | An inventory management system using Flask
+dddplus/dddplus-archetype-demo                |     65 | Java         | Apache-2.0   | 2025-12-19 | ♨️  Using dddplus-archetype build a WMS in 5 minutes. 5分钟搭建一个仓储中台WMS！
+geomoose/gm3                                  |     64 | JavaScript   | NOASSERTION  | 2026-09-10 | GeoMoose 3 Development. Please submit pull requests to the 'main' branch.
+AppGeo/wms                                    |     64 | JavaScript   | MIT          | 2023-07-18 | WMS/WMTS server for Node.js
+shanzm/Winform-WMS                            |     64 | C#           | None         | 2021-01-15 | 基于Winform，使用DevExpress的简单WMS
+ldlqdsdcn/eidea4                              |     60 | Java         | None         | 2017-12-27 | 企业框架 scm erp wms
+bgerp/bgerp                                   |     60 | PHP          | GPL-3.0      | 2026-09-11 | Web-базирана система за управление на бизнеса
+open-gpdb/gpdb                                |     60 | C            | Apache-2.0   | 2026-09-09 | open-gpdb - opensource fork of greenplum database
+ign-argentina/argenmap                        |     59 | JavaScript   | GPL-3.0      | 2026-09-01 | Visor de mapas web basado en Leaflet
+kamekazz/warehouse-management-system          |     52 | JavaScript   | None         | 2025-06-24 | Warehouses management systems with react.js
+pjborowiecki/QUANTUM-STASH-inventory-Manageme |     52 | TypeScript   | MIT          | 2024-01-14 | Quantum Stash is an open-source, modern, full-stack SaaS web application, designed for efficient inventory management. Tailored ma
+myTinyWMS/myTinyWMS                           |     49 | PHP          | AGPL-3.0     | 2026-08-06 | A free open source warehouse management system
+boxwise/boxtribute                            |     49 | TypeScript   | Apache-2.0   | 2026-09-10 | The code base for Boxtribute 2.0, a humanitarian aid web application making it easy to source, store and distribute goods to peopl
+vikramIde/stock_scan1                         |     45 | Vue          | None         | 2018-07-29 | Working Demo of Barcode/QR code scanner using VueJs+Quasaar+Cordova
+wmakeev/moysklad                              |     44 | JavaScript   | MIT          | 2026-01-21 | Библиотека для работы с API сервиса МойСклад
+shashi089/qr-code-label-designer              |     44 | TypeScript   | MIT          | 2026-08-31 | Open-source drag-and-drop QR code label & badge designer. Framework-agnostic (React, Vue, Angular, Svelte, Node.js). Export to ZPL
+Victor-Kipruto-Rop/cloud-etl-pipeline         |     41 | Python       | MIT          | 2026-09-05 | Built a scalable cloud ETL pipeline using Python, PostgreSQL, Pandas, and Docker to efficiently process, clean, and load over 1.6 
+DipanshKhandelwal/Warehouse                   |     33 | Python       | None         | 2017-11-28 | Django project on warehouse management system.
+jrie/sqstorage                                |     31 | PHP          | GPL-3.0      | 2026-06-29 | A easy to use and quick way to organize your inventory, music or game collection, storages and storage areas
+kuaigeyun/kuaigeyun-mes                       |     30 | TypeScript   | NOASSERTION  | 2026-09-11 | 快格云制造MES 是一个功能完整的制造执行系统（Manufacturing Execution System），专为生产型企业数字化转型设计。基于RiverEdge框架，使用现代化的技术栈（FastAPI + React），提供生产计划、工单管理、质量追溯、设
+ekote/Build-Your-First-End-to-End-Lakehouse-S |     22 | Jupyter Notebook | None         | 2025-11-18 | Big Data CONFERENCE Europe 2025 🇱🇹 AI, Cloud and Data Conference - Build Your First End-to-End Lakehouse Solution (aka.ms/fabconla
+josephines1/o-stock                           |     22 | PHP          | MIT          | 2024-08-05 | Aplikasi pengelolaan inventory barang yang dirancang menggunakan Framework PHP CodeIgniter 4, untuk memudahkan pengelolaan data st
+hightower-systems/sentry-wms                  |     22 | Python       | Apache-2.0   | 2026-08-20 | Open-source warehouse management system for e-commerce
+samirsaci/pareto-warehouse-layout             |     22 | Jupyter Notebook | None         | 2026-01-03 | Reduce Warehouse Space with the Pareto Principle using Python
+ohkrab/krab                                   |     21 | Go           | MIT          | 2025-11-26 | Krab is a migration and automation tool for PostgreSQL based on HCL syntax
+pyck-ai/pyck-oss                              |     21 | Go           | NOASSERTION  | 2026-08-31 | An Open-Source warehousing framework, engineered for the AI era 
+EaDesgin/magento2-warehouses                  |     20 | PHP          | Apache-2.0   | 2022-06-10 | Module to separate the stock on different store views based on warehouses.
+cepdnaclk/e16-3yp-smart-pharmaceutical-wareho |     19 | JavaScript   | None         | 2023-05-23 | In this project, we are trying to address this issue by developing a fully automated warehouse management that will minimize the d
+StepanTita/warehouse-management-system        |     19 | CSS          | MIT          | 2023-08-14 | An integrated Warehouse Management System leveraging Django, Vue.js, Kotlin, and Raspberry Pi for intelligent logistics automation
+eslamdyab21/AMRs-in-Warehouse-Systems         |     18 | Jupyter Notebook | MIT          | 2023-09-30 | This repository is for our graduation project ‫‪AMRs‬‬ ‫‪in‬‬ ‫‪Warehouse‬‬ ‫‪Systems,  A team in the Faculty of Engineering, Alex
+boxwise/boxwise                               |     18 | JavaScript   | Apache-2.0   | 2020-08-09 | A work on hold
+magiccoder815/warehouse-management-system     |     18 | CSS          | MIT          | 2025-04-09 | An integrated Warehouse Management System leveraging Django, Vue.js, Kotlin, and Raspberry Pi for intelligent logistics automation
+weimingwill/inventory-system                  |     17 | JavaScript   | None         | 2022-08-29 | E-commerce Inventory System developed using Vue and Vuetify
+sichkar-valentyn/Transportation_Problem       |     15 | C#           | MIT          | 2019-07-19 | Transportation Model for an optimal strategy for distributing a commodity from a group of supply centers to various receiving cent
+totalhack/zillion-web                         |     15 | Vue          | NOASSERTION  | 2026-08-29 | Zillion Web: A Demo UI and Web API for Zillion
+sempedia/stock_management                     |     15 | JavaScript   | None         | 2023-10-01 | Stock Management System *version 1.0  Stacks used: Python / Django / Html / CSS / jQuery / JavaScript / Bootstrap / MySQL       Co
+harshitjain-hj/stockmanager                   |     15 | Blade        | MIT          | 2023-01-05 | Multi role access based custom accounting and inventory management software application with POS receipt generate feature.
+samirsaci/workforce-planning                  |     14 | Jupyter Notebook | None         | 2026-01-03 | Optimize Workforce Planning using Linear Programming with Python
+Ma-Tao007/ssm_wareHorseManager                |     13 | None         | None         | 2022-09-28 | 基于ssm的仓库管理系统人员管理（仓库管理员管理），基础数据（供应商信息管理，客户信息管理，货物信息管理，仓库信息管理）， 系统维护（修改密码，系统日志，登陆日志）等菜单普通管理员：有库存管理（库存查询），出入库管理（货物入库，货物出库），系统维护（更改密码）
+WarehouseManagementSystem/WMS                 |     13 | Vue          | MIT          | 2020-06-05 | 仓库管理系统（Warehouse Management System/WMS）| System Web (Vue)
+MarshalOfficial/SaleSystem                    |     12 | C#           | MIT          | 2020-11-02 | A Powerful Sale System Backend Built on .Net Standard Library
+Geobatpo07/datahut-duckhouse                  |     12 | Python       | MIT          | 2025-07-11 | DataHut-DuckHouse is a modern, modular, and multi-tenant analytics platform that combines DuckDB, Apache Iceberg, Arrow Flight, db
+ndom91/katalog                                |     12 | TypeScript   | MIT          | 2021-08-26 | 📦 Fullstack Warehouse Management Application
+Ahmad-Nour-Haidar/pharmageddon-web            |     11 | Dart         | MIT          | 2024-05-20 | ⭐️ Goal: It is a web application for managing a drug warehouse and a mobile application for pharmacies.
+saru2020/InventoryOptimizer                   |     10 | Python       | MIT          | 2025-10-13 | This project provides an inventory optimization tool that uses synthetic data and applies demand forecasting, inventory classifica
+RudraMudra/Inventory-management               |     10 | JavaScript   | MIT          | 2025-07-11 | StockFlow is a full-stack inventory management web application designed to streamline stock tracking, warehouse management, and da
+openboxes/openboxes-mobile                    |     10 | TypeScript   | None         | 2026-09-10 | Mobile application for OpenBoxes.
+mesinkasir/inventoriphpapp                    |      9 | PHP          | None         | 2021-11-29 | Inventori apps stock management aplikasi stok perediaan gudang warehouse gratis download source code full
+Captain-Million/Captain-Million               |      9 | JavaScript   | MIT          | 2017-05-21 | 
+boxwise/dropapp                               |      8 | PHP          | Apache-2.0   | 2026-09-10 | Version 1 of Boxtribute, a web application that makes it easy for humanitarian groups to source, store and distribute donated good
+accord-erp-automation/accord_mobile           |      8 | Dart         | None         | 2026-06-12 | Flutter mobile client for ERPNext warehouse, delivery, and admin operations.
+projektdexter/tsp-time-window                 |      8 | Python       | MIT          | 2022-11-16 | Solving the classical travelling salesman problem including time window for each customer node
+arshc0der/Inventory-Management-System         |      7 | C++          | MIT          | 2025-07-02 | 🚀 Inventory Management System (IMS) is a powerful and lightweight desktop application built with Qt C++, designed to streamline in
+warehauser/warehauser                         |      7 | Python       | Apache-2.0   | 2026-07-21 | Warehauser is an open source warehouse management backend system written in Python using the Django library. It is designed to be 
+Het161/Inventory                              |      7 | TypeScript   | None         | 2026-04-03 | Inventory management platform for OM Marketing Solutions — real-time stock tracking across warehouses and outlets, with analytics 
+mah-shamim/primestock-inventory-management-so |      7 | JavaScript   | None         | 2025-05-24 | Prime Stock allows businesses to monitor products and parts as they move from suppliers to warehouses, between multiple warehouse 
+loadstarCN/GoodsMart-WMS                      |      7 | HTML         | AGPL-3.0     | 2026-08-17 | GoodsMart WMS is a modern, fully-featured open-source warehouse management system specifically designed for small and medium-sized
+Maya-Yagan/supermarket-management-system      |      6 | Java         | None         | 2025-06-04 | A comprehensive JavaFX-based application for managing supermarket operations. Built with Java 17, Hibernate, Microsoft SQL Server,
+JGAguilar626/amazon-warehouse-simulator       |      6 | Java         | GPL-3.0      | 2023-06-27 | This project creates a virtual Amazon Fulfillment Center and simulates the Simple Bin Count (SBC) inventory management process. 
+old-school-kid/Warehouse-management           |      6 | Jupyter Notebook | MIT          | 2021-08-23 | A software prototype web app for demand forecasting, inventory management and food tracking using machine learning and blockchain.
+nvlinhvn/warehouse-optimize                   |      6 | Jupyter Notebook | MIT          | 2024-05-24 | Finding the best location for items in an aisle in an warehouses
+ziakhan1516/Warehouse-Optimiztion-Q-Learning- |      6 | Jupyter Notebook | None         | 2024-08-19 | Warehouse path optimization using Reinforcement Learning (RL) enables agents to learn efficient routes by interacting with the env
+accord-erp-automation/gscale-platform         |      5 | Go           | None         | 2026-07-14 | GScale platform backend: scale/Zebra orchestration, mobile API, Telegram bot runtime, archive storage, and ERPNext workflow.
+shakedlokits/LineQueue                        |      5 | JavaScript   | GPL-3.0      | 2022-09-17 | Cross-platform line queue management system for service counters.

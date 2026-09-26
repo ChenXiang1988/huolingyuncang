@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>费用账 · 货主端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>货主端</small></div><ul><li><a href="工作台.html">工作台</a></li><li><a href="库存账.html">库存账</a></li><li><a href="流转账.html">流转账</a></li><li class="on"><a href="费用账.html">费用账</a></li><li><a href="实收确认.html">实收确认</a></li><li><a href="异常台账.html">异常台账</a></li><li><a href="增值服务指令.html">增值服务指令</a></li><li><a href="配额占用.html">配额占用</a></li><li><a href="货品资料.html">货品资料</a></li><li><a href="影像调取.html">影像调取</a></li><li><a href="出库预报.html">出库预报</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="工作台.html">首页</a><span class="sep">/</span><span class="cur">费用账</span></nav><div class="topbar-right"><span class="who">张三</span></div></header>
+<main><div class="head"><h1>费用账</h1></div>
+<div class="wrap">
+<div class="stats"><div class="stat"><div class="k">合计</div><div class="v">¥12,480</div><div class="s">待确认</div></div><div class="stat"><div class="k">仓租</div><div class="v">¥7,200</div><div class="s">按托盘位·天</div></div><div class="stat"><div class="k">操作费</div><div class="v">¥4,280</div><div class="s">动作 × 数量</div></div><div class="stat"><div class="k">增值服务费</div><div class="v">¥1,000</div><div class="s">贴标 2,000 件</div></div></div>
+<div class="card"><h2>费用明细<span class="hint">每笔费用都能下钻到产生它的作业动作。</span></h2><div class="body" style="padding:0"><table><thead><tr><th>费用项</th><th>计价基础</th><th>数量</th><th>单价</th><th>金额</th><th>来源作业记录</th></tr></thead><tbody><tr><td>仓租</td><td>托盘位 · 天</td><td>62</td><td>¥116.13</td><td>¥7,200</td><td>库位占用快照 →</td></tr><tr><td>收货上架</td><td>件</td><td>1,200</td><td>¥0.60</td><td>¥720</td><td>RK20260925-0031 →</td></tr><tr><td>拣货</td><td>行</td><td>3,100</td><td>¥0.55</td><td>¥1,705</td><td>拣货任务 →</td></tr><tr><td>打包</td><td>件</td><td>2,300</td><td>¥0.80</td><td>¥1,840</td><td>打包记录 →</td></tr><tr><td>出库套袋贴标</td><td>件</td><td>2,000</td><td>¥0.50</td><td>¥1,000</td><td>贴标校验记录 →</td></tr></tbody></table></div></div>
+
+<div class="card"><h2>操作</h2><div class="body"><div class="form"><div class="field"><label>对账确认</label><div class="ctl">按提示操作</div><div class="tip">对本账期内全部费用一次性确认</div></div></div><div class="btns"><span class="btn primary">确认对账</span><span class="btn">发起争议</span></div></div></div>
+</div></main>
+</div>
+</body>
+</html>

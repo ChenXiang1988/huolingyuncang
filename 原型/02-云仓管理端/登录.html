@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>登录 · 云仓管理端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body class="login-page">
+<div class="login-wrap">
+
+<aside class="login-brand">
+  <div class="lg">货灵云仓 · 云仓仓储管理系统</div>
+  <h1>云仓管理端</h1>
+
+
+  <div class="bfoot">私有化部署 · 数据不出内网<br>账号由本端管理员建档，不提供自助注册</div>
+</aside>
+
+<section class="login-main">
+  <div class="login-back"><a href="index.html">← 返回云仓管理端页面索引</a></div>
+
+  <form class="login-card" id="loginForm" novalidate autocomplete="on">
+    <div class="lhd">登录</div>
+    <div class="lsub">请使用管理员为你建立的账号登录</div>
+
+    <div class="lalert err" id="formAlert" role="alert" hidden><span id="formAlertText"></span></div>
+
+    <div class="lf" id="f-account">
+      <label for="account">账号<span class="req">*</span></label>
+      <div class="lwrap"><input class="lin" id="account" name="account" type="text"
+        autocomplete="username" placeholder="请输入账号" maxlength="64"></div>
+      <div class="lerr" id="e-account"></div>
+    </div>
+
+    <div class="lf" id="f-password">
+      <label for="password">密码<span class="req">*</span></label>
+      <div class="lwrap">
+        <input class="lin pwd" id="password" name="password" type="password"
+          autocomplete="current-password" placeholder="请输入密码" maxlength="128">
+        <a class="ltoggle" id="togglePwd" href="#" tabindex="-1">显示</a>
+      </div>
+      <div class="lerr" id="e-password"></div>
+    </div>
+
+    <div class="lrow">
+      <label class="lcheck"><input type="checkbox" id="remember">记住账号</label>
+      <a class="lforget" id="forget" href="#">忘记密码</a>
+    </div>
+
+    <button class="lbtn" id="submitBtn" type="submit"><span id="submitText">登 录</span></button>
+
+    <div class="lfoot">演示账号 · 密码统一 <code>hlyc2026</code><br>
+      <code>zhaoliu</code> 赵六／系统管理员 · <code>zhangsan</code> 张三／仓负责人<br>
+      <code>lisi</code> 李四／客服跟单 · <code>wangwu</code> 王五／财务结算 · 四个账号看到的菜单不同<br>
+      原型演示用，与真实账号体系无关</div>
+  </form>
+
+</section>
+
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ===== 两端唯一的行为差异：演示账号与各自的落地页 ===== */
+var DEMO_USERS = [
+  { account: 'zhaoliu',  name: '赵六', role: '系统管理员', next: '经营看板.html' },
+  { account: 'zhangsan', name: '张三', role: '仓负责人',   next: '经营看板.html' },
+  { account: 'lisi',     name: '李四', role: '客服跟单',   next: '单据运行异常.html' },
+  { account: 'wangwu',   name: '王五', role: '财务结算',   next: '计费规则.html' }
+];
+
+/* ===== 角色 → 动作集合。动作清单见 设计文档\02-5 §4.4 ===== */
+var ALL = ['经营看板','多仓容量统筹','容量度量','差错成本','告警中心','仓型模板与温区字典','权限与角色',
+  '仓与基础定义','仓与基础定义.编辑','新建仓','仓库容规则','仓库容规则.编辑','货主配额','货主配额.编辑',
+  '库位容量参数','库位容量参数.编辑','容量参数变更记录','规则模板与批量套用','货主与合同','货主与合同.编辑',
+  '计费规则','计费规则.编辑','承运商与物流渠道','承运商与物流渠道.编辑','预报单校验与处置','单据运行异常','调取审批'];
+var ROLES = {
+  '系统管理员': ALL,
+  '仓负责人': ['经营看板','多仓容量统筹','容量度量','差错成本','告警中心','仓与基础定义','仓库容规则','货主配额',
+              '库位容量参数','容量参数变更记录','货主与合同','计费规则','承运商与物流渠道','预报单校验与处置',
+              '单据运行异常','调取审批'],
+  '客服跟单': ['仓与基础定义','仓库容规则','货主配额','库位容量参数','容量参数变更记录','货主与合同','计费规则',
+              '承运商与物流渠道','预报单校验与处置','单据运行异常'],
+  '财务结算': ['仓与基础定义','仓库容规则','货主配额','货主与合同','计费规则','承运商与物流渠道']
+};
+
+var DEMO_PASSWORD = 'hlyc2026';
+var MAX_FAIL      = 5;
+var LOCK_SECONDS  = 30;
+
+var form      = document.getElementById('loginForm');
+var acc       = document.getElementById('account');
+var pwd       = document.getElementById('password');
+var fAcc      = document.getElementById('f-account');
+var fPwd      = document.getElementById('f-password');
+var eAcc      = document.getElementById('e-account');
+var ePwd      = document.getElementById('e-password');
+var alertBox  = document.getElementById('formAlert');
+var alertText = document.getElementById('formAlertText');
+var btn       = document.getElementById('submitBtn');
+var btnText   = document.getElementById('submitText');
+var toggle    = document.getElementById('togglePwd');
+var forget    = document.getElementById('forget');
+
+var fails = 0, locked = false, timer = null;
+
+function bad(wrap){ return wrap.className.indexOf('bad') > -1; }
+
+function setErr(wrap, box, msg){
+  wrap.className = msg ? 'lf bad' : 'lf';
+  box.textContent = msg || '';
+}
+function hideAlert(){ alertBox.hidden = true; alertBox.className = 'lalert err'; }
+function showAlert(kind, html){
+  alertBox.className = 'lalert ' + kind;
+  alertText.innerHTML = html;
+  alertBox.hidden = false;
+}
+function resetBtn(){ btn.disabled = false; btnText.textContent = '登 录'; }
+
+/* ---------- 校验规则 ---------- */
+function checkAccount(){
+  var v = acc.value.trim();
+  if (!v) return '请输入账号';
+  if (/\s/.test(v)) return '账号不能包含空格';
+  if (v.length < 4 || v.length > 32) return '账号长度需为 4 到 32 个字符';
+  return '';
+}
+function checkPassword(){
+  var v = pwd.value;
+  if (!v) return '请输入密码';
+  if (v.length < 6 || v.length > 64) return '密码长度需为 6 到 64 个字符';
+  return '';
+}
+
+/* ---------- 失焦校验 / 输入即清除错误 ---------- */
+acc.addEventListener('blur', function(){ setErr(fAcc, eAcc, checkAccount()); });
+acc.addEventListener('input', function(){ if (bad(fAcc)) setErr(fAcc, eAcc, ''); });
+pwd.addEventListener('blur', function(){ setErr(fPwd, ePwd, checkPassword()); });
+pwd.addEventListener('input', function(){ if (bad(fPwd)) setErr(fPwd, ePwd, ''); });
+
+/* ---------- 密码显示 / 隐藏 ---------- */
+toggle.addEventListener('click', function(e){
+  e.preventDefault();
+  if (pwd.type === 'password'){ pwd.type = 'text'; toggle.textContent = '隐藏'; }
+  else { pwd.type = 'password'; toggle.textContent = '显示'; }
+  pwd.focus();
+});
+
+/* ---------- 忘记密码：不提供自助找回 ---------- */
+forget.addEventListener('click', function(e){
+  e.preventDefault();
+  showAlert('info', '<b>本系统不提供自助找回密码。</b>请联系本端管理员为你重置账号密码。');
+});
+
+/* ---------- 连续失败锁定 ---------- */
+function lock(){
+  locked = true;
+  var left = LOCK_SECONDS;
+  showAlert('warn', '<b>连续 ' + MAX_FAIL + ' 次输入错误，账号已临时锁定。</b>请 ' + left
+    + ' 秒后重试，或联系本端管理员重置密码。');
+  btn.disabled = true;
+  btnText.textContent = '已锁定（' + left + ' 秒）';
+  timer = setInterval(function(){
+    left--;
+    if (left <= 0){
+      clearInterval(timer); timer = null;
+      locked = false; fails = 0;
+      resetBtn();
+      showAlert('info', '锁定期已结束，可以重新尝试登录。');
+      return;
+    }
+    btnText.textContent = '已锁定（' + left + ' 秒）';
+    alertText.innerHTML = '<b>连续 ' + MAX_FAIL + ' 次输入错误，账号已临时锁定。</b>请 ' + left
+      + ' 秒后重试，或联系本端管理员重置密码。';
+  }, 1000);
+}
+
+/* ---------- 提交 ---------- */
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (locked || btn.disabled) return;
+
+  var a = checkAccount(), p = checkPassword();
+  setErr(fAcc, eAcc, a);
+  setErr(fPwd, ePwd, p);
+  if (a){ hideAlert(); acc.focus(); return; }
+  if (p){ hideAlert(); pwd.focus(); return; }
+
+  hideAlert();
+  btn.disabled = true;
+  btnText.innerHTML = '<span class="spin"></span>登录中…';
+
+  setTimeout(function(){
+    var u = acc.value.trim(), found = null, i;
+    for (i = 0; i < DEMO_USERS.length; i++){
+      if (DEMO_USERS[i].account === u){ found = DEMO_USERS[i]; break; }
+    }
+    if (found && pwd.value === DEMO_PASSWORD){
+      /* 写入登录态：云仓管理端各页据此显隐菜单与按钮；读不到则按全量显示（原型体例 §五.2 第四类） */
+      try{
+        sessionStorage.setItem('hlLogin', JSON.stringify({
+          account: found.account, name: found.name, role: found.role,
+          actions: ROLES[found.role] || []
+        }));
+      }catch(e){}
+      btnText.textContent = '登录成功，正在进入…';
+      window.location.href = found.next;
+      return;
+    }
+    fails++;
+    resetBtn();
+    if (fails >= MAX_FAIL){ lock(); return; }
+    showAlert('err', '<b>账号或密码不正确。</b>已连续失败 ' + fails + ' 次，'
+      + MAX_FAIL + ' 次将被临时锁定。');
+    pwd.value = '';
+    pwd.focus();
+  }, 600);
+});
+})();
+</script>
+<script>/* 占位链接：拦截空锚点（href 为 #）的默认跳转，避免点击后页面回弹到顶部 */document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute("href")==="#"){e.preventDefault();return;}t=t.parentNode;}},false);</script>
+</body>
+</html>

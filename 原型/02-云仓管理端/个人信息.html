@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>个人信息 · 云仓管理端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>云仓管理端</small></div><div class="grp">经营分析</div><ul><li data-perm="经营看板"><a href="经营看板.html">经营看板</a></li><li data-perm="多仓容量统筹"><a href="多仓容量统筹.html">多仓容量统筹</a></li><li data-perm="容量度量"><a href="容量度量.html">容量度量</a></li><li data-perm="差错成本"><a href="差错成本.html">差错成本</a></li></ul><div class="grp">库容规则</div><ul><li data-perm="货主配额"><a href="货主配额.html">货主配额</a></li><li data-perm="库位容量参数"><a href="库位容量参数.html">库位容量参数</a></li><li data-perm="容量参数变更记录"><a href="容量参数变更记录.html">容量参数变更记录</a></li><li data-perm="规则模板与批量套用"><a href="规则模板与批量套用.html">规则模板与批量套用</a></li><li data-perm="告警中心"><a href="告警中心.html">告警中心</a></li></ul><div class="grp">主数据与规则</div><ul><li data-perm="仓与基础定义"><a href="仓与基础定义.html">仓与基础定义</a></li><li data-perm="仓型模板与温区字典"><a href="仓型模板与温区字典.html">仓型模板与温区字典</a></li><li data-perm="货主与合同"><a href="货主与合同.html">货主与合同</a></li><li data-perm="计费规则"><a href="计费规则.html">计费规则</a></li><li data-perm="承运商与物流渠道"><a href="承运商与物流渠道.html">承运商与物流渠道</a></li></ul><div class="grp">单据与运行</div><ul><li data-perm="预报单校验与处置"><a href="预报单校验与处置.html">预报单校验与处置</a></li><li data-perm="单据运行异常"><a href="单据运行异常.html">单据运行异常</a></li></ul><div class="grp">管控</div><ul><li data-perm="调取审批"><a href="调取审批.html">调取审批</a></li><li data-perm="权限与角色"><a href="权限与角色.html">权限与角色</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="经营看板.html">首页</a><span class="sep">/</span><span class="cur">个人信息</span></nav><div class="topbar-right"><span class="user" tabindex="0"><span class="avatar">张</span><span class="who">张三</span><span class="caret"></span><span class="user-menu"><a href="个人信息.html">个人信息</a><a href="修改密码.html">修改密码</a><span class="sep"></span><a href="登录.html">退出登录</a></span></span></div></header>
+<main><div class="head"><h1>个人信息</h1></div>
+<div class="wrap">
+
+<div class="card"><h2>账号<span class="hint">由管理员建档，本人不可改</span></h2><div class="body">
+<div class="kv"><span class="k">登录名</span><span class="v" data-me="account">zhangsan</span></div>
+<div class="kv"><span class="k">姓名</span><span class="v" data-me="name">张三</span></div>
+<div class="kv"><span class="k">工号</span><span class="v">SH-014</span></div>
+<div class="kv"><span class="k">所属角色</span><span class="v" data-me="role">仓负责人</span></div>
+<div class="kv"><span class="k">状态</span><span class="v"><span class="tag green">启用</span></span></div>
+<div class="kv"><span class="k">最近登录</span><span class="v">2026-09-26 12:04 · 本机</span></div>
+</div></div>
+
+<div class="card"><h2>联系方式</h2><div class="body">
+<div class="form">
+<div class="field"><label>手机</label><input class="in" id="fPhone" type="tel" maxlength="32" placeholder="选填"><div class="err"></div></div>
+<div class="field"><label>邮箱</label><input class="in" id="fMail" type="email" maxlength="128" placeholder="选填"><div class="err"></div></div>
+</div>
+</div></div>
+
+<div class="card"><h2>授权范围<span class="hint">本次登录实得的动作，按「账号 × 仓 × 动作」</span></h2><div class="body">
+<div data-me="actions" style="display:flex;flex-wrap:wrap;gap:6px;line-height:2;color:var(--text-3)">—</div>
+</div></div>
+
+<div class="note danger" id="errSum" hidden><span class="ico">校验未通过</span><span id="errList"></span></div>
+<div class="btns"><span class="btn primary" id="fSave">保存</span><a class="btn" href="经营看板.html">取消</a></div>
+
+</div></main>
+</div>
+<script>
+/* 管理端表单校验：联系方式的格式校验（原型体例 §五.2 第三类） */
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+  var phone = $('#fPhone'), mail = $('#fMail');
+
+  function checkPhone(){
+    var v = phone.value.trim();
+    if(!v) return '';
+    if(!/^\d{3}\s?\d{4}\s?\d{4}$/.test(v) && !/^\+\d{1,3}\s?[\d\s-]{6,}$/.test(v)) return '请填 11 位手机号，或带国家码的号码';
+    return '';
+  }
+  function checkMail(){
+    var v = mail.value.trim();
+    if(!v) return '';
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return '邮箱格式不正确';
+    return '';
+  }
+  function setErr(el, msg){
+    var f = el.closest('.field');
+    f.classList.toggle('bad', !!msg);
+    var e = f.querySelector('.err'); if(e) e.textContent = msg;
+  }
+
+  phone.addEventListener('blur', function(){ setErr(phone, checkPhone()); });
+  mail.addEventListener('blur', function(){ setErr(mail, checkMail()); });
+  phone.addEventListener('input', function(){ if(phone.closest('.field').classList.contains('bad')) setErr(phone, ''); });
+  mail.addEventListener('input', function(){ if(mail.closest('.field').classList.contains('bad')) setErr(mail, ''); });
+
+  $('#fSave').addEventListener('click', function(){
+    var a = checkPhone(), b = checkMail(), bad = [];
+    setErr(phone, a); setErr(mail, b);
+    if(a) bad.push('手机：' + a);
+    if(b) bad.push('邮箱：' + b);
+    $('#errSum').hidden = !bad.length;
+    if(bad.length) $('#errList').textContent = '共 ' + bad.length + ' 项未通过：' + bad.join('；') + '。';
+    if(!bad.length) $('#errSum').hidden = true;
+  });
+})();
+</script>
+<script>
+/* 登录态：填顶栏与本人信息（data-me）、按授权显隐菜单与按钮（data-perm）；读不到登录态则全量显示（原型体例 §五.2 第四类） */
+(function(){
+  var u = null;
+  try{ u = JSON.parse(sessionStorage.getItem('hlLogin') || 'null'); }catch(e){}
+  if(!u) return;
+
+  var box = document.querySelector('.topbar-right .user');
+  if(box){
+    var w = box.querySelector('.who'), a = box.querySelector('.avatar');
+    if(w) w.textContent = u.name || u.account;
+    if(a) a.textContent = (u.name || u.account).charAt(0);
+  }
+
+  [].forEach.call(document.querySelectorAll('[data-me]'), function(el){
+    var k = el.getAttribute('data-me');
+    if(k === 'actions'){
+      var list = u.actions || [];
+      el.innerHTML = list.length
+        ? list.map(function(x){ return '<span class="tag blue">' + x + '</span>'; }).join('')
+        : '—';
+    } else if(u[k] != null){ el.textContent = u[k]; }
+  });
+
+  if(!u.actions) return;
+  [].forEach.call(document.querySelectorAll('[data-perm]'), function(el){
+    var need = el.getAttribute('data-perm').split(' '), ok = false;
+    for(var i = 0; i < need.length; i++){ if(u.actions.indexOf(need[i]) > -1){ ok = true; break; } }
+    if(!ok) el.hidden = true;
+  });
+  [].forEach.call(document.querySelectorAll('.side .grp'), function(g){
+    var ul = g.nextElementSibling;
+    if(!ul || ul.tagName !== 'UL') return;
+    var any = false;
+    [].forEach.call(ul.children, function(li){ if(!li.hidden) any = true; });
+    if(!any) g.hidden = true;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+odoo 18.0 stock_quant.py len=89228 owner-hits=44
+    _rec_names_search = ['location_id', 'lot_id', 'package_id', 'owner_id']
+    owner_id = fields.Many2one(
+    help='This is the owner of the quant', check_company=True,
+    ('owner_id', '=', False),
+    owner_id = owner.id
+    quant.last_count_date = date_by_quant.get((quant.location_id.id, quant.package_id.id, quant.product_id.id, quant.lot_id.id, quant.owner_id.id))
+    owner_id = self.env['res.partner'].browse(vals.get('owner_id'))
+    quant = self._gather(product, location, lot_id=lot_id, package_id=package_id, owner_id=owner_id, strict=True)
+    action['context']['search_default_owner_id'] = self.owner_id.id
+    def _get_gather_domain(self, product_id, location_id, lot_id=None, package_id=None, owner_id=None, strict=False):
+    domain = expression.AND([[('owner_id', '=', owner_id.id)], domain])
+    domain = expression.AND([[('owner_id', '=', owner_id and owner_id.id or False)], domain])
+    def _gather(self, product_id, location_id, lot_id=None, package_id=None, owner_id=None, strict=False, qty=0):
+    domain = self._get_gather_domain(product_id, location_id, lot_id, package_id, owner_id, strict)
+    res |= quants_cache[product_id.id, location_id.id, lot_id.id, package_id.id, owner_id.id]
+    res |= quants_cache[product_id.id, location_id.id, False, package_id.id, owner_id.id]
+    def _get_available_quantity(self, product_id, location_id, lot_id=None, package_id=None, owner_id=None, strict=False, allow_negative=False):
+    quants = self._gather(product_id, location_id, lot_id=lot_id, package_id=package_id, owner_id=owner_id, strict=strict)
+    def _get_reserve_quantity(self, product_id, location_id, quantity, product_packaging_id=None, uom_id=None, lot_id=None, package_id=None, owner_id=None, strict=F
+    quants = self._gather(product_id, location_id, lot_id=lot_id, package_id=package_id, owner_id=owner_id, strict=strict, qty=quantity)
+    available_quantity = quants._get_available_quantity(product_id, location_id, lot_id, package_id, owner_id, strict)
+    negative_reserved_quantity[(quant.location_id, quant.lot_id, quant.package_id, quant.owner_id)] += quant.quantity - quant.reserved_quantity
+    negative_quantity = negative_reserved_quantity[(quant.location_id, quant.lot_id, quant.package_id, quant.owner_id)]
+    negative_reserved_quantity[(quant.location_id, quant.lot_id, quant.package_id, quant.owner_id)] += negative_qty_to_remove
+    res[product.id, loc.id, lot.id, package.id, owner.id] = quants
+odoo 18.0 stock_move.py owner-hits=18
+    'res.partner', 'Owner ', check_company=True,
+    consignment_enabled = self.env.user.has_group('stock.group_tracking_owner')
+    owner_id =reserved_quant.owner_id.id or False,
+    def _update_reserved_quantity(self, need, location_id, lot_id=None, package_id=None, owner_id=None, strict=True):
+    move_line_vals, taken_quantity = self._update_reserved_quantity_vals(need, location_id, lot_id, package_id, owner_id, strict)
+    def _update_reserved_quantity_vals(self, need, location_id, lot_id=None, package_id=None, owner_id=None, strict=True):
+    owner_id = self.env['res.partner']
+    uom_id=self.product_uom, lot_id=lot_id, package_id=package_id, owner_id=owner_id, strict=strict)
+    candidate_lines[line.location_id, line.lot_id, line.package_id, line.owner_id] = line
+    grouped_quants[quant.location_id, quant.lot_id, quant.package_id, quant.owner_id] = [quant, quantity]
+    grouped_quants[quant.location_id, quant.lot_id, quant.package_id, quant.owner_id][1] += quantity
+    to_update = candidate_lines.get((reserved_quant.location_id, reserved_quant.lot_id, reserved_quant.package_id, reserved_quant.owner_id))
+odoo 18.0 stock_lot.py owner-hits=0
+odoo 18.0 stock_location.py owner-hits=0
+InvenTree InvenTree/stock/models.py FAIL HTTP Error 404: Not Found
+InvenTree InvenTree/stock/serializers.py FAIL HTTP Error 404: Not Found
+openboxes OK Transaction.groovy len=8699
+openboxes OK Location.groovy len=15423
+openboxes OK Product.groovy len=31682
+openboxes OK InventoryItem.groovy len=4664

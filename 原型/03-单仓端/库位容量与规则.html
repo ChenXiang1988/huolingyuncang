@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>库位容量与规则 · 单仓端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>单仓端</small></div><ul><li><a href="本仓工作台.html">本仓工作台</a></li><li><a href="收货入库.html">收货入库</a></li><li><a href="上架.html">上架</a></li><li><a href="库存管理.html">库存管理</a></li><li><a href="盘点.html">盘点</a></li><li><a href="波次与拣货.html">波次与拣货</a></li><li><a href="复核打包.html">复核打包</a></li><li><a href="出库交接.html">出库交接</a></li><li><a href="退货.html">退货</a></li><li><a href="库内增值作业.html">库内增值作业</a></li><li><a href="移库与调拨.html">移库与调拨</a></li><li><a href="计费与结算.html">计费与结算</a></li><li><a href="退仓与清货.html">退仓与清货</a></li><li><a href="异常台账.html">异常台账</a></li><li class="on"><a href="库位容量与规则.html">库位容量与规则</a></li><li><a href="影像证据.html">影像证据</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="本仓工作台.html">首页</a><span class="sep">/</span><span class="cur">库位容量与规则</span></nav><div class="topbar-right"><span class="who">张三</span><a href="登录.html">退出</a></div></header>
+<main><div class="head"><h1>库位容量与规则</h1></div>
+<div class="wrap">
+<div class="card"><h2>库位主数据<span class="hint">库位是三维容器（底面积 × 净高 × 承重），不是编号。温区与保税为只读继承所属区域。</span></h2><div class="body" style="padding:0"><table><thead><tr><th>库位编码</th><th>层级链</th><th>底面积</th><th>净高</th><th>承重上限</th><th>温区</th><th>保税</th><th>归属货主</th><th>状态</th></tr></thead><tbody><tr><td>A-01-03</td><td>1F · A 区 · 货架 A-01</td><td>1.2 m²</td><td>2.4 m</td><td>500 kg</td><td>常温</td><td>否</td><td>某美妆品牌</td><td>占用</td></tr><tr><td>A-01-04</td><td>1F · A 区 · 货架 A-01</td><td>1.2 m²</td><td>2.4 m</td><td>500 kg</td><td>常温</td><td>否</td><td>某美妆品牌</td><td>占用</td></tr><tr><td>B-02-11</td><td>2F · B 区 · 货架 B-02</td><td>1.5 m²</td><td>2.0 m</td><td>800 kg</td><td>常温</td><td>否</td><td>某家居品牌</td><td>占用</td></tr><tr><td>待认领区-01</td><td>1F · 待认领区</td><td>2.0 m²</td><td>2.4 m</td><td>500 kg</td><td>常温</td><td>否</td><td>—（共享位）</td><td>占用</td></tr></tbody></table></div></div>
+<div class="card"><h2>本仓规则实例（按「仓 × 货品」配置）<span class="hint">配置可高不可低——货品级可调高，不允许把仓级已设的强制校验调低。</span></h2><div class="body" style="padding:0"><table><thead><tr><th>货品</th><th>批次管理</th><th>效期管理</th><th>上架校验档</th><th>混放（货品）</th><th>混放（批次）</th></tr></thead><tbody><tr><td>A001 补水面膜</td><td>是</td><td>是</td><td>高（强制扫库位码）</td><td>告警</td><td>告警</td></tr><tr><td>A003 保温杯</td><td>否</td><td>否</td><td>低（上架到区域级）</td><td>允许</td><td>允许</td></tr></tbody></table></div></div>
+<div class="card"><h2>货主配额<span class="hint"><b>货主维度是硬约束不是可配项</b>：库位带归属货主后，跨货主上架固定拦截，不可配为「告警」。</span></h2><div class="body" style="padding:0"><table><thead><tr><th>货主</th><th>计量口径</th><th>配额上限</th><th>已占用</th><th>占用率</th><th>超限策略</th></tr></thead><tbody><tr><td>某美妆品牌</td><td>托盘位</td><td>80</td><td>62</td><td>77.5%</td><td>只告警（默认）</td></tr><tr><td>某家居品牌</td><td>底面积（m²）</td><td>150</td><td>144</td><td>96.0%</td><td>软拦截</td></tr></tbody></table></div></div>
+
+</div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新建仓 · 云仓管理端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>云仓管理端</small></div><div class="grp">经营分析</div><ul><li data-perm="经营看板"><a href="经营看板.html">经营看板</a></li><li data-perm="多仓容量统筹"><a href="多仓容量统筹.html">多仓容量统筹</a></li><li data-perm="容量度量"><a href="容量度量.html">容量度量</a></li><li data-perm="差错成本"><a href="差错成本.html">差错成本</a></li></ul><div class="grp">库容规则</div><ul><li data-perm="货主配额"><a href="货主配额.html">货主配额</a></li><li data-perm="库位容量参数"><a href="库位容量参数.html">库位容量参数</a></li><li data-perm="容量参数变更记录"><a href="容量参数变更记录.html">容量参数变更记录</a></li><li data-perm="规则模板与批量套用"><a href="规则模板与批量套用.html">规则模板与批量套用</a></li><li data-perm="告警中心"><a href="告警中心.html">告警中心</a></li></ul><div class="grp">主数据与规则</div><ul><li class="on" data-perm="仓与基础定义"><a href="仓与基础定义.html">仓与基础定义</a></li><li data-perm="仓型模板与温区字典"><a href="仓型模板与温区字典.html">仓型模板与温区字典</a></li><li data-perm="货主与合同"><a href="货主与合同.html">货主与合同</a></li><li data-perm="计费规则"><a href="计费规则.html">计费规则</a></li><li data-perm="承运商与物流渠道"><a href="承运商与物流渠道.html">承运商与物流渠道</a></li></ul><div class="grp">单据与运行</div><ul><li data-perm="预报单校验与处置"><a href="预报单校验与处置.html">预报单校验与处置</a></li><li data-perm="单据运行异常"><a href="单据运行异常.html">单据运行异常</a></li></ul><div class="grp">管控</div><ul><li data-perm="调取审批"><a href="调取审批.html">调取审批</a></li><li data-perm="权限与角色"><a href="权限与角色.html">权限与角色</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="经营看板.html">首页</a><span class="sep">/</span><span>主数据与规则</span><span class="sep">/</span><a href="仓与基础定义.html">仓与基础定义</a><span class="sep">/</span><span class="cur">新建仓</span></nav><div class="topbar-right"><span class="user" tabindex="0"><span class="avatar">张</span><span class="who">张三</span><span class="caret"></span><span class="user-menu"><a href="个人信息.html">个人信息</a><a href="修改密码.html">修改密码</a><span class="sep"></span><a href="登录.html">退出登录</a></span></span></div></header>
+<main><div class="head"><h1>新建仓</h1></div>
+<div class="wrap">
+
+<div class="note info"><span class="ico">建仓口径</span><span>最小输入 4 项即可建成，其余字段可建成后补。<b>仓库不设「类型」字段</b>——业务功能经仓型模板引用，温区与保税落区域级，空间形态由结构派生。</span></div>
+
+<div class="card"><h2>最小输入<span class="hint">以下 4 项必填，其余可建成后补</span></h2><div class="body">
+<div class="form">
+<div class="field"><label>仓编码<span class="req">*</span></label><input class="in" id="fCode" placeholder="如 WH-SH-01"><div class="tip">全局唯一；一经业务使用不得更改</div><div class="err"></div></div>
+<div class="field"><label>仓名称<span class="req">*</span></label><input class="in" id="fName" placeholder="请输入仓名称"><div class="err"></div></div>
+<div class="field"><label>所属经营主体<span class="req">*</span></label><select class="in" id="fEntity"><option value="">请选择</option><option>某某供应链（上海）有限公司</option><option>某某供应链（广州）有限公司</option></select><div class="tip">决定合同与结算归属</div><div class="err"></div></div>
+<div class="field"><label>仓型模板<span class="req">*</span></label><select class="in" id="fTpl"><option value="">请选择</option><option>电商仓标准模板 v3</option><option>存储仓标准模板 v2</option></select><div class="tip">决定作业模式、单据类型、计费口径与时效承诺</div><div class="err"></div></div>
+</div>
+</div></div>
+
+<div class="card"><h2>基础信息</h2><div class="body">
+<div class="form">
+<div class="field"><label>启用状态<span class="req">*</span></label><select class="in" id="fStatus"><option>筹备</option><option>启用</option><option>停用</option></select><div class="tip">停用后不得新增业务单据</div></div>
+<div class="field"><label>启用日期<span class="req">*</span></label><input class="in" id="fStart" type="date"><div class="tip">计费起算点，影响首月计费</div><div class="err"></div></div>
+<div class="field"><label>时区<span class="req">*</span></label><select class="in" id="fTz"><option>（UTC+08:00）中国标准时间</option><option>（UTC+07:00）曼谷</option><option>（UTC+09:00）东京</option></select></div>
+<div class="field"><label>省市区</label><select class="in" id="fRegion"><option>请选择</option><option>上海市 / 上海市 / 浦东新区</option><option>广东省 / 广州市 / 白云区</option><option>安徽省 / 合肥市 / 肥西县</option></select></div>
+<div class="field wide"><label>详细地址<span class="req">*</span></label><input class="in" id="fAddr" placeholder="街道门牌，如 某某路 88 号 A 库"><div class="err"></div></div>
+<div class="field"><label>经度</label><input class="in" id="fLng" placeholder="选填"></div>
+<div class="field"><label>纬度</label><input class="in" id="fLat" placeholder="选填"><div class="tip">经纬度用于调拨距离与时效估算</div></div>
+<div class="field wide"><label>备注</label><textarea class="in" id="fRemark" placeholder="选填"></textarea></div>
+</div>
+</div></div>
+
+<div class="card"><h2>监管域</h2><div class="body">
+<div class="form">
+<div class="field wide"><label>是否位于海关特殊监管区域</label><select class="in" id="fCustoms"><option>否</option><option>是</option></select><div class="tip">选「是」时，下方监管参数成组必填，且其下区域才能标记保税专用存放区</div></div>
+<div class="field" data-reg hidden><label>关区代码<span class="req">*</span></label><input class="in" placeholder="4 位关区代码"><div class="err"></div></div>
+<div class="field" data-reg hidden><label>监管场所编码<span class="req">*</span></label><input class="in"><div class="err"></div></div>
+<div class="field" data-reg hidden><label>账册号<span class="req">*</span></label><input class="in"><div class="err"></div></div>
+<div class="field" data-reg hidden><label>账册类型<span class="req">*</span></label><select class="in"><option>电子账册（E 账册）</option><option>电子手册（H 手册）</option></select></div>
+<div class="field" data-reg hidden><label>有效期<span class="req">*</span></label><input class="in" type="date"></div>
+</div>
+</div></div>
+
+<div class="card"><h2>空间与结构</h2><div class="body">
+<div class="form">
+<div class="field"><label>楼层数<span class="req">*</span></label><input class="in" id="fFloors" type="number" min="1" value="1"><div class="tip">大于 1 时，货运电梯配置成组必填</div></div>
+</div>
+<div class="form" id="liftGroup" hidden style="margin-top:16px">
+<div class="field"><label>货运电梯数量<span class="req">*</span></label><input class="in" type="number" min="1" placeholder="台"><div class="err"></div></div>
+<div class="field"><label>单梯载重上限<span class="req">*</span></label><input class="in" type="number" min="1" placeholder="kg"><div class="err"></div></div>
+<div class="field"><label>轿厢尺寸<span class="req">*</span></label><input class="in" placeholder="长 × 宽 × 高（mm）"><div class="err"></div></div>
+</div>
+</div></div>
+
+<div class="card"><h2>作业与计费</h2><div class="body">
+<div class="form">
+<div class="field wide"><label>计费口径集合<span class="req">*</span></label><div class="checks" id="feeModes"><label><input type="checkbox" checked>体积</label><label><input type="checkbox" checked>托盘位</label><label><input type="checkbox">承重</label><label><input type="checkbox">底面积</label></div><div class="tip">决定本仓可签合同的口径，须含容积口径（体积或托盘位）</div><div class="err"></div></div>
+<div class="field"><label>容量口径定义<span class="req">*</span></label><select class="in" id="fCapMode"><option>体积</option><option>托盘位</option><option>承重</option></select><div class="tip">「满」按哪个口径算</div></div>
+<div class="field wide"><label>增值能力开关</label><div class="checks" id="vas"><label><input type="checkbox">组套</label><label><input type="checkbox">塑封</label><label><input type="checkbox">随附</label><label><input type="checkbox">套袋</label><label><input type="checkbox">贴标</label></div><div class="tip">未启用的能力，货主端不可选（双闸门：候选集过滤 + 云仓端校验）</div></div>
+</div>
+</div></div>
+
+<div class="card"><h2>派生字段<span class="hint">只读 · 建成后由结构汇总生成</span></h2><div class="body">
+<div class="kv"><span class="k">拥有温区集合</span><span class="v">汇总其下所有区域的「温区类型」，去重</span></div>
+<div class="kv"><span class="k">空间形态</span><span class="v">存在栋层 → 多栋楼层仓；否则楼层数 &gt; 1 → 楼层仓；否则平面仓</span></div>
+<div class="kv"><span class="k">区域数 / 库位数</span><span class="v">结构汇总</span></div>
+<div class="kv"><span class="k">保税专区清单</span><span class="v">汇总「是否保税专用存放区」为真的区域</span></div>
+</div></div>
+
+<div class="note danger" id="errSum" hidden><span class="ico">校验未通过</span><span id="errList"></span></div>
+<div class="note ok" id="okSum" hidden><span class="ico">校验通过</span><span>原型不提交数据，实际系统在此下发建仓指令。</span></div>
+<div class="btns"><span class="btn primary" id="fSave">保存</span><span class="btn">保存并配置结构</span><a class="btn" href="仓与基础定义.html">取消</a></div>
+
+</div></main>
+</div>
+<script>
+/* 管理端表单校验：必填 + 条件必填 + 条件展开（原型体例 §五.2 第三类） */
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+  var $$ = function(s){ return [].slice.call(document.querySelectorAll(s)); };
+
+  // 条件展开①：是否位于海关特殊监管区域 ⇒ 监管参数
+  var customs = $('#fCustoms');
+  function syncReg(){ $$('[data-reg]').forEach(function(el){ el.hidden = customs.value !== '是'; }); }
+  customs.addEventListener('change', syncReg); syncReg();
+
+  // 条件展开②：楼层数 > 1 ⇒ 货运电梯配置
+  var floors = $('#fFloors'), lift = $('#liftGroup');
+  function syncLift(){ lift.hidden = !(parseInt(floors.value, 10) > 1); }
+  floors.addEventListener('input', syncLift); syncLift();
+
+  function mark(el, msg){
+    var f = el.closest('.field'); if(!f) return;
+    f.classList.add('bad');
+    var e = f.querySelector('.err'); if(e) e.textContent = msg;
+  }
+  function clearMarks(){ $$('.field.bad').forEach(function(f){ f.classList.remove('bad'); }); }
+
+  $('#fSave').addEventListener('click', function(){
+    clearMarks();
+    var bad = [];
+    function isBlank(el){ return !String(el.value == null ? '' : el.value).trim(); }
+    function need(sel, label){
+      var el = $(sel), f = el.closest('.field');
+      if (f && f.hidden) return;
+      if (isBlank(el)) { mark(el, '必填'); bad.push(label); }
+    }
+
+    need('#fCode', '仓编码');
+    need('#fName', '仓名称');
+    need('#fEntity', '所属经营主体');
+    need('#fTpl', '仓型模板');
+    need('#fStart', '启用日期');
+    need('#fAddr', '详细地址');
+
+    // C2：位于海关特殊监管区域 ⇒ 监管参数成组必填
+    if (customs.value === '是') {
+      var miss = 0;
+      $$('[data-reg]').forEach(function(el){
+        var inp = el.querySelector('.in');
+        if (inp && isBlank(inp)) { mark(inp, '必填'); miss++; }
+      });
+      if (miss) bad.push('监管参数（缺 ' + miss + ' 项）');
+    }
+
+    // S1：楼层数 > 1 ⇒ 货运电梯配置必填
+    if (parseInt(floors.value, 10) > 1) {
+      var lm = 0;
+      $$('#liftGroup .in').forEach(function(inp){ if (isBlank(inp)) { mark(inp, '必填'); lm++; } });
+      if (lm) bad.push('货运电梯配置（缺 ' + lm + ' 项）');
+    }
+
+    // 计费口径集合须含容积口径
+    var fees = $$('#feeModes input:checked').map(function(i){ return i.parentNode.textContent.trim(); });
+    if (!fees.length) { mark($('#feeModes'), '至少选一项'); bad.push('计费口径集合'); }
+    else if (fees.indexOf('体积') < 0 && fees.indexOf('托盘位') < 0) { mark($('#feeModes'), '须含容积口径'); bad.push('计费口径集合缺容积口径'); }
+
+    $('#errSum').hidden = !bad.length;
+    $('#okSum').hidden = !!bad.length;
+    if (bad.length) $('#errList').textContent = '共 ' + bad.length + ' 项未通过：' + bad.join('；') + '。';
+    if (bad.length) $('#errSum').scrollIntoView({ block: 'nearest' });
+  });
+})();
+</script>
+<script>
+/* 登录态：填顶栏与本人信息（data-me）、按授权显隐菜单与按钮（data-perm）；读不到登录态则全量显示（原型体例 §五.2 第四类） */
+(function(){
+  var u = null;
+  try{ u = JSON.parse(sessionStorage.getItem('hlLogin') || 'null'); }catch(e){}
+  if(!u) return;
+
+  var box = document.querySelector('.topbar-right .user');
+  if(box){
+    var w = box.querySelector('.who'), a = box.querySelector('.avatar');
+    if(w) w.textContent = u.name || u.account;
+    if(a) a.textContent = (u.name || u.account).charAt(0);
+  }
+
+  [].forEach.call(document.querySelectorAll('[data-me]'), function(el){
+    var k = el.getAttribute('data-me');
+    if(k === 'actions'){
+      var list = u.actions || [];
+      el.innerHTML = list.length
+        ? list.map(function(x){ return '<span class="tag blue">' + x + '</span>'; }).join('')
+        : '—';
+    } else if(u[k] != null){ el.textContent = u[k]; }
+  });
+
+  if(!u.actions) return;
+  [].forEach.call(document.querySelectorAll('[data-perm]'), function(el){
+    var need = el.getAttribute('data-perm').split(' '), ok = false;
+    for(var i = 0; i < need.length; i++){ if(u.actions.indexOf(need[i]) > -1){ ok = true; break; } }
+    if(!ok) el.hidden = true;
+  });
+  [].forEach.call(document.querySelectorAll('.side .grp'), function(g){
+    var ul = g.nextElementSibling;
+    if(!ul || ul.tagName !== 'UL') return;
+    var any = false;
+    [].forEach.call(ul.children, function(li){ if(!li.hidden) any = true; });
+    if(!any) g.hidden = true;
+  });
+})();
+</script>
+</body>
+</html>

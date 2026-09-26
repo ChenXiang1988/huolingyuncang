@@ -1,0 +1,20 @@
+﻿OK   GreaterWMS         GreaterWMS/GreaterWMS        br=master   len=6790
+OK   open-wes           jingsewu/open-wes            br=main     len=5108
+OK   ModernWMS          fjykTec/ModernWMS            br=master   len=10477
+OK   wms-ruoyi          zccbbg/wms-ruoyi             br=master   len=2239
+OK   openboxes          openboxes/openboxes          br=develop  len=5638
+OK   org.openwms        openwms/org.openwms          br=master   len=14930
+OK   InvenTree          inventree/InvenTree          br=master   len=12514
+OK   OCA-wms            OCA/wms                      br=18.0     len=4331
+OK   JeeWMS             erzhongxmu/JeeWMS            br=master   len=2836
+OK   KopSoftWms         lysilver/KopSoftWms          br=master   len=944
+OK   mywms              wms2/mywms                   br=master   len=4306
+OK   oms-erp            FJ-OMS/oms-erp               br=master   len=3528
+OK   SPMS               s-pms/SPMS-Server            br=master   len=4268
+OK   yeqifu-warehouse   yeqifu/warehouse             br=master   len=2901
+OK   fleetbase          fleetbase/fleetbase          br=main     len=20902
+OK   crbnos-carbon      crbnos/carbon                br=main     len=29934
+FAIL s-pms2             qq283335746/Wms              (no README found)
+OK   smowms             comsmobiler/SmoWMS           br=master   len=2239
+OK   RuoYi-WMS-VUE      zccbbg/RuoYi-WMS-VUE         br=master   len=994
+OK   jshERP             jishenghua/jshERP            br=master   len=2543

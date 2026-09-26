@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>差错成本 · 云仓管理端 · 货灵云仓原型</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side"><div class="brand">货灵云仓<small>云仓管理端</small></div><div class="grp">经营分析</div><ul><li data-perm="经营看板"><a href="经营看板.html">经营看板</a></li><li data-perm="多仓容量统筹"><a href="多仓容量统筹.html">多仓容量统筹</a></li><li data-perm="容量度量"><a href="容量度量.html">容量度量</a></li><li class="on" data-perm="差错成本"><a href="差错成本.html">差错成本</a></li></ul><div class="grp">库容规则</div><ul><li data-perm="货主配额"><a href="货主配额.html">货主配额</a></li><li data-perm="库位容量参数"><a href="库位容量参数.html">库位容量参数</a></li><li data-perm="容量参数变更记录"><a href="容量参数变更记录.html">容量参数变更记录</a></li><li data-perm="规则模板与批量套用"><a href="规则模板与批量套用.html">规则模板与批量套用</a></li><li data-perm="告警中心"><a href="告警中心.html">告警中心</a></li></ul><div class="grp">主数据与规则</div><ul><li data-perm="仓与基础定义"><a href="仓与基础定义.html">仓与基础定义</a></li><li data-perm="仓型模板与温区字典"><a href="仓型模板与温区字典.html">仓型模板与温区字典</a></li><li data-perm="货主与合同"><a href="货主与合同.html">货主与合同</a></li><li data-perm="计费规则"><a href="计费规则.html">计费规则</a></li><li data-perm="承运商与物流渠道"><a href="承运商与物流渠道.html">承运商与物流渠道</a></li></ul><div class="grp">单据与运行</div><ul><li data-perm="预报单校验与处置"><a href="预报单校验与处置.html">预报单校验与处置</a></li><li data-perm="单据运行异常"><a href="单据运行异常.html">单据运行异常</a></li></ul><div class="grp">管控</div><ul><li data-perm="调取审批"><a href="调取审批.html">调取审批</a></li><li data-perm="权限与角色"><a href="权限与角色.html">权限与角色</a></li></ul></aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="经营看板.html">首页</a><span class="sep">/</span><span>经营分析</span><span class="sep">/</span><span class="cur">差错成本</span></nav><div class="topbar-right"><span class="user" tabindex="0"><span class="avatar">张</span><span class="who">张三</span><span class="caret"></span><span class="user-menu"><a href="个人信息.html">个人信息</a><a href="修改密码.html">修改密码</a><span class="sep"></span><a href="登录.html">退出登录</a></span></span></div></header>
+<main><div class="head"><h1>差错成本</h1></div>
+<div class="wrap">
+<div class="stats"><div class="stat"><div class="k">本月差错成本<span class="poptip"><span class="cal">?</span><span class="poptip-b">四口合计，按「货主 × 仓」归集口径：按货主×仓</span></span></div><div class="v">¥6,870</div></div><div class="stat"><div class="k">错发赔付<span class="poptip"><span class="cal">?</span><span class="poptip-b">3 笔，均发生在打包环节口径：笔数 × 赔付额</span></span></div><div class="v">¥3,900</div></div><div class="stat"><div class="k">破损赔款<span class="poptip"><span class="cal">?</span><span class="poptip-b">11 笔，集中在两批玻璃制品口径：实收差异 × 货值</span></span></div><div class="v">¥2,240</div></div><div class="stat"><div class="k">客诉处理<span class="poptip"><span class="cal">?</span><span class="poptip-b">4 笔口径：人工工时折算</span></span></div><div class="v">¥730</div></div></div>
+<div class="card"><h2>按「货主 × 仓」的差错成本</h2><div class="tbl-wrap"><table><thead><tr><th>货主</th><th>仓</th><th class="num">错发赔付</th><th class="num">破损赔款</th><th class="num">客诉</th><th class="num">差错成本合计</th><th class="num">占操作费</th><th class="num">错发笔数</th><th>操作</th></tr></thead><tbody><tr><td>某家居品牌</td><td>上海云仓</td><td class="num">¥3,900</td><td class="num">¥180</td><td class="num">¥160</td><td class="num"><b>¥4,240</b></td><td class="num"><b style="color:#cf1322">23.0%</b></td><td class="num">3</td><td><span class="ops"><span class="poptip"><a href="告警中心.html">处置记录</a><span class="poptip-b">处置全过程留痕：登记 → 定责 → 处理 → 闭环 → 回写费用账与库存</span></span></span></td></tr><tr><td>某美妆品牌</td><td>广州云仓</td><td class="num">¥0</td><td class="num">¥1,860</td><td class="num">¥320</td><td class="num"><b>¥2,180</b></td><td class="num">8.4%</td><td class="num">0</td><td><span class="ops"><a href="告警中心.html">处置记录</a></span></td></tr><tr><td>某美妆品牌</td><td>上海云仓</td><td class="num">¥0</td><td class="num">¥140</td><td class="num">¥250</td><td class="num"><b>¥390</b></td><td class="num">0.9%</td><td class="num">0</td><td><span class="ops"><a href="告警中心.html">处置记录</a></span></td></tr><tr><td>某母婴品牌</td><td>合肥云仓</td><td class="num">¥0</td><td class="num">¥60</td><td class="num">¥0</td><td class="num"><b>¥60</b></td><td class="num">0.4%</td><td class="num">0</td><td><span class="ops"><a href="告警中心.html">处置记录</a></span></td></tr></tbody></table></div><div class="pager"><span>共 4 条</span><a href="#">上一页</a><a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">下一页</a></div></div>
+
+
+</div></main>
+</div>
+<script>
+/* 弹出提示：点击后鼠标保持静止 400ms 才显示；位移超 4px 即收起并重新计时；移出 100ms 后消失 */
+(function(){
+  var STILL=400, MOVE=4, LEAVE=100;
+  var ws=[].slice.call(document.querySelectorAll('.poptip'));
+  function hideAll(){ws.forEach(function(w){w.classList.remove('on')})}
+  document.addEventListener('scroll', hideAll, true);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') hideAll(); });
+  ws.forEach(function(w){
+    var armed=false, t1=null, t2=null, x=0, y=0;
+    function show(){ w.classList.add('on'); }
+    function hide(){ clearTimeout(t1); clearTimeout(t2); w.classList.remove('on'); }
+    function arm(){ clearTimeout(t1); t1=setTimeout(show, STILL); }
+    w.addEventListener('click', function(e){ armed=true; x=e.clientX; y=e.clientY; arm(); });
+    w.addEventListener('mousemove', function(e){
+      if(!armed) return;
+      if(Math.abs(e.clientX-x)>MOVE || Math.abs(e.clientY-y)>MOVE){
+        x=e.clientX; y=e.clientY; hide(); arm();
+      }
+    });
+    w.addEventListener('mouseenter', function(){ clearTimeout(t2); if(armed) arm(); });
+    w.addEventListener('mouseleave', function(){ clearTimeout(t1); t2=setTimeout(hide, LEAVE); });
+  });
+})();
+</script>
+<script>/* 占位链接：拦截空锚点（href 为 #）的默认跳转，避免点击后页面回弹到顶部 */document.addEventListener("click",function(e){var t=e.target;while(t&&t!==document){if(t.tagName==="A"&&t.getAttribute("href")==="#"){e.preventDefault();return;}t=t.parentNode;}},false);</script>
+<script>
+/* 登录态：填顶栏与本人信息（data-me）、按授权显隐菜单与按钮（data-perm）；读不到登录态则全量显示（原型体例 §五.2 第四类） */
+(function(){
+  var u = null;
+  try{ u = JSON.parse(sessionStorage.getItem('hlLogin') || 'null'); }catch(e){}
+  if(!u) return;
+
+  var box = document.querySelector('.topbar-right .user');
+  if(box){
+    var w = box.querySelector('.who'), a = box.querySelector('.avatar');
+    if(w) w.textContent = u.name || u.account;
+    if(a) a.textContent = (u.name || u.account).charAt(0);
+  }
+
+  [].forEach.call(document.querySelectorAll('[data-me]'), function(el){
+    var k = el.getAttribute('data-me');
+    if(k === 'actions'){
+      var list = u.actions || [];
+      el.innerHTML = list.length
+        ? list.map(function(x){ return '<span class="tag blue">' + x + '</span>'; }).join('')
+        : '—';
+    } else if(u[k] != null){ el.textContent = u[k]; }
+  });
+
+  if(!u.actions) return;
+  [].forEach.call(document.querySelectorAll('[data-perm]'), function(el){
+    var need = el.getAttribute('data-perm').split(' '), ok = false;
+    for(var i = 0; i < need.length; i++){ if(u.actions.indexOf(need[i]) > -1){ ok = true; break; } }
+    if(!ok) el.hidden = true;
+  });
+  [].forEach.call(document.querySelectorAll('.side .grp'), function(g){
+    var ul = g.nextElementSibling;
+    if(!ul || ul.tagName !== 'UL') return;
+    var any = false;
+    [].forEach.call(ul.children, function(li){ if(!li.hidden) any = true; });
+    if(!any) g.hidden = true;
+  });
+})();
+</script>
+</body>
+</html>

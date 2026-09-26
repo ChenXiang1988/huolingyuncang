@@ -1,0 +1,56 @@
+﻿q=topic:wms                                                    n=50
+q=topic:warehouse                                              n=50
+q=topic:warehouse-management                                   n=50
+q=topic:inventory-management                                   n=50
+q=topic:supply-chain stars:>200                                n=38
+q=topic:erp stars:>500                                         n=42
+q=topic:wms-java                                               n=0
+q=topic:logistics stars:>500                                   n=6
+q=wms in:name stars:>100                                       n=17
+q=warehouse in:name stars:>200                                 n=19
+  !! fail: inventory in:name stars:>1000 HTTP Error 403: rate limit exceeded
+q=inventory in:name stars:>1000                                n=0
+  !! fail: 浠撳簱 in:name,description stars:>50 HTTP Error 403: rate limit exceeded
+q=浠撳簱 in:name,description stars:>50                             n=0
+  !! fail: 浠撳偍 in:name,description stars:>50 HTTP Error 403: rate limit exceeded
+q=浠撳偍 in:name,description stars:>50                             n=0
+  !! fail: wms in:name,description language:Java stars:>50 HTTP Error 403: rate limit exceeded
+q=wms in:name,description language:Java stars:>50              n=0
+  !! fail: wms in:name,description language:Python stars:>50 HTTP Error 403: rate limit exceeded
+q=wms in:name,description language:Python stars:>50            n=0
+q=warehouse management system in:readme stars:>100             n=50
+OK   openboxes/openboxes                         893 2026-09-11
+OK   inventree/InvenTree                        7554 2026-09-11
+OK   openwms/org.openwms                         731 2026-07-13
+ERR  openwms/org.openwms.core                 HTTP Error 404: Not Found
+ERR  openwms/org.openwms.tms                  HTTP Error 404: Not Found
+OK   frappe/erpnext                            39123 2026-09-11
+OK   odoo/odoo                                 54295 2026-09-11
+OK   yangzongzhuan/RuoYi                        8552 2026-09-07
+OK   jeecgboot/JeecgBoot                       47743 2026-09-11
+OK   apache/ofbiz                                806 2020-04-27
+OK   akaunting/akaunting                       10119 2026-09-11
+OK   invoiceninja/invoiceninja                 10071 2026-09-11
+OK   metasfresh/metasfresh                      2419 2026-09-11
+OK   dolibarr/dolibarr                          7598 2026-09-11
+ERR  ghislieri/WMS                            HTTP Error 404: Not Found
+OK   jhipster/jhipster-sample-app               1469 2026-08-30
+ERR  paulc4/wms                               HTTP Error 404: Not Found
+ERR  ross-davey/wms                           HTTP Error 404: Not Found
+OK   snipe/snipe-it                            14929 2026-09-11
+ERR  eramba/eramba                            HTTP Error 404: Not Found
+ERR  openboxes/grails-warehouse               HTTP Error 404: Not Found
+ERR  hschneid/warehouse                       HTTP Error 404: Not Found
+ERR  joewandy/wms                             HTTP Error 404: Not Found
+ERR  kartoza/django-wms                       HTTP Error 404: Not Found
+ERR  norkunas/cin7                            HTTP Error 404: Not Found
+ERR  blueseaspl/wms                           HTTP Error 404: Not Found
+ERR  violet-wms/violet                        HTTP Error 404: Not Found
+ERR  wms-systems/wms                          HTTP Error 404: Not Found
+ERR  sap-labs/wms                             HTTP Error 404: Not Found
+ERR  openlogistics/open-wms                   HTTP Error 404: Not Found
+ERR  novatecconsulting/wms                    HTTP Error 404: Not Found
+ERR  odoo-turkey/wms                          HTTP Error 404: Not Found
+ERR  skfaisal93/wms                           HTTP Error 404: Not Found
+
+WROTE 349
