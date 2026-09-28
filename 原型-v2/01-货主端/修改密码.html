@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>修改密码 · 货主端 · 货灵云仓原型 v2</title>
+<link rel="stylesheet" href="../00-资源/原型样式.css">
+</head>
+<body>
+<aside class="side">
+<div class="brand">货灵云仓<small>货主端</small></div>
+<div class="grp">单据管理</div>
+<ul>
+<li><a href="预约入库.html">预约入库</a></li>
+<li><a href="通知出库.html">通知出库</a></li>
+<li><a href="通知盘点.html">通知盘点</a></li>
+<li><a href="售后管理.html">售后管理</a></li>
+</ul>
+<div class="grp">账号管理</div>
+<ul>
+<li><a href="资料查询.html">资料查询</a></li>
+<li><a href="用户管理.html">用户管理</a></li>
+<li class="on"><a href="修改密码.html">修改密码</a></li>
+</ul>
+<div class="grp">库存查询</div>
+<ul>
+<li><a href="商品资料管理.html">商品资料管理</a></li>
+<li><a href="商品库存查询.html">商品库存查询</a></li>
+</ul>
+<div class="grp">账户管理</div>
+<ul>
+<li><a href="余额查询.html">余额查询</a></li>
+<li><a href="账单查询.html">账单查询</a></li>
+</ul>
+<div class="grp">平台店铺授权</div>
+<ul>
+<li><a href="店铺授权.html">店铺授权</a></li>
+<li><a href="订单拉取.html">订单拉取</a></li>
+</ul>
+<div class="sub">平台订单 · 国内</div>
+<ul>
+<li><a href="平台订单-淘宝天猫.html">淘宝/天猫</a></li>
+<li><a href="平台订单-京东.html">京东</a></li>
+<li><a href="平台订单-拼多多.html">拼多多</a></li>
+<li><a href="平台订单-抖音.html">抖音</a></li>
+<li><a href="平台订单-快手.html">快手</a></li>
+<li><a href="平台订单-小红书.html">小红书</a></li>
+<li><a href="平台订单-视频号小店.html">视频号小店</a></li>
+</ul>
+<div class="sub">平台订单 · 跨境</div>
+<ul>
+<li><a href="平台订单-TEMU.html">TEMU</a></li>
+<li><a href="平台订单-SHEIN.html">SHEIN</a></li>
+<li><a href="平台订单-Amazon.html">Amazon</a></li>
+<li><a href="平台订单-速卖通.html">速卖通</a></li>
+<li><a href="平台订单-TikTokShop.html">TikTok Shop</a></li>
+<li><a href="平台订单-Shopee.html">Shopee</a></li>
+<li><a href="平台订单-Lazada.html">Lazada</a></li>
+</ul>
+</aside>
+<div class="main">
+<header class="topbar"><nav class="crumb"><a href="../index.html#01-货主端">货主端</a><span class="sep">/</span><span>账号管理</span><span class="sep">/</span><span class="cur">修改密码</span></nav><div class="topbar-right"><span class="user" tabindex="0"><span class="avatar">李</span><span class="who">李珊</span><span class="caret"></span><span class="user-menu"><a href="资料查询.html">资料查询</a><a href="修改密码.html">修改密码</a><span class="sep"></span><a href="登录.html">退出登录</a></span></span></div></header>
+<main><div class="head"><h1>修改密码</h1></div>
+<div class="wrap">
+<div class="card"><h2>修改密码</h2><div class="body"><form id="pwdForm" novalidate><div class="form"><div class="field" id="f-old"><label>当前密码<span class="req">*</span></label><input class="in" id="old" type="password" placeholder="请输入当前密码" autocomplete="current-password" maxlength="64"><div class="err" id="e-old"></div></div><div class="field" id="f-new"><label>新密码<span class="req">*</span></label><input class="in" id="new" type="password" placeholder="8 到 20 位，含字母与数字" autocomplete="new-password" maxlength="20"><div class="err" id="e-new"></div></div><div class="field" id="f-rep"><label>确认新密码<span class="req">*</span></label><input class="in" id="rep" type="password" placeholder="请再次输入新密码" autocomplete="new-password" maxlength="20"><div class="err" id="e-rep"></div></div></div><div class="lalert" id="okAlert" hidden><b>密码已修改。</b>下次登录请使用新密码。</div><div class="btns"><button class="btn primary" type="submit">确认修改</button><a class="btn" href="资料查询.html">取消</a></div></form></div></div>
+</div></main>
+</div>
+<script>
+(function(){
+'use strict';
+var f=document.getElementById('pwdForm');
+var o=document.getElementById('old'),n=document.getElementById('new'),r=document.getElementById('rep');
+var fo=document.getElementById('f-old'),fn=document.getElementById('f-new'),fr=document.getElementById('f-rep');
+var eo=document.getElementById('e-old'),en=document.getElementById('e-new'),er=document.getElementById('e-rep');
+var ok=document.getElementById('okAlert');
+function set(w,b,m){w.className=m?'field bad':'field';b.textContent=m||''}
+function cOld(){ return o.value?'' : '请输入当前密码'; }
+function cNew(){
+  if(!n.value) return '请输入新密码';
+  if(!/^[A-Za-z0-9]{8,20}$/.test(n.value)) return '新密码需为 8 到 20 位字母或数字';
+  if(!/[A-Za-z]/.test(n.value)||!/[0-9]/.test(n.value)) return '新密码需同时包含字母与数字';
+  if(n.value===o.value) return '新密码不能与当前密码相同';
+  return '';
+}
+function cRep(){ if(!r.value) return '请再次输入新密码'; if(r.value!==n.value) return '两次输入的新密码不一致'; return ''; }
+o.addEventListener('blur',function(){set(fo,eo,cOld())});
+n.addEventListener('blur',function(){set(fn,en,cNew())});
+r.addEventListener('blur',function(){set(fr,er,cRep())});
+[o,n,r].forEach(function(el){el.addEventListener('input',function(){ok.hidden=true})});
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var a=cOld(),b=cNew(),c=cRep();
+  set(fo,eo,a);set(fn,en,b);set(fr,er,c);
+  if(a||b||c) return;
+  ok.hidden=false;
+  o.value='';n.value='';r.value='';
+});
+})();
+</script></body>
+</html>

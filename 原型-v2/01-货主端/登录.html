@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>登录 · 货主端 · 货灵云仓原型</title>
+<title>登录 · 货主端 · 货灵云仓原型 v2</title>
 <link rel="stylesheet" href="../00-资源/原型样式.css">
 </head>
 <body class="login-page">
@@ -49,7 +49,7 @@
 
     <button class="lbtn" id="submitBtn" type="submit"><span id="submitText">登 录</span></button>
 
-    <div class="lfoot">演示账号 <code>admin</code> ／ 演示密码 <code>hlyc2026</code><br>
+    <div class="lfoot">演示账号 <code>admin</code> ／ <code>zhangsan</code> · 演示密码 <code>hlyc2026</code><br>
       原型演示用，与真实账号体系无关</div>
   </form>
 
@@ -61,12 +61,16 @@
 (function(){
 'use strict';
 
-/* ===== 三端唯一的行为差异：登录成功后跳转的目标页 ===== */
-var NEXT = '工作台.html';
+/* ===== 演示口令表：两个口令的差别只在登录成功后的落点 =====
+   02-5 §5.2「是首次登录？是 → 强制进入 修改密码」。
+   zhangsan 演示该分支；admin 是已改过密的账号，直落落地页。
+   账号表的「首登须改密」默认值为「是」，故新建账号默认走前者。 */
+var ACCOUNTS = {
+  'admin'   : { password: 'hlyc2026', next: '预约入库.html' },
+  'zhangsan': { password: 'hlyc2026', next: '修改密码.html' }
+};
 
-/* ===== 以下为演示用固定值，三端完全相同 ===== */
-var DEMO_ACCOUNT  = 'admin';
-var DEMO_PASSWORD = 'hlyc2026';
+/* ===== 以下为演示用固定值 ===== */
 var MAX_FAIL      = 5;
 var LOCK_SECONDS  = 30;
 
@@ -100,7 +104,6 @@ function showAlert(kind, html){
 }
 function resetBtn(){ btn.disabled = false; btnText.textContent = '登 录'; }
 
-/* ---------- 校验规则 ---------- */
 function checkAccount(){
   var v = acc.value.trim();
   if (!v) return '请输入账号';
@@ -115,13 +118,11 @@ function checkPassword(){
   return '';
 }
 
-/* ---------- 失焦校验 / 输入即清除错误 ---------- */
 acc.addEventListener('blur', function(){ setErr(fAcc, eAcc, checkAccount()); });
 acc.addEventListener('input', function(){ if (bad(fAcc)) setErr(fAcc, eAcc, ''); });
 pwd.addEventListener('blur', function(){ setErr(fPwd, ePwd, checkPassword()); });
 pwd.addEventListener('input', function(){ if (bad(fPwd)) setErr(fPwd, ePwd, ''); });
 
-/* ---------- 密码显示 / 隐藏 ---------- */
 toggle.addEventListener('click', function(e){
   e.preventDefault();
   if (pwd.type === 'password'){ pwd.type = 'text'; toggle.textContent = '隐藏'; }
@@ -129,13 +130,11 @@ toggle.addEventListener('click', function(e){
   pwd.focus();
 });
 
-/* ---------- 忘记密码：不提供自助找回 ---------- */
 forget.addEventListener('click', function(e){
   e.preventDefault();
   showAlert('info', '<b>本系统不提供自助找回密码。</b>请联系本端管理员为你重置账号密码。');
 });
 
-/* ---------- 连续失败锁定 ---------- */
 function lock(){
   locked = true;
   var left = LOCK_SECONDS;
@@ -158,7 +157,6 @@ function lock(){
   }, 1000);
 }
 
-/* ---------- 提交 ---------- */
 form.addEventListener('submit', function(e){
   e.preventDefault();
   if (locked || btn.disabled) return;
@@ -175,9 +173,10 @@ form.addEventListener('submit', function(e){
 
   setTimeout(function(){
     var u = acc.value.trim();
-    if (u === DEMO_ACCOUNT && pwd.value === DEMO_PASSWORD){
+    var hit = Object.prototype.hasOwnProperty.call(ACCOUNTS, u) ? ACCOUNTS[u] : null;
+    if (hit && hit.password === pwd.value){
       btnText.textContent = '登录成功，正在进入…';
-      window.location.href = NEXT;
+      window.location.href = hit.next;
       return;
     }
     fails++;

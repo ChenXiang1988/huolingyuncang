@@ -34,18 +34,18 @@
 <tbody>
 <tr><td>默认档必须最省动作</td><td>页面底部一块提示条：<span class="code">「界面不得诱导选贵的档」</span></td><td>默认档按钮加高亮；「高」档旁标 <span class="code">按此档执行需人工复核</span></td></tr>
 <tr><td>库容指标不得裸数字</td><td>提示条：<span class="code">「每个指标必须标注口径」</span></td><td>每个数字下挂口径标 <span class="code">有效占用</span> / <span class="code">冻结占用</span></td></tr>
-<tr><td>上游依据可追溯</td><td>页面标题右侧标签：<span class="code">依据 02-2 §7.1</span></td><td>不写在页面里——登记在本端 <span class="code">index.html</span> 的页面清单表中</td></tr>
+<tr><td>上游依据可追溯</td><td>页面标题右侧标签：<span class="code">依据 02-2 §7.1</span></td><td>不写在页面里——登记在根级 <span class="code">index.html</span> 的本端分区中</td></tr>
 </tbody></table></div>
 
 <div class="note info" style="margin-top:16px"><span class="ico">三条推论</span><span>
 <b>1. 整块提示条（Alert）不是解释性内容的容器。</b>业务信息要落到字段旁、按钮文案里、表头口径标上——做成使用者一眼就能用的东西，而不是读一段说明才敢操作。<br>
-<b>2. 上游依据不散落在页面内。</b>可追溯性由各端 <span class="code">index.html</span> 的页面清单集中登记（逐页对应哪几条上游条款），页面里不再挂依据标签。<br>
+<b>2. 上游依据不散落在页面内。</b>可追溯性由根级 <span class="code">index.html</span> 的本端分区集中登记（逐页对应哪几条上游条款），页面里不再挂依据标签。<br>
 <b>3. 原型里唯一允许的标注，是原型机制本身的标注。</b>静态假数据标记、当前页高亮——它们不是解释，是原型的表达手段。<b>弹层内容预览的虚线框已取消</b>，改为真实的悬浮提示（见第十六节）。
 </span></div>
 
 <div class="note warn" style="margin-top:16px"><span class="ico">适用范围</span><span><b>本原则约束的是原型页面。</b>另有两类文件不受约束，因为它们不是原型页面：<br>
 · <b>本规范页</b>——身份是规范文档，说明「为什么这么定」正是它的职责；<br>
-· <b>各端 <span class="code">index.html</span></b>——身份是页面索引与依据登记表，登记依据是它的功能。<br>
+· <b>根级 <span class="code">index.html</span> 的各端分区</b>——身份是页面索引与依据登记表，登记依据是它的功能。<br>
 若不划这条边界，本页自身的「反方审查」「未决项」「改造前状态」会被自身规则全部删掉——那是自毁。
 </span></div>
 
@@ -104,7 +104,7 @@
 <tr><td><b>侧栏 · 导航</b></td><td><span class="code">Menu</span>（<span class="code">mode="inline"</span>）</td><td>本端全部页面，<b>按业务分组</b>；当前项高亮</td><td>不跨端跳转；不承担操作</td></tr>
 <tr><td><b>顶栏 · 面包屑</b></td><td><span class="code">Breadcrumb</span></td><td>「首页 / 分组 / 当前页」三级定位，占据顶栏左侧</td><td>不做导航主线（主线在侧栏）</td></tr>
 <tr><td><b>顶栏 · 用户区</b></td><td><span class="code">Avatar</span> + <span class="code">Dropdown</span></td><td>操作人 + 退出</td><td><b>不显示角色</b>——01 §4.3 已定角色按动作切、一人兼任多角色，顶栏写死角色会与权限模型冲突</td></tr>
-<tr><td><b>内容 · 标题区</b></td><td><span class="code">PageHeader</span></td><td>页面名（唯一必需内容）</td><td><b>不挂上游依据标签、不做面向角色的说明</b>——见第一节判据；可追溯性由本端 <span class="code">index.html</span> 集中登记</td></tr>
+<tr><td><b>内容 · 标题区</b></td><td><span class="code">PageHeader</span></td><td>页面名（唯一必需内容）</td><td><b>不挂上游依据标签、不做面向角色的说明</b>——见第一节判据；可追溯性由根级 <span class="code">index.html</span> 的本端分区集中登记</td></tr>
 <tr><td><b>内容 · 筛选条</b></td><td><span class="code">Form</span>（<span class="code">layout="inline"</span>）</td><td>查询条件；标签与控件同行，查询/重置按钮另起一行</td><td><b>卡片不带标题</b>——筛选区一眼可辨，标题是冗余</td></tr>
 <tr><td><b>内容 · 指标卡</b></td><td><span class="code">Statistic</span> / <span class="code">Card</span></td><td>关键经营数字</td><td><b>禁止裸数字</b>，每个数字必须带口径标签（02-2 §7.2 原则 2）</td></tr>
 <tr><td><b>内容 · 数据表格</b></td><td><span class="code">Table</span></td><td>明细；支持主从展开（主行 + 子表）</td><td>—</td></tr>
@@ -595,13 +595,13 @@
 <tr><td>新-5</td><td><b>「辅助色」指的是哪一个</b>——主色衍生色阶 / 功能色 / 次要操作色？</td><td>第六节已给出三种映射，需挑一个，否则后续页面可能各取一套</td></tr>
 <tr><td>新-6</td><td><b>主按钮禁用底色的官方值</b></td><td>第十二节的「待核」项，需查官方 Button 组件 Token 表补齐</td></tr>
 <tr><td>新-7</td><td><b>侧栏在 992px 以下直接隐藏是否可接受</b></td><td>当前窄屏无导航入口，未做抽屉式导航（Pro 默认是自动收起为图标栏，非隐藏）</td></tr>
-<tr><td><b>新-8</b></td><td><b>原型页面按本节判据的清理</b> <span class="tag green">2026-09-26 已执行</span></td><td><b>删除</b>：提示条 94 条 · 卡片副标题 14 条 · 标题区依据标签 42 处 · 面向角色说明 44 处 · 折叠块 16 处（含两端登录页「原型专用」说明区）· 登录页品牌要点 2 组 · 内联条款标注 39 处（卡片副标题 10 · 字段说明 9 · 正文表格 20）。<br><b>保留</b>：服务使用者的业务信息——提示条 10 条（弹层内操作后果、货主侧操作规则）· 字段说明 44 处 · 卡片副标题 27 处。<br><b>依据的落点</b>：不在页面内，由各端 <span class="code">index.html</span> 的页面清单集中登记。</td></tr>
+<tr><td><b>新-8</b></td><td><b>原型页面按本节判据的清理</b> <span class="tag green">2026-09-26 已执行</span></td><td><b>删除</b>：提示条 94 条 · 卡片副标题 14 条 · 标题区依据标签 42 处 · 面向角色说明 44 处 · 折叠块 16 处（含两端登录页「原型专用」说明区）· 登录页品牌要点 2 组 · 内联条款标注 39 处（卡片副标题 10 · 字段说明 9 · 正文表格 20）。<br><b>保留</b>：服务使用者的业务信息——提示条 10 条（弹层内操作后果、货主侧操作规则）· 字段说明 44 处 · 卡片副标题 27 处。<br><b>依据的落点</b>：不在页面内，由根级 <span class="code">index.html</span> 的本端分区集中登记。</td></tr>
 <tr><td><b>新-9</b></td><td><b>「点击后」是否为必要条件</b>：是「点击过才可提示」（当前实现），还是「取消点击、纯悬停静止」</td><td>反方 8。两种实现只差一个判断，但规则表述不同；另需定「点击过的状态」是否移出后保持</td></tr>
 <tr><td><b>新-10</b></td><td><b>静止阈值 400ms 与位移阈值 4px 是否采用</b></td><td>反方 9。无官方出处、无测试数据，纯取值</td></tr>
 <tr><td><b>新-11</b></td><td><b>内联脚本是否抽为 <span class="code">00-资源\原型交互.js</span></b></td><td>反方 12。当前 7 页各内联一份，改参数要改 7 处；抽出则新增文件，需按 §六 报备</td></tr>
 <tr><td><b>新-12</b></td><td><b>表格同列其余行的按钮是否也挂提示</b></td><td>反方 11。当前只挂首行</td></tr>
 <tr><td><b>新-13</b></td><td><b>是否补键盘可达</b>（<span class="code">focus</span> 触发 + 同样施加静止判定）</td><td>官方 <span class="code">trigger</span> 默认不含 <span class="code">focus</span>，当前提示对键盘用户不可达</td></tr>
-<tr><td><b>新-14</b></td><td><b>评审者如何分辨「权限视图」与「全量视图」</b>：无登录态按全量显示、登录后按权限显示，同一页面两种样子</td><td>反方 14。当前无任何提示，评审者可能以为原型做坏了。是否在云仓管理端的 <span class="code">index.html</span> 留一句极简说明（<b>不放进页面</b>——依第一节，解释性内容服务评审者，应出）</td></tr>
+<tr><td><b>新-14</b></td><td><b>评审者如何分辨「权限视图」与「全量视图」</b>：无登录态按全量显示、登录后按权限显示，同一页面两种样子</td><td>反方 14。当前无任何提示，评审者可能以为原型做坏了。是否在根级 <span class="code">index.html</span> 的云仓管理端分区留一句极简说明（<b>不放进页面</b>——依第一节，解释性内容服务评审者，应出）</td></tr>
 <tr><td>旧-1</td><td>组件命名的中英混用（<span class="code">CODEBUDDY.md §四</span>「全中文不用英文缩写」vs <span class="code">02-2 §7</span>「统一使用 Ant Design Pro 标准组件名」）</td><td>本页用了 <span class="code">Layout.Sider</span> / <span class="code">Table</span> / <span class="code">Menu</span> 等英文组件名与 token 名。这是最需要裁的一条——<b>建议在 §四 加一句组件名与 token 名的例外</b></td></tr>
 <tr><td>旧-2</td><td>端划分属 03 身份 · 多仓登录主体能否跨法人 · NEW-42 四位置字段 · U7 动作清单精度</td><td>同前几轮，未动</td></tr>
 </tbody></table></div>
